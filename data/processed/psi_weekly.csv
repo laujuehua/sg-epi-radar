@@ -647,4 +647,8 @@ week_start,psi_mean,psi_max,days_unhealthy,days_with_data,band,haze_week
 2026-08-09,79.1,81,0,7,Moderate,False
 2026-08-16,75.4,80,0,7,Moderate,False
 2026-08-23,86.6,99,0,7,Moderate,False
-2026-08-30,70.0,78,0,3,Moderate,False
+2026-08-30,90.6,123,2,7,Unhealthy,True
+2026-09-06,94.7,106,2,7,Unhealthy,True
+2026-09-13,115.6,154,6,7,Unhealthy,True
+2026-09-20,93.3,123,2,7,Unhealthy,True
+2026-09-27,130.0,167,4,5,Unhealthy,True

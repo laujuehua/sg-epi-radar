@@ -9,6 +9,30 @@
       "changes": [],
       "added_rows": 0,
       "removed_rows": 0
+    },
+    {
+      "run_at": "2026-10-23T05:47:44+00:00",
+      "snapshot_id": "a5b136274415253b166a65198abde2ca89701b9c8e1a6ce8962210e294962ef6",
+      "previous_snapshot_id": "4731854df81457b05aed3b4355e3a2175f43c9a10a9f4a64c9e667ae9d374dfe",
+      "comparison_available": true,
+      "changes": [
+        {
+          "disease": "Campylobacter enteritis",
+          "week_start": "2026-10-04",
+          "previous_cases": 10.0,
+          "current_cases": 11.0,
+          "change": 1.0
+        },
+        {
+          "disease": "Salmonellosis (non-enteric fevers)",
+          "week_start": "2026-10-04",
+          "previous_cases": 21.0,
+          "current_cases": 22.0,
+          "change": 1.0
+        }
+      ],
+      "added_rows": 38,
+      "removed_rows": 0
     }
   ]
 }

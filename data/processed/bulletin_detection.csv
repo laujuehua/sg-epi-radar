@@ -770,6 +770,7 @@ Acute Viral Hepatitis A,2026,37,2026-09-13,1.0,False,False,1.29,4.29,-0.29,False
 Acute Viral Hepatitis A,2026,38,2026-09-20,2.0,False,False,1.29,4.29,0.71,False,0.58,2.58,False,False
 Acute Viral Hepatitis A,2026,39,2026-09-27,1.0,False,False,1.29,4.29,-0.29,False,0.58,2.58,False,False
 Acute Viral Hepatitis A,2026,40,2026-10-04,0.0,False,False,1.14,4.14,-1.14,False,0.58,2.58,False,False
+Acute Viral Hepatitis A,2026,41,2026-10-11,0.0,False,False,1.29,4.29,-1.29,False,1.0,3.0,False,False
 Acute Viral Hepatitis B,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis B,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis B,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -1541,6 +1542,7 @@ Acute Viral Hepatitis B,2026,37,2026-09-13,0.0,False,False,0.57,3.57,-0.57,False
 Acute Viral Hepatitis B,2026,38,2026-09-20,1.0,False,False,0.57,3.57,0.43,False,1.17,3.4,False,False
 Acute Viral Hepatitis B,2026,39,2026-09-27,2.0,False,False,0.43,3.43,1.57,False,1.0,3.0,False,False
 Acute Viral Hepatitis B,2026,40,2026-10-04,3.0,False,False,0.43,3.43,2.57,False,0.58,2.58,False,False
+Acute Viral Hepatitis B,2026,41,2026-10-11,0.0,False,False,0.43,3.43,-0.43,False,0.42,2.42,False,False
 Acute Viral Hepatitis C,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis C,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis C,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -2312,6 +2314,7 @@ Acute Viral Hepatitis C,2026,37,2026-09-13,0.0,False,False,0.43,3.43,-0.43,False
 Acute Viral Hepatitis C,2026,38,2026-09-20,0.0,False,False,0.29,3.29,-0.29,False,0.5,2.5,False,False
 Acute Viral Hepatitis C,2026,39,2026-09-27,1.0,False,False,0.43,3.43,0.57,False,0.5,2.5,False,False
 Acute Viral Hepatitis C,2026,40,2026-10-04,0.0,False,False,0.43,3.43,-0.43,False,0.5,2.5,False,False
+Acute Viral Hepatitis C,2026,41,2026-10-11,0.0,False,False,0.43,3.43,-0.43,False,0.42,2.42,False,False
 Acute Viral Hepatitis E,2012,1,2012-01-01,3.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis E,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Acute Viral Hepatitis E,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -3083,6 +3086,7 @@ Acute Viral Hepatitis E,2026,37,2026-09-13,4.0,False,False,1.86,6.58,1.36,False,
 Acute Viral Hepatitis E,2026,38,2026-09-20,1.0,False,False,1.57,6.11,-0.38,False,0.42,2.42,False,False
 Acute Viral Hepatitis E,2026,39,2026-09-27,5.0,False,False,1.71,6.2,2.2,False,0.67,2.81,True,True
 Acute Viral Hepatitis E,2026,40,2026-10-04,4.0,False,False,2.0,7.2,1.15,False,0.92,2.92,False,False
+Acute Viral Hepatitis E,2026,41,2026-10-11,2.0,False,False,2.14,6.86,-0.09,False,0.92,2.92,False,False
 Avian Influenza,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Avian Influenza,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Avian Influenza,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -3854,6 +3858,7 @@ Avian Influenza,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,Fal
 Avian Influenza,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Avian Influenza,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Avian Influenza,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Avian Influenza,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Botulism,2017,1,2017-01-01,0.0,False,False,,,,False,,,False,False
 Botulism,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Botulism,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -4364,6 +4369,7 @@ Botulism,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,Fals
 Botulism,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Botulism,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Botulism,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Botulism,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Campylobacter enteritis,2012,1,2012-01-01,6.0,False,False,,,,False,,,False,False
 Campylobacter enteritis,2012,2,2012-01-08,7.0,False,False,,,,False,,,False,False
 Campylobacter enteritis,2012,3,2012-01-15,9.0,False,False,,,,False,,,False,False
@@ -5134,7 +5140,8 @@ Campylobacter enteritis,2026,36,2026-09-06,7.0,False,False,10.57,18.09,-1.42,Fal
 Campylobacter enteritis,2026,37,2026-09-13,12.0,False,False,10.0,18.49,0.71,False,8.25,17.12,False,False
 Campylobacter enteritis,2026,38,2026-09-20,4.0,False,False,10.29,19.73,-2.0,False,8.75,17.28,False,False
 Campylobacter enteritis,2026,39,2026-09-27,6.0,False,False,10.43,19.24,-1.51,False,9.08,17.63,False,False
-Campylobacter enteritis,2026,40,2026-10-04,10.0,False,False,10.29,18.72,-0.1,False,8.67,15.77,False,False
+Campylobacter enteritis,2026,40,2026-10-04,11.0,False,False,10.29,18.72,0.25,False,8.67,15.77,False,False
+Campylobacter enteritis,2026,41,2026-10-11,6.0,False,False,9.57,20.64,-0.97,False,7.17,12.68,False,False
 Chikungunya,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Chikungunya,2012,2,2012-01-08,1.0,False,False,,,,False,,,False,False
 Chikungunya,2012,3,2012-01-15,1.0,False,False,,,,False,,,False,False
@@ -5906,6 +5913,7 @@ Chikungunya,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.58,2.58,False
 Chikungunya,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.75,2.75,False,False
 Chikungunya,2026,39,2026-09-27,1.0,False,False,0.0,3.0,1.0,False,0.67,2.67,False,False
 Chikungunya,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.5,2.5,False,False
+Chikungunya,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.33,2.33,False,False
 Cholera,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Cholera,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Cholera,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -6677,6 +6685,7 @@ Cholera,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.08,2.08,False,Fal
 Cholera,2026,38,2026-09-20,0.0,False,False,0.14,3.14,-0.14,False,0.08,2.08,False,False
 Cholera,2026,39,2026-09-27,0.0,False,False,0.14,3.14,-0.14,False,0.08,2.08,False,False
 Cholera,2026,40,2026-10-04,0.0,False,False,0.14,3.14,-0.14,False,0.08,2.08,False,False
+Cholera,2026,41,2026-10-11,0.0,False,False,0.14,3.14,-0.14,False,0.08,2.08,False,False
 DHF,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 DHF,2012,2,2012-01-08,2.0,False,False,,,,False,,,False,False
 DHF,2012,3,2012-01-15,1.0,False,False,,,,False,,,False,False
@@ -7448,6 +7457,7 @@ DHF,2026,37,2026-09-13,0.0,False,False,1.0,4.0,-1.0,False,0.5,2.5,False,False
 DHF,2026,38,2026-09-20,0.0,False,False,1.0,4.0,-1.0,False,0.33,2.33,False,False
 DHF,2026,39,2026-09-27,1.0,False,False,1.0,4.0,0.0,False,0.67,2.67,False,False
 DHF,2026,40,2026-10-04,0.0,False,False,0.86,3.86,-0.86,False,0.5,2.5,False,False
+DHF,2026,41,2026-10-11,0.0,False,False,0.71,3.71,-0.71,False,0.33,2.33,False,False
 Dengue,2012,1,2012-01-01,74.0,False,False,,,,False,,,False,False
 Dengue,2012,2,2012-01-08,64.0,False,False,,,,False,,,False,False
 Dengue,2012,3,2012-01-15,60.0,False,False,,,,False,,,False,False
@@ -8219,6 +8229,7 @@ Dengue,2026,37,2026-09-13,74.0,False,False,106.0,146.17,-2.39,False,261.92,638.1
 Dengue,2026,38,2026-09-20,82.0,False,False,101.29,142.84,-1.39,False,253.42,600.76,False,False
 Dengue,2026,39,2026-09-27,70.0,False,False,94.29,138.06,-1.66,False,231.08,544.03,False,False
 Dengue,2026,40,2026-10-04,79.0,False,False,88.0,123.71,-0.76,False,212.33,502.03,False,False
+Dengue,2026,41,2026-10-11,61.0,False,False,85.43,117.73,-2.27,False,192.25,463.13,False,False
 Diphtheria,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Diphtheria,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Diphtheria,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -8990,6 +9001,7 @@ Diphtheria,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,Fa
 Diphtheria,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Diphtheria,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Diphtheria,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Diphtheria,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Ebola Virus Disease,2017,1,2017-01-01,0.0,False,False,,,,False,,,False,False
 Ebola Virus Disease,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Ebola Virus Disease,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -9500,6 +9512,7 @@ Ebola Virus Disease,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0
 Ebola Virus Disease,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Ebola Virus Disease,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Ebola Virus Disease,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Ebola Virus Disease,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Encephalitis,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Encephalitis,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Encephalitis,2012,3,2012-01-15,3.0,False,False,,,,False,,,False,False
@@ -11419,6 +11432,7 @@ Haemophilus influenzae type b,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,Fal
 Haemophilus influenzae type b,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Haemophilus influenzae type b,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.08,2.08,False,False
 Haemophilus influenzae type b,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.08,2.08,False,False
+Haemophilus influenzae type b,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.08,2.08,False,False
 Japanese Encephalitis,2017,1,2017-01-01,0.0,False,False,,,,False,,,False,False
 Japanese Encephalitis,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Japanese Encephalitis,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -11929,6 +11943,7 @@ Japanese Encephalitis,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2
 Japanese Encephalitis,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Japanese Encephalitis,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Japanese Encephalitis,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Japanese Encephalitis,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Legionellosis,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Legionellosis,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Legionellosis,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -12700,6 +12715,7 @@ Legionellosis,2026,37,2026-09-13,3.0,False,False,1.29,4.29,1.71,False,0.75,2.75,
 Legionellosis,2026,38,2026-09-20,2.0,False,False,1.29,4.29,0.71,False,0.92,2.92,False,False
 Legionellosis,2026,39,2026-09-27,3.0,False,False,1.14,4.14,1.86,False,0.75,2.75,False,False
 Legionellosis,2026,40,2026-10-04,0.0,False,False,1.29,4.62,-1.16,False,0.75,2.75,False,False
+Legionellosis,2026,41,2026-10-11,0.0,False,False,1.57,4.57,-1.57,False,0.75,2.75,False,False
 Leptospirosis,2017,1,2017-01-01,2.0,False,False,,,,False,,,False,False
 Leptospirosis,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Leptospirosis,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -13210,6 +13226,7 @@ Leptospirosis,2026,37,2026-09-13,4.0,False,False,0.71,3.71,3.29,False,0.75,3.18,
 Leptospirosis,2026,38,2026-09-20,0.0,False,False,1.14,5.18,-0.85,False,0.75,2.75,False,False
 Leptospirosis,2026,39,2026-09-27,1.0,False,False,1.29,5.43,-0.21,False,1.67,5.61,False,False
 Leptospirosis,2026,40,2026-10-04,2.0,False,False,1.86,6.58,0.09,False,1.92,5.96,False,False
+Leptospirosis,2026,41,2026-10-11,0.0,False,False,1.71,6.83,-1.01,False,2.08,6.21,False,False
 Malaria,2012,1,2012-01-01,1.0,False,False,,,,False,,,False,False
 Malaria,2012,2,2012-01-08,2.0,False,False,,,,False,,,False,False
 Malaria,2012,3,2012-01-15,2.0,False,False,,,,False,,,False,False
@@ -13981,6 +13998,7 @@ Malaria,2026,37,2026-09-13,1.0,False,False,1.0,4.0,0.0,False,0.42,2.42,False,Fal
 Malaria,2026,38,2026-09-20,0.0,False,False,1.0,4.0,-1.0,False,0.58,2.58,False,False
 Malaria,2026,39,2026-09-27,1.0,False,False,1.14,4.14,-0.14,False,0.5,2.5,False,False
 Malaria,2026,40,2026-10-04,0.0,False,False,1.0,4.0,-1.0,False,0.67,2.67,False,False
+Malaria,2026,41,2026-10-11,0.0,False,False,0.86,3.86,-0.86,False,0.58,2.58,False,False
 Measles,2012,1,2012-01-01,2.0,False,False,,,,False,,,False,False
 Measles,2012,2,2012-01-08,1.0,False,False,,,,False,,,False,False
 Measles,2012,3,2012-01-15,2.0,False,False,,,,False,,,False,False
@@ -14752,6 +14770,7 @@ Measles,2026,37,2026-09-13,0.0,False,False,1.43,4.83,-1.26,False,0.0,2.0,False,F
 Measles,2026,38,2026-09-20,0.0,False,False,1.43,4.83,-1.26,False,0.08,2.08,False,False
 Measles,2026,39,2026-09-27,2.0,False,False,1.29,4.29,0.71,False,0.25,2.25,False,False
 Measles,2026,40,2026-10-04,0.0,False,False,1.29,4.29,-1.29,False,0.42,2.42,False,False
+Measles,2026,41,2026-10-11,0.0,False,False,1.0,4.0,-1.0,False,0.33,2.33,False,False
 Melioidosis,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Melioidosis,2012,2,2012-01-08,1.0,False,False,,,,False,,,False,False
 Melioidosis,2012,3,2012-01-15,1.0,False,False,,,,False,,,False,False
@@ -15523,6 +15542,7 @@ Melioidosis,2026,37,2026-09-13,0.0,False,False,0.57,3.57,-0.57,False,1.17,3.17,F
 Melioidosis,2026,38,2026-09-20,2.0,False,False,0.71,3.71,1.29,False,0.67,2.67,False,False
 Melioidosis,2026,39,2026-09-27,1.0,False,False,0.71,3.71,0.29,False,0.58,2.58,False,False
 Melioidosis,2026,40,2026-10-04,4.0,False,False,0.71,3.71,3.29,False,0.83,2.83,False,False
+Melioidosis,2026,41,2026-10-11,2.0,False,False,0.71,3.71,1.29,False,1.0,3.0,False,False
 Meningococcal Infection,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Meningococcal Infection,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Meningococcal Infection,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -16294,6 +16314,7 @@ Meningococcal Infection,2026,37,2026-09-13,0.0,False,False,0.29,3.29,-0.29,False
 Meningococcal Infection,2026,38,2026-09-20,0.0,False,False,0.29,3.29,-0.29,False,0.08,2.08,False,False
 Meningococcal Infection,2026,39,2026-09-27,0.0,False,False,0.14,3.14,-0.14,False,0.17,2.17,False,False
 Meningococcal Infection,2026,40,2026-10-04,0.0,False,False,0.14,3.14,-0.14,False,0.25,2.25,False,False
+Meningococcal Infection,2026,41,2026-10-11,0.0,False,False,0.14,3.14,-0.14,False,0.25,2.25,False,False
 Middle East Respiratory Syndrome,2023,1,2023-01-01,0.0,False,False,,,,False,,,False,False
 Middle East Respiratory Syndrome,2023,2,2023-01-08,0.0,False,False,,,,False,,,False,False
 Middle East Respiratory Syndrome,2023,3,2023-01-15,0.0,False,False,,,,False,,,False,False
@@ -16491,6 +16512,7 @@ Middle East Respiratory Syndrome,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,
 Middle East Respiratory Syndrome,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Middle East Respiratory Syndrome,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Middle East Respiratory Syndrome,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Middle East Respiratory Syndrome,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Mpox,2022,1,2022-01-02,0.0,False,False,,,,False,,,False,False
 Mpox,2022,2,2022-01-09,0.0,False,False,,,,False,,,False,False
 Mpox,2022,3,2022-01-16,0.0,False,False,,,,False,,,False,False
@@ -16740,6 +16762,7 @@ Mpox,2026,37,2026-09-13,1.0,False,False,1.29,4.29,-0.29,False,0.67,2.81,False,Fa
 Mpox,2026,38,2026-09-20,4.0,False,False,1.43,4.43,2.57,False,0.42,2.42,False,False
 Mpox,2026,39,2026-09-27,2.0,False,False,1.29,4.29,0.71,False,0.42,2.42,False,False
 Mpox,2026,40,2026-10-04,1.0,False,False,1.29,4.29,-0.29,False,0.42,2.42,False,False
+Mpox,2026,41,2026-10-11,1.0,False,False,1.71,5.47,-0.57,False,0.42,2.42,False,False
 Mumps,2012,1,2012-01-01,11.0,False,False,,,,False,,,False,False
 Mumps,2012,2,2012-01-08,10.0,False,False,,,,False,,,False,False
 Mumps,2012,3,2012-01-15,15.0,False,False,,,,False,,,False,False
@@ -17511,6 +17534,7 @@ Mumps,2026,37,2026-09-13,5.0,False,False,3.0,7.24,1.41,False,3.75,7.67,False,Fal
 Mumps,2026,38,2026-09-20,6.0,False,False,2.86,7.25,2.15,False,3.75,7.07,False,False
 Mumps,2026,39,2026-09-27,5.0,False,False,2.57,6.76,1.74,False,4.08,7.94,False,False
 Mumps,2026,40,2026-10-04,0.0,False,False,2.86,7.89,-1.7,False,3.83,7.33,False,False
+Mumps,2026,41,2026-10-11,3.0,False,False,3.71,8.2,-0.48,False,3.67,7.51,False,False
 Murine Typhus,2017,1,2017-01-01,0.0,False,False,,,,False,,,False,False
 Murine Typhus,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Murine Typhus,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -18021,6 +18045,7 @@ Murine Typhus,2026,37,2026-09-13,2.0,False,False,2.71,10.4,-0.28,False,0.33,2.33
 Murine Typhus,2026,38,2026-09-20,0.0,False,False,1.71,7.38,-0.91,False,0.58,3.06,False,False
 Murine Typhus,2026,39,2026-09-27,4.0,False,False,1.86,7.18,1.21,False,0.92,4.05,False,False
 Murine Typhus,2026,40,2026-10-04,1.0,False,False,1.86,7.18,-0.48,False,1.67,5.51,False,False
+Murine Typhus,2026,41,2026-10-11,0.0,False,False,1.43,6.87,-0.79,False,1.67,5.51,False,False
 Nipah,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Nipah,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Nipah,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -18792,6 +18817,7 @@ Nipah,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Nipah,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Nipah,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Nipah,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Nipah,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Paratyphoid,2012,1,2012-01-01,1.0,False,False,,,,False,,,False,False
 Paratyphoid,2012,2,2012-01-08,1.0,False,False,,,,False,,,False,False
 Paratyphoid,2012,3,2012-01-15,1.0,False,False,,,,False,,,False,False
@@ -19563,6 +19589,7 @@ Paratyphoid,2026,37,2026-09-13,0.0,False,False,0.43,3.43,-0.43,False,0.08,2.08,F
 Paratyphoid,2026,38,2026-09-20,1.0,False,False,0.29,3.29,0.71,False,0.0,2.0,False,False
 Paratyphoid,2026,39,2026-09-27,0.0,False,False,0.14,3.14,-0.14,False,0.0,2.0,False,False
 Paratyphoid,2026,40,2026-10-04,1.0,False,False,0.14,3.14,0.86,False,0.08,2.08,False,False
+Paratyphoid,2026,41,2026-10-11,0.0,False,False,0.14,3.14,-0.14,False,0.17,2.17,False,False
 Pertussis,2012,1,2012-01-01,2.0,False,False,,,,False,,,False,False
 Pertussis,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Pertussis,2012,3,2012-01-15,5.0,False,False,,,,False,,,False,False
@@ -20334,6 +20361,7 @@ Pertussis,2026,37,2026-09-13,2.0,False,False,2.71,6.05,-0.64,False,1.0,3.41,Fals
 Pertussis,2026,38,2026-09-20,2.0,False,False,2.71,6.05,-0.64,False,1.08,3.71,False,False
 Pertussis,2026,39,2026-09-27,3.0,False,False,2.29,5.29,0.71,False,1.08,3.56,False,False
 Pertussis,2026,40,2026-10-04,2.0,False,False,2.14,5.14,-0.14,False,1.17,3.7,False,False
+Pertussis,2026,41,2026-10-11,3.0,False,False,2.14,5.14,0.86,False,0.83,2.83,False,False
 Plague,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Plague,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Plague,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -21105,6 +21133,7 @@ Plague,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Plague,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Plague,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Plague,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Plague,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Pneumococcal Disease (invasive),2012,1,2012-01-01,3.0,False,False,,,,False,,,False,False
 Pneumococcal Disease (invasive),2012,2,2012-01-08,3.0,False,False,,,,False,,,False,False
 Pneumococcal Disease (invasive),2012,3,2012-01-15,3.0,False,False,,,,False,,,False,False
@@ -21876,6 +21905,7 @@ Pneumococcal Disease (invasive),2026,37,2026-09-13,2.0,False,False,1.86,5.06,0.1
 Pneumococcal Disease (invasive),2026,38,2026-09-20,1.0,False,False,2.0,5.0,-1.0,False,2.0,4.95,False,False
 Pneumococcal Disease (invasive),2026,39,2026-09-27,1.0,False,False,2.0,5.0,-1.0,False,2.5,5.63,False,False
 Pneumococcal Disease (invasive),2026,40,2026-10-04,0.0,False,False,1.71,4.71,-1.71,False,2.33,5.07,False,False
+Pneumococcal Disease (invasive),2026,41,2026-10-11,0.0,False,False,1.71,4.71,-1.71,False,3.17,6.45,False,False
 Poliomyelitis,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Poliomyelitis,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Poliomyelitis,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -22647,6 +22677,7 @@ Poliomyelitis,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False
 Poliomyelitis,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Poliomyelitis,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Poliomyelitis,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Poliomyelitis,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Rubella,2012,1,2012-01-01,1.0,False,False,,,,False,,,False,False
 Rubella,2012,2,2012-01-08,2.0,False,False,,,,False,,,False,False
 Rubella,2012,3,2012-01-15,4.0,False,False,,,,False,,,False,False
@@ -23418,6 +23449,7 @@ Rubella,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Rubella,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Rubella,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Rubella,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Rubella,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 SARS,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 SARS,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 SARS,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -24189,6 +24221,7 @@ SARS,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 SARS,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 SARS,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 SARS,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+SARS,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Salmonellosis (non-enteric fevers),2012,1,2012-01-01,26.0,False,False,,,,False,,,False,False
 Salmonellosis (non-enteric fevers),2012,2,2012-01-08,24.0,False,False,,,,False,,,False,False
 Salmonellosis (non-enteric fevers),2012,3,2012-01-15,21.0,False,False,,,,False,,,False,False
@@ -24959,7 +24992,8 @@ Salmonellosis (non-enteric fevers),2026,36,2026-09-06,37.0,False,False,27.0,45.9
 Salmonellosis (non-enteric fevers),2026,37,2026-09-13,28.0,False,False,26.14,40.57,0.39,False,23.92,35.5,False,False
 Salmonellosis (non-enteric fevers),2026,38,2026-09-20,26.0,False,False,25.43,43.67,0.09,False,23.42,34.12,False,False
 Salmonellosis (non-enteric fevers),2026,39,2026-09-27,34.0,False,False,27.86,48.53,0.89,False,22.58,30.87,True,True
-Salmonellosis (non-enteric fevers),2026,40,2026-10-04,21.0,False,False,27.43,47.69,-0.95,False,25.33,31.08,False,False
+Salmonellosis (non-enteric fevers),2026,40,2026-10-04,22.0,False,False,27.43,47.69,-0.8,False,25.33,31.08,False,False
+Salmonellosis (non-enteric fevers),2026,41,2026-10-11,25.0,False,False,27.29,47.61,-0.34,False,25.83,33.06,False,False
 Tetanus,2017,1,2017-01-01,0.0,False,False,,,,False,,,False,False
 Tetanus,2017,2,2017-01-08,0.0,False,False,,,,False,,,False,False
 Tetanus,2017,3,2017-01-15,0.0,False,False,,,,False,,,False,False
@@ -25470,6 +25504,7 @@ Tetanus,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Tetanus,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Tetanus,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Tetanus,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Tetanus,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.08,2.08,False,False
 Typhoid,2012,1,2012-01-01,6.0,False,False,,,,False,,,False,False
 Typhoid,2012,2,2012-01-08,3.0,False,False,,,,False,,,False,False
 Typhoid,2012,3,2012-01-15,5.0,False,False,,,,False,,,False,False
@@ -26241,6 +26276,7 @@ Typhoid,2026,37,2026-09-13,1.0,False,False,0.86,4.5,0.12,False,1.08,3.08,False,F
 Typhoid,2026,38,2026-09-20,2.0,False,False,0.57,3.57,1.43,False,0.83,2.89,False,False
 Typhoid,2026,39,2026-09-27,0.0,False,False,0.57,3.57,-0.57,False,0.92,3.08,False,False
 Typhoid,2026,40,2026-10-04,0.0,False,False,0.71,3.71,-0.71,False,0.92,3.08,False,False
+Typhoid,2026,41,2026-10-11,1.0,False,False,1.0,4.0,0.0,False,0.83,2.83,False,False
 Yellow Fever,2012,1,2012-01-01,0.0,False,False,,,,False,,,False,False
 Yellow Fever,2012,2,2012-01-08,0.0,False,False,,,,False,,,False,False
 Yellow Fever,2012,3,2012-01-15,0.0,False,False,,,,False,,,False,False
@@ -27012,6 +27048,7 @@ Yellow Fever,2026,37,2026-09-13,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,
 Yellow Fever,2026,38,2026-09-20,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Yellow Fever,2026,39,2026-09-27,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Yellow Fever,2026,40,2026-10-04,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
+Yellow Fever,2026,41,2026-10-11,0.0,False,False,0.0,3.0,0.0,False,0.0,2.0,False,False
 Zika,2016,19,2016-05-08,1.0,False,False,,,,False,,,False,False
 Zika,2016,20,2016-05-15,0.0,False,False,,,,False,,,False,False
 Zika,2016,21,2016-05-22,0.0,False,False,,,,False,,,False,False
@@ -27556,3 +27593,4 @@ Zika,2026,37,2026-09-13,0.0,False,False,0.14,3.14,-0.14,False,0.25,2.25,False,Fa
 Zika,2026,38,2026-09-20,1.0,False,False,0.14,3.14,0.86,False,0.33,2.33,False,False
 Zika,2026,39,2026-09-27,0.0,False,False,0.14,3.14,-0.14,False,0.25,2.25,False,False
 Zika,2026,40,2026-10-04,0.0,False,False,0.14,3.14,-0.14,False,0.17,2.17,False,False
+Zika,2026,41,2026-10-11,1.0,False,False,0.29,3.29,0.71,False,0.08,2.08,False,False

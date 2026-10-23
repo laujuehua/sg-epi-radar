@@ -1,266 +1,267 @@
 {
-  "run_at": "2026-10-23T05:32:15+00:00",
+  "run_at": "2026-10-23T05:47:45+00:00",
   "sources": [
-    {
-      "name": "weather",
-      "source": "https://www.weather.gov.sg/climate-historical-daily/",
-      "path": "raw\\weather_daily_raw.csv",
-      "status": "partial",
-      "notes": [
-        "2026-10: HTTP 404"
-      ],
-      "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597",
-      "checked_at": "2026-10-22T12:44:29+00:00"
-    },
     {
       "name": "notifications",
       "source": "https://data.gov.sg/datasets/d_ca168b2cb763640d72c4600a68f9909e/view",
       "path": "raw/notifications.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "b782b6570e3e3ba4377b487b0c1c40905d0d7dd40db0e716c8a659bb53310a54"
     },
     {
       "name": "polyclinic",
       "source": "https://data.gov.sg/datasets/d_5d5508f1c954f5630d7b3aa7875d01f9/view",
       "path": "raw/polyclinic.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "315d3c92963b25e7c4593d95e46bd6ba41fe131ab79e6f4982d5ffd91c0a0ccf"
     },
     {
       "name": "psi_historical",
       "source": "https://data.gov.sg/datasets/d_b4cf557f8750260d229c49fd768e11ed/view",
       "path": "raw/psi_historical.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "7f3a842f05dcdb0296df2934b9f5b388d6dfcffdd1a68dd29dec8c69bcf1564f"
     },
     {
       "name": "humidity",
       "source": "https://data.gov.sg/datasets/d_e3b1111a26b2aefef4f386c068d4ca5d/view",
       "path": "raw/humidity.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "47449b875513742352f6b859ad4495ba5cb43feb8ed4b7bafdd49331c8f66a26"
     },
     {
       "name": "residents",
       "source": "https://data.gov.sg/datasets/d_3cf667d761b4bdc6d4d3d3aeec37dea5/view",
       "path": "raw/residents.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "4ae99b295b48690f2ac58f59662b091e739f30db5947fe5dbfd42c27feefc7f4"
     },
     {
       "name": "total_population",
       "source": "https://data.gov.sg/datasets/d_6c26f6181f2e5dd62bf3210fa1029074/view",
       "path": "raw/total_population.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "3350108a1e6637a3a02ed35af560647c512f914b1598c7d18139cebd40355cad"
     },
     {
       "name": "public_holidays",
       "source": "https://data.gov.sg/datasets/d_8ef23381f9417e4d4254ee8b4dcdb176/view",
       "path": "raw/public_holidays.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "35e469d2c46642b19e5b17d48348aa5bb00b82aeca6557135e68f2fcd4eb9d5d"
     },
     {
       "name": "visitors",
       "source": "https://data.gov.sg/datasets/d_d1c33009b674dcf70b8e8c790b793f28/view",
       "path": "raw/visitors.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "63daa464a80da2935e9c51f1e7ba404f37e2037ff76d6bfb464a5b91998c059d"
     },
     {
       "name": "deaths_cause",
       "source": "https://data.gov.sg/datasets/d_f9e1ec367036b43d97eec96cbcee7827/view",
       "path": "raw/deaths_cause.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "ee38b94f4c5ba66f83c1a430a50f8482d2521d82a91f3d50eba3765915b9e4cb"
     },
     {
       "name": "deaths_age",
       "source": "https://data.gov.sg/datasets/d_716c31ea00d7c05d43d4109d8b0db3bb/view",
       "path": "raw/deaths_age.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "b517feabd7f436f09cd4c04d3e70adaf39a1b40fcf28f3ede5cccd2de24f895d"
     },
     {
       "name": "deaths_rates",
       "source": "https://data.gov.sg/datasets/d_e2c79c60c046f9a2061328cc3f665688/view",
       "path": "raw/deaths_rates.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "74343913ec60cb2715146613b02d2e34130fc6012c4a5b0ba7ed3b3c460d013e"
     },
     {
       "name": "deaths_monthly",
       "source": "https://data.gov.sg/datasets/d_ccff6769339af25d11a9223031e87da3/view",
       "path": "raw/deaths_monthly.csv",
-      "checked_at": "2026-10-22T12:41:20+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:41:20+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "5bece3e6cc2935943d9651721bb59b23fb77dbce07bd693eda3e82c403e7f1f9"
+    },
+    {
+      "name": "flunet_singapore",
+      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+      "path": "raw/flunet_singapore.csv",
+      "checked_at": "2026-10-23T05:47:45+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:47:45+00:00",
+      "sha256": "0080b0bcde30bb6e369a9af518fd133ec4519e841c321e6fbc85f11c773806e5"
+    },
+    {
+      "name": "flunet_neighbours",
+      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+      "path": "raw/flunet_neighbours.csv",
+      "checked_at": "2026-10-23T05:47:45+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:47:45+00:00",
+      "sha256": "19ef84a54ccf34cefa1e5cf8c52cdac2515078b2ee0bbb081a3802d86b3adce7"
+    },
+    {
+      "name": "sea_tb",
+      "source": "https://data.worldbank.org/indicator/SH.TBS.INCD",
+      "path": "raw/sea_tb.csv",
+      "checked_at": "2026-10-23T05:47:45+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:47:45+00:00",
+      "sha256": "e53c651cfff6c6ae4097aae2d8dae6e27b79ff105ad330528550d14510b18962"
     },
     {
       "name": "psi_recent",
       "source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
       "path": "raw/psi_recent.csv",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
-      "sha256": "18e40f7455afdb7eb15b5a77e46ed846de1460550db097212c0ab16a74db7a4a"
+      "last_success_at": "2026-10-23T05:47:45+00:00",
+      "sha256": "1c90055152745e99d23344e1736c69c04351a5d918664581bbef015076aa9114"
+    },
+    {
+      "name": "weather",
+      "source": "https://www.weather.gov.sg/climate-historical-daily/",
+      "path": "raw/weather_daily_raw.csv",
+      "checked_at": "2026-10-23T05:47:45+00:00",
+      "status": "partial",
+      "notes": [
+        "2026-10: HTTP 404"
+      ],
+      "last_success_at": "2026-10-23T05:47:45+00:00",
+      "sha256": "a46b6effd9b2d13d81987a476b9fd80db66fc6d8266b7a89bbe8deff08525348"
     },
     {
       "name": "contact_all",
       "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_all.rdata",
       "path": "raw/contact_all.rdata",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "ca2e23f519fd747068ec99782fa2c2a6124d6f3018747607f99ffd9a68afe578"
     },
     {
       "name": "contact_home",
       "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_home.rdata",
       "path": "raw/contact_home.rdata",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "9f7dae851a3c131c830d2304366578a9b9534028077b6072b14ecbf37882e967"
     },
     {
       "name": "contact_school",
       "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_school.rdata",
       "path": "raw/contact_school.rdata",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "21e1665b8f15ebe507fba93646c008b5736ad7458bb8af256ca3f37334bb64b8"
     },
     {
       "name": "contact_work",
       "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_work.rdata",
       "path": "raw/contact_work.rdata",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "6f0db1aec1446940e76298837fe832f332a4f9c32cb46fdca2cd4fff83eba504"
     },
     {
       "name": "contact_others",
       "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_others.rdata",
       "path": "raw/contact_others.rdata",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "f599b53d0494f3346b961d727ad9a8d9b63495324bbac986e5ccaaa30ce032f0"
     },
     {
       "name": "cda_2023",
       "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2023/",
       "path": "raw/cda/bulletin_2023.xls",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "5bfdfee2f85d4183e4ec18c6b82167d511ea72e1794dcc44e3828a3f08509264"
     },
     {
       "name": "cda_2024",
       "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2024/",
       "path": "raw/cda/bulletin_2024.xlsx",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "569844f89419e1ec8d0e963be8a48dfee89c5afc2085ad1b5669629d5969c70d"
     },
     {
       "name": "cda_2025",
       "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2025/",
       "path": "raw/cda/bulletin_2025.xlsx",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "31bb619f7fee0a68428dde44a53865cc54423e2f74d5c2073b04ab418f74a703"
     },
     {
       "name": "cda_2026",
       "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2026/",
       "path": "raw/cda/bulletin_2026.xlsx",
-      "checked_at": "2026-10-22T12:44:29+00:00",
+      "checked_at": "2026-10-23T05:47:45+00:00",
       "status": "refreshed",
       "notes": [],
-      "last_success_at": "2026-10-22T12:44:29+00:00",
+      "last_success_at": "2026-10-23T05:47:45+00:00",
       "sha256": "d5db99e53f0b01bc38df70c7f922ba55ea89b58555ed35812bc7576b5b1c9c8f"
-    },
-    {
-      "name": "flunet_singapore",
-      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-      "path": "raw/flunet_singapore.csv",
-      "checked_at": "2026-10-23T05:32:15+00:00",
-      "status": "refreshed",
-      "notes": [],
-      "last_success_at": "2026-10-23T05:32:15+00:00",
-      "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
-    },
-    {
-      "name": "flunet_neighbours",
-      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-      "path": "raw/flunet_neighbours.csv",
-      "checked_at": "2026-10-23T05:32:15+00:00",
-      "status": "refreshed",
-      "notes": [],
-      "last_success_at": "2026-10-23T05:32:15+00:00",
-      "sha256": "7a9e528c1d38cbfdc05498cf4967afab63f6485c8fb4bb457a2a501df6e98132"
-    },
-    {
-      "name": "sea_tb",
-      "source": "https://data.worldbank.org/indicator/SH.TBS.INCD",
-      "path": "raw/sea_tb.csv",
-      "checked_at": "2026-10-23T05:32:15+00:00",
-      "status": "refreshed",
-      "notes": [],
-      "last_success_at": "2026-10-23T05:32:15+00:00",
-      "sha256": "e9b329b2e95a31ebdeb43278506a3167181f50ff29df4d2bba4a53f2185cebcb"
     }
   ]
 }
