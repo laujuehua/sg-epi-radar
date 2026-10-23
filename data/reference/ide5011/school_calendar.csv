@@ -1,0 +1,89 @@
+year,type,name,start_date,end_date,source
+2012,vacation,March,2012-03-10,2012-03-18,https://time.sg/school-holidays-2012
+2012,vacation,Mid-year,2012-05-26,2012-06-24,https://time.sg/school-holidays-2012
+2012,vacation,September,2012-09-01,2012-09-09,https://time.sg/school-holidays-2012
+2012,vacation,Year-end,2012-11-17,2012-12-31,https://time.sg/school-holidays-2012
+2013,vacation,March,2013-03-16,2013-03-24,https://time.sg/school-holidays-2013
+2013,vacation,Mid-year,2013-06-01,2013-06-30,https://time.sg/school-holidays-2013
+2013,vacation,September,2013-09-07,2013-09-15,https://time.sg/school-holidays-2013
+2013,vacation,Year-end,2013-11-16,2013-12-31,https://time.sg/school-holidays-2013
+2014,vacation,March,2014-03-15,2014-03-23,https://www.littledayout.com/singapore-public-school-holidays-calendar-2014/
+2014,vacation,Mid-year,2014-05-31,2014-06-29,https://www.littledayout.com/singapore-public-school-holidays-calendar-2014/
+2014,vacation,September,2014-09-06,2014-09-14,https://www.littledayout.com/singapore-public-school-holidays-calendar-2014/
+2014,vacation,Year-end,2014-11-15,2014-12-31,https://www.littledayout.com/singapore-public-school-holidays-calendar-2014/
+2015,vacation,March,2015-03-14,2015-03-22,https://www.littledayout.com/singapore-public-school-holidays-calendar-2015
+2015,vacation,Mid-year,2015-05-30,2015-06-28,https://www.littledayout.com/singapore-public-school-holidays-calendar-2015
+2015,vacation,September,2015-09-05,2015-09-13,https://www.littledayout.com/singapore-public-school-holidays-calendar-2015
+2015,vacation,Year-end,2015-11-21,2015-12-31,https://www.littledayout.com/singapore-public-school-holidays-calendar-2015
+2016,vacation,March,2016-03-12,2016-03-20,https://www.littledayout.com/singapore-public-school-holidays-calendar-2016/
+2016,vacation,Mid-year,2016-05-28,2016-06-26,https://www.littledayout.com/singapore-public-school-holidays-calendar-2016/
+2016,vacation,September,2016-09-03,2016-09-11,https://www.littledayout.com/singapore-public-school-holidays-calendar-2016/
+2016,vacation,Year-end,2016-11-19,2016-12-31,https://www.littledayout.com/singapore-public-school-holidays-calendar-2016/
+2017,vacation,March,2017-03-11,2017-03-19,https://www.littledayout.com/?p=156414
+2017,vacation,Mid-year,2017-05-27,2017-06-25,https://www.littledayout.com/?p=156414
+2017,vacation,September,2017-09-02,2017-09-10,https://www.littledayout.com/?p=156414
+2017,vacation,Year-end,2017-11-18,2017-12-31,https://www.littledayout.com/?p=156414
+2018,vacation,March,2018-03-10,2018-03-18,https://publicholidays.sg/school-holidays/2018-dates/
+2018,vacation,Mid-year,2018-05-26,2018-06-24,https://publicholidays.sg/school-holidays/2018-dates/
+2018,vacation,September,2018-09-01,2018-09-09,https://publicholidays.sg/school-holidays/2018-dates/
+2018,vacation,Year-end,2018-11-17,2018-12-31,https://publicholidays.sg/school-holidays/2018-dates/
+2019,vacation,March,2019-03-16,2019-03-24,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,vacation,Mid-year,2019-06-01,2019-06-30,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,vacation,September,2019-09-07,2019-09-15,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,vacation,Year-end,2019-11-16,2019-12-31,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,extra,Youth Day school holiday,2019-07-08,2019-07-08,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,extra,Teachers' Day,2019-09-06,2019-09-06,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2019,extra,Children's Day (primary),2019-10-04,2019-10-04,https://www.moe.gov.sg/news/press-releases/20180815-school-terms-and-holidays-for-2019
+2020,vacation,March,2020-03-14,2020-03-22,https://www.moe.gov.sg/news/press-releases/20190813-school-terms-and-holidays-for-2020
+2020,closure,Home-based learning (circuit breaker),2020-04-08,2020-05-04,https://www.moe.gov.sg/news/press-releases/20200421-mid-year-holidays-brought-forward-as-schools-adjust-academic-calendar-institutes-of-higher-learning-to-extend-home-based-learning
+2020,vacation,Mid-year (brought forward),2020-05-05,2020-06-01,https://www.moe.gov.sg/news/press-releases/20200421-mid-year-holidays-brought-forward-as-schools-adjust-academic-calendar-institutes-of-higher-learning-to-extend-home-based-learning
+2020,vacation,July mid-term break,2020-07-20,2020-07-26,https://www.moe.gov.sg/news/press-releases/20200421-mid-year-holidays-brought-forward-as-schools-adjust-academic-calendar-institutes-of-higher-learning-to-extend-home-based-learning
+2020,vacation,September,2020-09-05,2020-09-13,https://www.moe.gov.sg/news/press-releases/20190813-school-terms-and-holidays-for-2020
+2020,vacation,Year-end,2020-11-21,2020-12-31,https://www.moe.gov.sg/news/press-releases/20190813-school-terms-and-holidays-for-2020
+2020,extra,Teachers' Day,2020-09-04,2020-09-04,https://www.moe.gov.sg/news/press-releases/20190813-school-terms-and-holidays-for-2020
+2020,extra,Children's Day (primary),2020-10-09,2020-10-09,https://www.moe.gov.sg/news/press-releases/20190813-school-terms-and-holidays-for-2020
+2021,vacation,March,2021-03-13,2021-03-21,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,vacation,Mid-year,2021-05-29,2021-06-27,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,vacation,September,2021-09-04,2021-09-12,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,vacation,Year-end,2021-11-20,2021-12-31,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,extra,Youth Day school holiday,2021-07-05,2021-07-05,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,extra,Day after National Day,2021-08-10,2021-08-10,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,extra,Teachers' Day,2021-09-03,2021-09-03,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2021,extra,Children's Day (primary),2021-10-08,2021-10-08,https://www.moe.gov.sg/news/press-releases/20200817-school-terms-and-holidays-for-2021
+2022,vacation,March,2022-03-12,2022-03-20,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,vacation,Mid-year,2022-05-28,2022-06-26,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,vacation,September,2022-09-03,2022-09-11,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,vacation,Year-end,2022-11-19,2022-12-31,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,extra,Youth Day school holiday,2022-07-04,2022-07-04,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,extra,Day after National Day,2022-08-10,2022-08-10,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,extra,Teachers' Day,2022-09-02,2022-09-02,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2022,extra,Children's Day (primary),2022-10-07,2022-10-07,https://www.moe.gov.sg/news/press-releases/20210811-school-terms-and-holidays-for-2022
+2023,vacation,March,2023-03-11,2023-03-19,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,vacation,Mid-year,2023-05-27,2023-06-25,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,vacation,September,2023-09-02,2023-09-10,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,vacation,Year-end,2023-11-18,2023-12-31,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,extra,Youth Day school holiday,2023-07-03,2023-07-03,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,extra,Day after National Day,2023-08-10,2023-08-10,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,extra,Teachers' Day,2023-09-01,2023-09-01,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2023,extra,Children's Day (primary),2023-10-06,2023-10-06,https://www.moe.gov.sg/news/press-releases/20221019-school-terms-and-holidays-for-2023
+2024,vacation,March,2024-03-09,2024-03-17,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,vacation,Mid-year,2024-05-25,2024-06-23,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,vacation,September,2024-08-31,2024-09-08,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,vacation,Year-end,2024-11-16,2024-12-31,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,extra,Youth Day school holiday,2024-07-01,2024-07-01,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,extra,Teachers' Day,2024-08-30,2024-08-30,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2024,extra,Children's Day (primary),2024-10-04,2024-10-04,https://www.moe.gov.sg/news/press-releases/20230807-school-terms-and-holidays-for-2024
+2025,vacation,March,2025-03-15,2025-03-23,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,vacation,Mid-year,2025-05-31,2025-06-29,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,vacation,September,2025-09-06,2025-09-14,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,vacation,Year-end,2025-11-22,2025-12-31,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,extra,Youth Day school holiday,2025-07-07,2025-07-07,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,extra,Teachers' Day,2025-09-05,2025-09-05,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2025,extra,Children's Day (primary),2025-10-03,2025-10-03,https://www.moe.gov.sg/news/press-releases/20240812-school-terms-and-holidays-for-2025
+2026,vacation,March,2026-03-14,2026-03-22,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,vacation,Mid-year,2026-05-30,2026-06-28,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,vacation,September,2026-09-05,2026-09-13,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,vacation,Year-end,2026-11-21,2026-12-31,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,extra,Youth Day school holiday,2026-07-06,2026-07-06,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,extra,Teachers' Day,2026-09-04,2026-09-04,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026
+2026,extra,Children's Day (primary),2026-10-02,2026-10-02,https://www.moe.gov.sg/news/press-releases/20250730-school-terms-and-holidays-for-2026

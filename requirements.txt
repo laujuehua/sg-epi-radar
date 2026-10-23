@@ -1,0 +1,17 @@
+# Core pipeline
+pandas>=2.1
+numpy>=1.26
+requests>=2.31
+openpyxl>=3.1   # read CDA .xlsx files
+xlrd>=2.0       # read CDA .xls files (2023)
+rdata>=1.1      # read the Singapore contact matrices without running R scripts
+
+# Dashboard (rendered with Quarto)
+plotly>=5.20
+jupyter>=1.0
+
+# Tests
+pytest>=8.0
+
+# Optional: AI-drafted situation summary (needs ANTHROPIC_API_KEY)
+anthropic>=0.40

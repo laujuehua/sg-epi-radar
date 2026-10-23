@@ -1,0 +1,846 @@
+series,year,value
+Crude Death Rate,2024,6.0
+Infant Mortality Rate,2024,2.3
+Infant Mortality Rate - Males,2024,1.8
+Infant Mortality Rate - Females,2024,2.8
+Neonatal Mortality Rate,2024,1.4
+Perinatal Mortality Rate,2024,4.4
+Maternal Mortality Ratio,2024,5.9
+Under-5 Mortality Rate,2024,2.8
+Under-5 Mortality Rate - Males,2024,2.4
+Under-5 Mortality Rate - Females,2024,3.2
+Age-Standardised Death Rate,2024,5.3
+Total Deaths,2024,26442.0
+Resident Deaths,2024,25171.0
+Crude Death Rate,2023,6.2
+Infant Mortality Rate,2023,2.2
+Infant Mortality Rate - Males,2023,1.9
+Infant Mortality Rate - Females,2023,2.6
+Neonatal Mortality Rate,2023,1.1
+Perinatal Mortality Rate,2023,5.2
+Maternal Mortality Ratio,2023,3.0
+Under-5 Mortality Rate,2023,2.5
+Under-5 Mortality Rate - Males,2023,2.5
+Under-5 Mortality Rate - Females,2023,2.4
+Age-Standardised Death Rate,2023,5.6
+Total Deaths,2023,26888.0
+Resident Deaths,2023,25567.0
+Crude Death Rate,2022,6.3
+Infant Mortality Rate,2022,1.8
+Infant Mortality Rate - Males,2022,1.9
+Infant Mortality Rate - Females,2022,1.6
+Neonatal Mortality Rate,2022,1.1
+Perinatal Mortality Rate,2022,3.9
+Maternal Mortality Ratio,2022,2.8
+Under-5 Mortality Rate,2022,2.3
+Under-5 Mortality Rate - Males,2022,2.3
+Under-5 Mortality Rate - Females,2022,2.4
+Age-Standardised Death Rate,2022,5.9
+Total Deaths,2022,26891.0
+Resident Deaths,2022,25586.0
+Crude Death Rate,2021,5.8
+Infant Mortality Rate,2021,1.8
+Infant Mortality Rate - Males,2021,1.6
+Infant Mortality Rate - Females,2021,1.9
+Neonatal Mortality Rate,2021,1.1
+Perinatal Mortality Rate,2021,2.9
+Maternal Mortality Ratio,2021,2.6
+Under-5 Mortality Rate,2021,2.2
+Under-5 Mortality Rate - Males,2021,2.3
+Under-5 Mortality Rate - Females,2021,2.0
+Age-Standardised Death Rate,2021,5.6
+Total Deaths,2021,24292.0
+Resident Deaths,2021,23270.0
+Crude Death Rate,2020,5.2
+Infant Mortality Rate,2020,1.8
+Infant Mortality Rate - Males,2020,2.1
+Infant Mortality Rate - Females,2020,1.4
+Neonatal Mortality Rate,2020,0.8
+Perinatal Mortality Rate,2020,2.7
+Maternal Mortality Ratio,2020,0.0
+Under-5 Mortality Rate,2020,2.1
+Under-5 Mortality Rate - Males,2020,2.2
+Under-5 Mortality Rate - Females,2020,2.0
+Age-Standardised Death Rate,2020,5.2
+Total Deaths,2020,22054.0
+Resident Deaths,2020,20985.0
+Crude Death Rate,2019,5.0
+Infant Mortality Rate,2019,1.7
+Infant Mortality Rate - Males,2019,1.8
+Infant Mortality Rate - Females,2019,1.6
+Neonatal Mortality Rate,2019,0.6
+Perinatal Mortality Rate,2019,2.5
+Maternal Mortality Ratio,2019,2.5
+Under-5 Mortality Rate,2019,2.3
+Under-5 Mortality Rate - Males,2019,2.5
+Under-5 Mortality Rate - Females,2019,2.1
+Age-Standardised Death Rate,2019,5.3
+Total Deaths,2019,21446.0
+Resident Deaths,2019,20288.0
+Crude Death Rate,2018,5.0
+Infant Mortality Rate,2018,2.1
+Infant Mortality Rate - Males,2018,2.3
+Infant Mortality Rate - Females,2018,1.9
+Neonatal Mortality Rate,2018,1.3
+Perinatal Mortality Rate,2018,3.2
+Maternal Mortality Ratio,2018,10.2
+Under-5 Mortality Rate,2018,2.6
+Under-5 Mortality Rate - Males,2018,2.6
+Under-5 Mortality Rate - Females,2018,2.6
+Age-Standardised Death Rate,2018,5.5
+Total Deaths,2018,21282.0
+Resident Deaths,2018,20095.0
+Crude Death Rate,2017,5.0
+Infant Mortality Rate,2017,2.2
+Infant Mortality Rate - Males,2017,2.0
+Infant Mortality Rate - Females,2017,2.4
+Neonatal Mortality Rate,2017,1.2
+Perinatal Mortality Rate,2017,3.4
+Maternal Mortality Ratio,2017,0.0
+Under-5 Mortality Rate,2017,2.8
+Under-5 Mortality Rate - Males,2017,2.8
+Under-5 Mortality Rate - Females,2017,2.8
+Age-Standardised Death Rate,2017,5.6
+Total Deaths,2017,20905.0
+Resident Deaths,2017,19763.0
+Crude Death Rate,2016,4.8
+Infant Mortality Rate,2016,2.4
+Infant Mortality Rate - Males,2016,2.3
+Infant Mortality Rate - Females,2016,2.5
+Neonatal Mortality Rate,2016,1.4
+Perinatal Mortality Rate,2016,3.0
+Maternal Mortality Ratio,2016,4.8
+Under-5 Mortality Rate,2016,2.7
+Under-5 Mortality Rate - Males,2016,2.9
+Under-5 Mortality Rate - Females,2016,2.5
+Age-Standardised Death Rate,2016,5.6
+Total Deaths,2016,20017.0
+Resident Deaths,2016,18856.0
+Crude Death Rate,2015,4.8
+Infant Mortality Rate,2015,1.7
+Infant Mortality Rate - Males,2015,2.2
+Infant Mortality Rate - Females,2015,1.2
+Neonatal Mortality Rate,2015,0.8
+Perinatal Mortality Rate,2015,2.8
+Maternal Mortality Ratio,2015,7.1
+Under-5 Mortality Rate,2015,2.6
+Under-5 Mortality Rate - Males,2015,2.9
+Under-5 Mortality Rate - Females,2015,2.3
+Age-Standardised Death Rate,2015,5.8
+Total Deaths,2015,19862.0
+Resident Deaths,2015,18640.0
+Crude Death Rate,2014,4.7
+Infant Mortality Rate,2014,1.8
+Infant Mortality Rate - Males,2014,1.9
+Infant Mortality Rate - Females,2014,1.7
+Neonatal Mortality Rate,2014,1.1
+Perinatal Mortality Rate,2014,2.9
+Maternal Mortality Ratio,2014,2.4
+Under-5 Mortality Rate,2014,2.5
+Under-5 Mortality Rate - Males,2014,2.8
+Under-5 Mortality Rate - Females,2014,2.3
+Age-Standardised Death Rate,2014,6.0
+Total Deaths,2014,19393.0
+Resident Deaths,2014,18237.0
+Crude Death Rate,2013,4.6
+Infant Mortality Rate,2013,2.0
+Infant Mortality Rate - Males,2013,1.8
+Infant Mortality Rate - Females,2013,2.1
+Neonatal Mortality Rate,2013,1.1
+Perinatal Mortality Rate,2013,2.8
+Maternal Mortality Ratio,2013,2.5
+Under-5 Mortality Rate,2013,2.6
+Under-5 Mortality Rate - Males,2013,2.7
+Under-5 Mortality Rate - Females,2013,2.5
+Age-Standardised Death Rate,2013,6.1
+Total Deaths,2013,18938.0
+Resident Deaths,2013,17810.0
+Crude Death Rate,2012,4.5
+Infant Mortality Rate,2012,1.8
+Infant Mortality Rate - Males,2012,2.0
+Infant Mortality Rate - Females,2012,1.6
+Neonatal Mortality Rate,2012,1.1
+Perinatal Mortality Rate,2012,3.6
+Maternal Mortality Ratio,2012,2.3
+Under-5 Mortality Rate,2012,2.7
+Under-5 Mortality Rate - Males,2012,2.9
+Under-5 Mortality Rate - Females,2012,2.5
+Age-Standardised Death Rate,2012,6.2
+Total Deaths,2012,18481.0
+Resident Deaths,2012,17273.0
+Crude Death Rate,2011,4.5
+Infant Mortality Rate,2011,2.0
+Infant Mortality Rate - Males,2011,2.3
+Infant Mortality Rate - Females,2011,1.7
+Neonatal Mortality Rate,2011,1.3
+Perinatal Mortality Rate,2011,3.9
+Maternal Mortality Ratio,2011,7.6
+Under-5 Mortality Rate,2011,2.9
+Under-5 Mortality Rate - Males,2011,3.1
+Under-5 Mortality Rate - Females,2011,2.6
+Age-Standardised Death Rate,2011,6.4
+Total Deaths,2011,18027.0
+Resident Deaths,2011,16887.0
+Crude Death Rate,2010,4.4
+Infant Mortality Rate,2010,2.0
+Infant Mortality Rate - Males,2010,1.9
+Infant Mortality Rate - Females,2010,2.1
+Neonatal Mortality Rate,2010,1.1
+Perinatal Mortality Rate,2010,3.5
+Maternal Mortality Ratio,2010,2.6
+Under-5 Mortality Rate,2010,2.9
+Under-5 Mortality Rate - Males,2010,3.2
+Under-5 Mortality Rate - Females,2010,2.5
+Age-Standardised Death Rate,2010,6.5
+Total Deaths,2010,17610.0
+Resident Deaths,2010,16476.0
+Crude Death Rate,2009,4.3
+Infant Mortality Rate,2009,2.2
+Infant Mortality Rate - Males,2009,2.6
+Infant Mortality Rate - Females,2009,1.7
+Neonatal Mortality Rate,2009,1.3
+Perinatal Mortality Rate,2009,3.2
+Maternal Mortality Ratio,2009,0.0
+Under-5 Mortality Rate,2009,2.8
+Under-5 Mortality Rate - Males,2009,3.1
+Under-5 Mortality Rate - Females,2009,2.5
+Age-Standardised Death Rate,2009,6.6
+Total Deaths,2009,17101.0
+Resident Deaths,2009,16013.0
+Crude Death Rate,2008,4.4
+Infant Mortality Rate,2008,2.1
+Infant Mortality Rate - Males,2008,2.6
+Infant Mortality Rate - Females,2008,1.7
+Neonatal Mortality Rate,2008,1.3
+Perinatal Mortality Rate,2008,3.1
+Maternal Mortality Ratio,2008,7.5
+Under-5 Mortality Rate,2008,2.7
+Under-5 Mortality Rate - Males,2008,3.1
+Under-5 Mortality Rate - Females,2008,2.3
+Age-Standardised Death Rate,2008,7.0
+Total Deaths,2008,17222.0
+Resident Deaths,2008,16162.0
+Crude Death Rate,2007,4.5
+Infant Mortality Rate,2007,2.1
+Infant Mortality Rate - Males,2007,2.6
+Infant Mortality Rate - Females,2007,1.5
+Neonatal Mortality Rate,2007,1.2
+Perinatal Mortality Rate,2007,3.1
+Maternal Mortality Ratio,2007,7.6
+Under-5 Mortality Rate,2007,2.9
+Under-5 Mortality Rate - Males,2007,3.2
+Under-5 Mortality Rate - Females,2007,2.5
+Age-Standardised Death Rate,2007,7.3
+Total Deaths,2007,17140.0
+Resident Deaths,2007,16045.0
+Crude Death Rate,2006,4.4
+Infant Mortality Rate,2006,2.6
+Infant Mortality Rate - Males,2006,2.8
+Infant Mortality Rate - Females,2006,2.4
+Neonatal Mortality Rate,2006,1.7
+Perinatal Mortality Rate,2006,3.8
+Maternal Mortality Ratio,2006,10.4
+Under-5 Mortality Rate,2006,2.9
+Under-5 Mortality Rate - Males,2006,3.2
+Under-5 Mortality Rate - Females,2006,2.5
+Age-Standardised Death Rate,2006,7.3
+Total Deaths,2006,16393.0
+Resident Deaths,2006,15414.0
+Crude Death Rate,2005,4.4
+Infant Mortality Rate,2005,2.1
+Infant Mortality Rate - Males,2005,2.4
+Infant Mortality Rate - Females,2005,1.7
+Neonatal Mortality Rate,2005,1.3
+Perinatal Mortality Rate,2005,3.8
+Maternal Mortality Ratio,2005,13.3
+Under-5 Mortality Rate,2005,2.9
+Under-5 Mortality Rate - Males,2005,3.2
+Under-5 Mortality Rate - Females,2005,2.6
+Age-Standardised Death Rate,2005,7.6
+Total Deaths,2005,16215.0
+Resident Deaths,2005,15285.0
+Crude Death Rate,2004,4.4
+Infant Mortality Rate,2004,2.0
+Infant Mortality Rate - Males,2004,2.2
+Infant Mortality Rate - Females,2004,1.8
+Neonatal Mortality Rate,2004,1.1
+Perinatal Mortality Rate,2004,3.8
+Maternal Mortality Ratio,2004,5.4
+Under-5 Mortality Rate,2004,3.0
+Under-5 Mortality Rate - Males,2004,3.3
+Under-5 Mortality Rate - Females,2004,2.6
+Age-Standardised Death Rate,2004,7.8
+Total Deaths,2004,15860.0
+Resident Deaths,2004,14925.0
+Crude Death Rate,2003,4.5
+Infant Mortality Rate,2003,2.5
+Infant Mortality Rate - Males,2003,2.8
+Infant Mortality Rate - Females,2003,2.2
+Neonatal Mortality Rate,2003,1.6
+Perinatal Mortality Rate,2003,3.6
+Maternal Mortality Ratio,2003,5.3
+Under-5 Mortality Rate,2003,3.2
+Under-5 Mortality Rate - Males,2003,3.6
+Under-5 Mortality Rate - Females,2003,2.7
+Age-Standardised Death Rate,2003,8.3
+Total Deaths,2003,16036.0
+Resident Deaths,2003,15168.0
+Crude Death Rate,2002,4.4
+Infant Mortality Rate,2002,2.9
+Infant Mortality Rate - Males,2002,3.4
+Infant Mortality Rate - Females,2002,2.3
+Neonatal Mortality Rate,2002,1.6
+Perinatal Mortality Rate,2002,3.9
+Maternal Mortality Ratio,2002,12.3
+Under-5 Mortality Rate,2002,3.4
+Under-5 Mortality Rate - Males,2002,3.8
+Under-5 Mortality Rate - Females,2002,3.0
+Age-Standardised Death Rate,2002,8.2
+Total Deaths,2002,15820.0
+Resident Deaths,2002,14908.0
+Crude Death Rate,2001,4.3
+Infant Mortality Rate,2001,2.2
+Infant Mortality Rate - Males,2001,2.4
+Infant Mortality Rate - Females,2001,2.1
+Neonatal Mortality Rate,2001,1.1
+Perinatal Mortality Rate,2001,3.5
+Maternal Mortality Ratio,2001,9.6
+Under-5 Mortality Rate,2001,3.5
+Under-5 Mortality Rate - Males,2001,3.8
+Under-5 Mortality Rate - Females,2001,3.1
+Age-Standardised Death Rate,2001,8.3
+Total Deaths,2001,15367.0
+Resident Deaths,2001,14449.0
+Crude Death Rate,2000,4.5
+Infant Mortality Rate,2000,2.5
+Infant Mortality Rate - Males,2000,2.8
+Infant Mortality Rate - Females,2000,2.2
+Neonatal Mortality Rate,2000,1.5
+Perinatal Mortality Rate,2000,4.3
+Maternal Mortality Ratio,2000,17.0
+Under-5 Mortality Rate,2000,3.8
+Under-5 Mortality Rate - Males,2000,3.9
+Under-5 Mortality Rate - Females,2000,3.6
+Age-Standardised Death Rate,2000,8.8
+Total Deaths,2000,15693.0
+Resident Deaths,2000,14715.0
+Crude Death Rate,1999,4.5
+Infant Mortality Rate,1999,3.3
+Infant Mortality Rate - Males,1999,3.2
+Infant Mortality Rate - Females,1999,3.4
+Neonatal Mortality Rate,1999,1.9
+Perinatal Mortality Rate,1999,4.2
+Maternal Mortality Ratio,1999,9.2
+Under-5 Mortality Rate,1999,4.4
+Under-5 Mortality Rate - Males,1999,4.5
+Under-5 Mortality Rate - Females,1999,4.4
+Age-Standardised Death Rate,1999,9.0
+Total Deaths,1999,15516.0
+Resident Deaths,1999,14491.0
+Crude Death Rate,1998,4.6
+Infant Mortality Rate,1998,4.1
+Infant Mortality Rate - Males,1998,4.1
+Infant Mortality Rate - Females,1998,4.1
+Neonatal Mortality Rate,1998,2.4
+Perinatal Mortality Rate,1998,4.9
+Maternal Mortality Ratio,1998,13.7
+Under-5 Mortality Rate,1998,4.5
+Under-5 Mortality Rate - Males,1998,4.8
+Under-5 Mortality Rate - Females,1998,4.1
+Age-Standardised Death Rate,1998,9.3
+Total Deaths,1998,15657.0
+Resident Deaths,1998,14547.0
+Crude Death Rate,1997,4.5
+Infant Mortality Rate,1997,3.6
+Infant Mortality Rate - Males,1997,4.0
+Infant Mortality Rate - Females,1997,3.1
+Neonatal Mortality Rate,1997,2.2
+Perinatal Mortality Rate,1997,4.4
+Maternal Mortality Ratio,1997,4.2
+Under-5 Mortality Rate,1997,4.7
+Under-5 Mortality Rate - Males,1997,5.1
+Under-5 Mortality Rate - Females,1997,4.3
+Age-Standardised Death Rate,1997,9.3
+Total Deaths,1997,15305.0
+Resident Deaths,1997,14128.0
+Crude Death Rate,1996,4.7
+Infant Mortality Rate,1996,3.6
+Infant Mortality Rate - Males,1996,3.5
+Infant Mortality Rate - Females,1996,3.5
+Neonatal Mortality Rate,1996,2.2
+Perinatal Mortality Rate,1996,4.5
+Maternal Mortality Ratio,1996,4.1
+Under-5 Mortality Rate,1996,4.7
+Under-5 Mortality Rate - Males,1996,5.3
+Under-5 Mortality Rate - Females,1996,4.0
+Age-Standardised Death Rate,1996,9.8
+Total Deaths,1996,15590.0
+Resident Deaths,1996,14429.0
+Crude Death Rate,1995,4.8
+Infant Mortality Rate,1995,3.8
+Infant Mortality Rate - Males,1995,4.3
+Infant Mortality Rate - Females,1995,3.2
+Neonatal Mortality Rate,1995,2.0
+Perinatal Mortality Rate,1995,4.3
+Maternal Mortality Ratio,1995,4.1
+Under-5 Mortality Rate,1995,5.0
+Under-5 Mortality Rate - Males,1995,5.4
+Under-5 Mortality Rate - Females,1995,4.6
+Age-Standardised Death Rate,1995,10.1
+Total Deaths,1995,15569.0
+Resident Deaths,1995,14462.0
+Crude Death Rate,1994,4.7
+Infant Mortality Rate,1994,4.1
+Infant Mortality Rate - Males,1994,4.3
+Infant Mortality Rate - Females,1994,4.0
+Neonatal Mortality Rate,1994,2.4
+Perinatal Mortality Rate,1994,5.1
+Maternal Mortality Ratio,1994,6.1
+Under-5 Mortality Rate,1994,5.3
+Under-5 Mortality Rate - Males,1994,5.8
+Under-5 Mortality Rate - Females,1994,4.8
+Age-Standardised Death Rate,1994,10.0
+Total Deaths,1994,14946.0
+Resident Deaths,1994,13870.0
+Crude Death Rate,1993,4.6
+Infant Mortality Rate,1993,4.7
+Infant Mortality Rate - Males,1993,5.0
+Infant Mortality Rate - Females,1993,4.3
+Neonatal Mortality Rate,1993,3.0
+Perinatal Mortality Rate,1993,5.5
+Maternal Mortality Ratio,1993,8.0
+Under-5 Mortality Rate,1993,5.8
+Under-5 Mortality Rate - Males,1993,6.1
+Under-5 Mortality Rate - Females,1993,5.4
+Age-Standardised Death Rate,1993,10.0
+Total Deaths,1993,14461.0
+Resident Deaths,1993,13354.0
+Crude Death Rate,1992,4.7
+Infant Mortality Rate,1992,4.8
+Infant Mortality Rate - Males,1992,5.2
+Infant Mortality Rate - Females,1992,4.4
+Neonatal Mortality Rate,1992,3.0
+Perinatal Mortality Rate,1992,5.7
+Maternal Mortality Ratio,1992,4.0
+Under-5 Mortality Rate,1992,6.1
+Under-5 Mortality Rate - Males,1992,6.6
+Under-5 Mortality Rate - Females,1992,5.6
+Age-Standardised Death Rate,1992,10.2
+Total Deaths,1992,14337.0
+Resident Deaths,1992,13299.0
+Crude Death Rate,1991,4.6
+Infant Mortality Rate,1991,5.4
+Infant Mortality Rate - Males,1991,5.8
+Infant Mortality Rate - Females,1991,4.8
+Neonatal Mortality Rate,1991,3.5
+Perinatal Mortality Rate,1991,6.4
+Maternal Mortality Ratio,1991,4.1
+Under-5 Mortality Rate,1991,6.7
+Under-5 Mortality Rate - Males,1991,7.1
+Under-5 Mortality Rate - Females,1991,6.1
+Age-Standardised Death Rate,1991,10.3
+Total Deaths,1991,13876.0
+Resident Deaths,1991,12912.0
+Crude Death Rate,1990,4.7
+Infant Mortality Rate,1990,6.6
+Infant Mortality Rate - Males,1990,7.1
+Infant Mortality Rate - Females,1990,6.2
+Neonatal Mortality Rate,1990,4.7
+Perinatal Mortality Rate,1990,7.3
+Maternal Mortality Ratio,1990,2.0
+Under-5 Mortality Rate,1990,7.5
+Under-5 Mortality Rate - Males,1990,7.9
+Under-5 Mortality Rate - Females,1990,7.1
+Age-Standardised Death Rate,1990,10.5
+Total Deaths,1990,13891.0
+Resident Deaths,1990,12932.0
+Crude Death Rate,1989,4.9
+Infant Mortality Rate,1989,6.3
+Infant Mortality Rate - Males,1989,6.5
+Infant Mortality Rate - Females,1989,6.0
+Neonatal Mortality Rate,1989,4.6
+Perinatal Mortality Rate,1989,7.9
+Maternal Mortality Ratio,1989,4.2
+Under-5 Mortality Rate,1989,7.3
+Under-5 Mortality Rate - Males,1989,7.6
+Under-5 Mortality Rate - Females,1989,7.0
+Age-Standardised Death Rate,1989,10.7
+Total Deaths,1989,14069.0
+Resident Deaths,1989,13097.0
+Crude Death Rate,1988,4.9
+Infant Mortality Rate,1988,5.5
+Infant Mortality Rate - Males,1988,5.6
+Infant Mortality Rate - Females,1988,5.4
+Neonatal Mortality Rate,1988,4.6
+Perinatal Mortality Rate,1988,7.3
+Maternal Mortality Ratio,1988,11.3
+Under-5 Mortality Rate,1988,7.2
+Under-5 Mortality Rate - Males,1988,7.5
+Under-5 Mortality Rate - Females,1988,7.0
+Age-Standardised Death Rate,1988,10.8
+Total Deaths,1988,13690.0
+Resident Deaths,1988,12672.0
+Crude Death Rate,1987,4.7
+Infant Mortality Rate,1987,5.5
+Infant Mortality Rate - Males,1987,6.0
+Infant Mortality Rate - Females,1987,4.9
+Neonatal Mortality Rate,1987,5.6
+Perinatal Mortality Rate,1987,9.1
+Maternal Mortality Ratio,1987,6.9
+Under-5 Mortality Rate,1987,7.7
+Under-5 Mortality Rate - Males,1987,8.1
+Under-5 Mortality Rate - Females,1987,7.2
+Age-Standardised Death Rate,1987,10.7
+Total Deaths,1987,13173.0
+Resident Deaths,1987,12091.0
+Crude Death Rate,1986,4.6
+Infant Mortality Rate,1986,6.1
+Infant Mortality Rate - Males,1986,6.1
+Infant Mortality Rate - Females,1986,6.0
+Neonatal Mortality Rate,1986,6.5
+Perinatal Mortality Rate,1986,10.2
+Maternal Mortality Ratio,1986,13.0
+Under-5 Mortality Rate,1986,7.6
+Under-5 Mortality Rate - Males,1986,8.2
+Under-5 Mortality Rate - Females,1986,7.1
+Age-Standardised Death Rate,1986,10.8
+Total Deaths,1986,12821.0
+Resident Deaths,1986,11708.0
+Crude Death Rate,1985,4.9
+Infant Mortality Rate,1985,7.6
+Infant Mortality Rate - Males,1985,8.3
+Infant Mortality Rate - Females,1985,6.8
+Neonatal Mortality Rate,1985,7.0
+Perinatal Mortality Rate,1985,10.8
+Maternal Mortality Ratio,1985,4.7
+Under-5 Mortality Rate,1985,8.2
+Under-5 Mortality Rate - Males,1985,8.7
+Under-5 Mortality Rate - Females,1985,7.6
+Age-Standardised Death Rate,1985,11.7
+Total Deaths,1985,13348.0
+Resident Deaths,1985,12190.0
+Crude Death Rate,1984,4.8
+Infant Mortality Rate,1984,7.3
+Infant Mortality Rate - Males,1984,7.5
+Infant Mortality Rate - Females,1984,7.0
+Neonatal Mortality Rate,1984,6.2
+Perinatal Mortality Rate,1984,10.4
+Maternal Mortality Ratio,1984,12.0
+Under-5 Mortality Rate,1984,9.9
+Under-5 Mortality Rate - Males,1984,10.6
+Under-5 Mortality Rate - Females,1984,9.2
+Age-Standardised Death Rate,1984,11.8
+Total Deaths,1984,13162.0
+Resident Deaths,1984,11849.0
+Crude Death Rate,1983,5.0
+Infant Mortality Rate,1983,8.8
+Infant Mortality Rate - Males,1983,9.7
+Infant Mortality Rate - Females,1983,7.9
+Neonatal Mortality Rate,1983,6.6
+Perinatal Mortality Rate,1983,10.6
+Maternal Mortality Ratio,1983,14.8
+Under-5 Mortality Rate,1983,10.4
+Under-5 Mortality Rate - Males,1983,11.5
+Under-5 Mortality Rate - Females,1983,9.2
+Age-Standardised Death Rate,1983,12.6
+Total Deaths,1983,13321.0
+Resident Deaths,1983,12070.0
+Crude Death Rate,1982,4.9
+Infant Mortality Rate,1982,9.6
+Infant Mortality Rate - Males,1982,11.6
+Infant Mortality Rate - Females,1982,7.3
+Neonatal Mortality Rate,1982,8.2
+Perinatal Mortality Rate,1982,13.0
+Maternal Mortality Ratio,1982,11.7
+Under-5 Mortality Rate,1982,11.0
+Under-5 Mortality Rate - Males,1982,12.1
+Under-5 Mortality Rate - Females,1982,9.8
+Age-Standardised Death Rate,1982,12.5
+Total Deaths,1982,12896.0
+Resident Deaths,1982,11671.0
+Crude Death Rate,1981,4.9
+Infant Mortality Rate,1981,8.2
+Infant Mortality Rate - Males,1981,9.0
+Infant Mortality Rate - Females,1981,7.4
+Neonatal Mortality Rate,1981,7.6
+Perinatal Mortality Rate,1981,12.6
+Maternal Mortality Ratio,1981,4.7
+Under-5 Mortality Rate,1981,10.9
+Under-5 Mortality Rate - Males,1981,12.1
+Under-5 Mortality Rate - Females,1981,9.7
+Age-Standardised Death Rate,1981,12.8
+Total Deaths,1981,12863.0
+Resident Deaths,1981,11495.0
+Crude Death Rate,1980,4.9
+Infant Mortality Rate,1980,8.0
+Infant Mortality Rate - Males,1980,8.3
+Infant Mortality Rate - Females,1980,7.7
+Neonatal Mortality Rate,1980,8.9
+Perinatal Mortality Rate,1980,13.4
+Maternal Mortality Ratio,1980,4.9
+Under-5 Mortality Rate,1980,11.6
+Under-5 Mortality Rate - Males,1980,12.1
+Under-5 Mortality Rate - Females,1980,11.1
+Age-Standardised Death Rate,1980,13.0
+Total Deaths,1980,12505.0
+Resident Deaths,1980,11205.0
+Crude Death Rate,1979,5.2
+Infant Mortality Rate,1979,13.2
+Infant Mortality Rate - Males,1979,14.3
+Infant Mortality Rate - Females,1979,12.0
+Neonatal Mortality Rate,1979,9.8
+Perinatal Mortality Rate,1979,14.9
+Maternal Mortality Ratio,1979,7.4
+Under-5 Mortality Rate,1979,
+Under-5 Mortality Rate - Males,1979,
+Under-5 Mortality Rate - Females,1979,
+Age-Standardised Death Rate,1979,14.0
+Total Deaths,1979,12468.0
+Resident Deaths,1979,
+Crude Death Rate,1978,5.1
+Infant Mortality Rate,1978,12.6
+Infant Mortality Rate - Males,1978,14.9
+Infant Mortality Rate - Females,1978,10.1
+Neonatal Mortality Rate,1978,9.7
+Perinatal Mortality Rate,1978,15.2
+Maternal Mortality Ratio,1978,20.3
+Under-5 Mortality Rate,1978,
+Under-5 Mortality Rate - Males,1978,
+Under-5 Mortality Rate - Females,1978,
+Age-Standardised Death Rate,1978,13.8
+Total Deaths,1978,12065.0
+Resident Deaths,1978,
+Crude Death Rate,1977,5.1
+Infant Mortality Rate,1977,12.4
+Infant Mortality Rate - Males,1977,14.6
+Infant Mortality Rate - Females,1977,9.9
+Neonatal Mortality Rate,1977,9.3
+Perinatal Mortality Rate,1977,16.1
+Maternal Mortality Ratio,1977,15.6
+Under-5 Mortality Rate,1977,
+Under-5 Mortality Rate - Males,1977,
+Under-5 Mortality Rate - Females,1977,
+Age-Standardised Death Rate,1977,14.3
+Total Deaths,1977,11955.0
+Resident Deaths,1977,
+Crude Death Rate,1976,5.1
+Infant Mortality Rate,1976,11.6
+Infant Mortality Rate - Males,1976,13.7
+Infant Mortality Rate - Females,1976,9.4
+Neonatal Mortality Rate,1976,8.3
+Perinatal Mortality Rate,1976,14.7
+Maternal Mortality Ratio,1976,14.0
+Under-5 Mortality Rate,1976,
+Under-5 Mortality Rate - Males,1976,
+Under-5 Mortality Rate - Females,1976,
+Age-Standardised Death Rate,1976,14.3
+Total Deaths,1976,11648.0
+Resident Deaths,1976,
+Crude Death Rate,1975,5.1
+Infant Mortality Rate,1975,13.9
+Infant Mortality Rate - Males,1975,15.9
+Infant Mortality Rate - Females,1975,11.6
+Neonatal Mortality Rate,1975,10.2
+Perinatal Mortality Rate,1975,16.6
+Maternal Mortality Ratio,1975,30.0
+Under-5 Mortality Rate,1975,18.0
+Under-5 Mortality Rate - Males,1975,20.4
+Under-5 Mortality Rate - Females,1975,15.3
+Age-Standardised Death Rate,1975,14.2
+Total Deaths,1975,11447.0
+Resident Deaths,1975,
+Crude Death Rate,1974,5.2
+Infant Mortality Rate,1974,16.8
+Infant Mortality Rate - Males,1974,19.7
+Infant Mortality Rate - Females,1974,13.6
+Neonatal Mortality Rate,1974,12.1
+Perinatal Mortality Rate,1974,18.1
+Maternal Mortality Ratio,1974,18.5
+Under-5 Mortality Rate,1974,
+Under-5 Mortality Rate - Males,1974,
+Under-5 Mortality Rate - Females,1974,
+Age-Standardised Death Rate,1974,14.8
+Total Deaths,1974,11674.0
+Resident Deaths,1974,
+Crude Death Rate,1973,5.4
+Infant Mortality Rate,1973,20.3
+Infant Mortality Rate - Males,1973,23.7
+Infant Mortality Rate - Females,1973,16.4
+Neonatal Mortality Rate,1973,14.3
+Perinatal Mortality Rate,1973,20.0
+Maternal Mortality Ratio,1973,14.5
+Under-5 Mortality Rate,1973,
+Under-5 Mortality Rate - Males,1973,
+Under-5 Mortality Rate - Females,1973,
+Age-Standardised Death Rate,1973,15.1
+Total Deaths,1973,11920.0
+Resident Deaths,1973,
+Crude Death Rate,1972,5.4
+Infant Mortality Rate,1972,19.2
+Infant Mortality Rate - Males,1972,22.6
+Infant Mortality Rate - Females,1972,15.6
+Neonatal Mortality Rate,1972,14.4
+Perinatal Mortality Rate,1972,20.5
+Maternal Mortality Ratio,1972,36.2
+Under-5 Mortality Rate,1972,
+Under-5 Mortality Rate - Males,1972,
+Under-5 Mortality Rate - Females,1972,
+Age-Standardised Death Rate,1972,15.1
+Total Deaths,1972,11522.0
+Resident Deaths,1972,
+Crude Death Rate,1971,5.4
+Infant Mortality Rate,1971,20.1
+Infant Mortality Rate - Males,1971,22.5
+Infant Mortality Rate - Females,1971,17.6
+Neonatal Mortality Rate,1971,14.0
+Perinatal Mortality Rate,1971,21.0
+Maternal Mortality Ratio,1971,21.2
+Under-5 Mortality Rate,1971,
+Under-5 Mortality Rate - Males,1971,
+Under-5 Mortality Rate - Females,1971,
+Age-Standardised Death Rate,1971,15.5
+Total Deaths,1971,11329.0
+Resident Deaths,1971,
+Crude Death Rate,1970,5.2
+Infant Mortality Rate,1970,20.5
+Infant Mortality Rate - Males,1970,22.2
+Infant Mortality Rate - Females,1970,18.7
+Neonatal Mortality Rate,1970,14.6
+Perinatal Mortality Rate,1970,21.5
+Maternal Mortality Ratio,1970,32.7
+Under-5 Mortality Rate,1970,25.3
+Under-5 Mortality Rate - Males,1970,27.6
+Under-5 Mortality Rate - Females,1970,22.7
+Age-Standardised Death Rate,1970,15.5
+Total Deaths,1970,10717.0
+Resident Deaths,1970,
+Crude Death Rate,1969,5.0
+Infant Mortality Rate,1969,20.9
+Infant Mortality Rate - Males,1969,23.3
+Infant Mortality Rate - Females,1969,18.2
+Neonatal Mortality Rate,1969,14.5
+Perinatal Mortality Rate,1969,21.7
+Maternal Mortality Ratio,1969,38.1
+Under-5 Mortality Rate,1969,
+Under-5 Mortality Rate - Males,1969,
+Under-5 Mortality Rate - Females,1969,
+Age-Standardised Death Rate,1969,16.4
+Total Deaths,1969,10224.0
+Resident Deaths,1969,
+Crude Death Rate,1968,5.5
+Infant Mortality Rate,1968,23.4
+Infant Mortality Rate - Males,1968,25.5
+Infant Mortality Rate - Females,1968,21.0
+Neonatal Mortality Rate,1968,15.9
+Perinatal Mortality Rate,1968,23.2
+Maternal Mortality Ratio,1968,40.2
+Under-5 Mortality Rate,1968,
+Under-5 Mortality Rate - Males,1968,
+Under-5 Mortality Rate - Females,1968,
+Age-Standardised Death Rate,1968,17.9
+Total Deaths,1968,10982.0
+Resident Deaths,1968,
+Crude Death Rate,1967,5.3
+Infant Mortality Rate,1967,24.8
+Infant Mortality Rate - Males,1967,27.2
+Infant Mortality Rate - Females,1967,22.1
+Neonatal Mortality Rate,1967,16.7
+Perinatal Mortality Rate,1967,24.4
+Maternal Mortality Ratio,1967,31.6
+Under-5 Mortality Rate,1967,
+Under-5 Mortality Rate - Males,1967,
+Under-5 Mortality Rate - Females,1967,
+Age-Standardised Death Rate,1967,17.8
+Total Deaths,1967,10523.0
+Resident Deaths,1967,
+Crude Death Rate,1966,5.4
+Infant Mortality Rate,1966,25.8
+Infant Mortality Rate - Males,1966,28.3
+Infant Mortality Rate - Females,1966,23.1
+Neonatal Mortality Rate,1966,16.6
+Perinatal Mortality Rate,1966,24.6
+Maternal Mortality Ratio,1966,49.4
+Under-5 Mortality Rate,1966,
+Under-5 Mortality Rate - Males,1966,
+Under-5 Mortality Rate - Females,1966,
+Age-Standardised Death Rate,1966,17.5
+Total Deaths,1966,10444.0
+Resident Deaths,1966,
+Crude Death Rate,1965,5.4
+Infant Mortality Rate,1965,26.3
+Infant Mortality Rate - Males,1965,30.5
+Infant Mortality Rate - Females,1965,21.8
+Neonatal Mortality Rate,1965,17.9
+Perinatal Mortality Rate,1965,25.5
+Maternal Mortality Ratio,1965,39.5
+Under-5 Mortality Rate,1965,34.6
+Under-5 Mortality Rate - Males,1965,38.2
+Under-5 Mortality Rate - Females,1965,30.7
+Age-Standardised Death Rate,1965,17.7
+Total Deaths,1965,10263.0
+Resident Deaths,1965,
+Crude Death Rate,1964,5.7
+Infant Mortality Rate,1964,29.9
+Infant Mortality Rate - Males,1964,33.6
+Infant Mortality Rate - Females,1964,25.8
+Neonatal Mortality Rate,1964,19.6
+Perinatal Mortality Rate,1964,26.1
+Maternal Mortality Ratio,1964,41.2
+Under-5 Mortality Rate,1964,
+Under-5 Mortality Rate - Males,1964,
+Under-5 Mortality Rate - Females,1964,
+Age-Standardised Death Rate,1964,17.6
+Total Deaths,1964,10434.0
+Resident Deaths,1964,
+Crude Death Rate,1963,5.6
+Infant Mortality Rate,1963,28.1
+Infant Mortality Rate - Males,1963,32.5
+Infant Mortality Rate - Females,1963,23.5
+Neonatal Mortality Rate,1963,18.4
+Perinatal Mortality Rate,1963,26.4
+Maternal Mortality Ratio,1963,35.3
+Under-5 Mortality Rate,1963,
+Under-5 Mortality Rate - Males,1963,
+Under-5 Mortality Rate - Females,1963,
+Age-Standardised Death Rate,1963,17.7
+Total Deaths,1963,10138.0
+Resident Deaths,1963,
+Crude Death Rate,1962,5.8
+Infant Mortality Rate,1962,31.2
+Infant Mortality Rate - Males,1962,36.3
+Infant Mortality Rate - Females,1962,25.9
+Neonatal Mortality Rate,1962,19.1
+Perinatal Mortality Rate,1962,26.7
+Maternal Mortality Ratio,1962,39.0
+Under-5 Mortality Rate,1962,
+Under-5 Mortality Rate - Males,1962,
+Under-5 Mortality Rate - Females,1962,
+Age-Standardised Death Rate,1962,17.6
+Total Deaths,1962,10178.0
+Resident Deaths,1962,
+Crude Death Rate,1961,5.9
+Infant Mortality Rate,1961,32.3
+Infant Mortality Rate - Males,1961,35.7
+Infant Mortality Rate - Females,1961,28.7
+Neonatal Mortality Rate,1961,17.7
+Perinatal Mortality Rate,1961,26.2
+Maternal Mortality Ratio,1961,40.0
+Under-5 Mortality Rate,1961,
+Under-5 Mortality Rate - Males,1961,
+Under-5 Mortality Rate - Females,1961,
+Age-Standardised Death Rate,1961,17.5
+Total Deaths,1961,10027.0
+Resident Deaths,1961,
+Crude Death Rate,1960,6.2
+Infant Mortality Rate,1960,34.9
+Infant Mortality Rate - Males,1960,37.9
+Infant Mortality Rate - Females,1960,31.7
+Neonatal Mortality Rate,1960,17.7
+Perinatal Mortality Rate,1960,27.9
+Maternal Mortality Ratio,1960,45.3
+Under-5 Mortality Rate,1960,45.9
+Under-5 Mortality Rate - Males,1960,49.5
+Under-5 Mortality Rate - Females,1960,41.9
+Age-Standardised Death Rate,1960,17.9
+Total Deaths,1960,10210.0
+Resident Deaths,1960,

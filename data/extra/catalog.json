@@ -1,0 +1,1177 @@
+{
+  "generated_at": "2026-10-22T12:44:56+00:00",
+  "datasets": [
+    {
+      "id": "weekly_notifications",
+      "title": "Weekly disease notifications",
+      "family": "Surveillance",
+      "units": "Notified cases per week",
+      "note": "Dates use Singapore epidemiological weeks; unavailable counts remain missing.",
+      "rows": 27595,
+      "columns": [
+        "disease",
+        "year",
+        "week",
+        "week_start",
+        "cases",
+        "imputed_zero",
+        "missing_observation"
+      ],
+      "missing_values": {
+        "disease": 0,
+        "year": 0,
+        "week": 0,
+        "week_start": 0,
+        "cases": 1,
+        "imputed_zero": 0,
+        "missing_observation": 0
+      },
+      "coverage_start": "2012-01-01",
+      "coverage_through": "2026-10-11",
+      "sha256": "b715b3a827932b0157da751f24a70c0b5eb3407f9b47f0c45d7c3d236a77ab09",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/weekly_notifications.csv"
+    },
+    {
+      "id": "polyclinic_attendances",
+      "title": "Polyclinic attendances",
+      "family": "Surveillance",
+      "units": "Average attendances per day",
+      "note": "Attendances are daily averages within each reporting week, not weekly totals.",
+      "rows": 3547,
+      "columns": [
+        "disease",
+        "year",
+        "week",
+        "week_start",
+        "avg_daily_attendances",
+        "imputed_zero",
+        "missing_observation"
+      ],
+      "missing_values": {
+        "disease": 0,
+        "year": 0,
+        "week": 0,
+        "week_start": 0,
+        "avg_daily_attendances": 0,
+        "imputed_zero": 0,
+        "missing_observation": 0
+      },
+      "coverage_start": "2012-01-01",
+      "coverage_through": "2026-10-11",
+      "sha256": "7d28a74039f68ffa271189167a38c5f495a90a6b450231a94ad49eece83b1b86",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/polyclinic_attendances.csv"
+    },
+    {
+      "id": "psi_daily",
+      "title": "Daily PSI",
+      "family": "Environment",
+      "units": "PSI index",
+      "note": "Maximum is the daily peak across hourly regional maxima; mean averages hourly regional means. Partial days are flagged by hour counts.",
+      "rows": 4588,
+      "columns": [
+        "date",
+        "psi_daily_max",
+        "psi_daily_mean",
+        "hours_unhealthy",
+        "hours_reported",
+        "hours_all_regions"
+      ],
+      "missing_values": {
+        "date": 0,
+        "psi_daily_max": 0,
+        "psi_daily_mean": 0,
+        "hours_unhealthy": 0,
+        "hours_reported": 0,
+        "hours_all_regions": 0
+      },
+      "coverage_start": "2014-04-01",
+      "coverage_through": "2026-10-22",
+      "sha256": "591117a20d75a68c64f09061782d33b6b06efabc657e74a8f27547ec1c3194a1",
+      "curated": false,
+      "quality_notes": [
+        "25 conflicting overlapping PSI region-hours: historical bulk observations take priority; both raw sources retained."
+      ],
+      "included_in_dashboard_views": false,
+      "path": "processed/psi_daily.csv"
+    },
+    {
+      "id": "weather_daily",
+      "title": "Changi daily weather",
+      "family": "Environment",
+      "units": "Rainfall mm; temperature \u00b0C",
+      "note": "One station (Changi S24); unavailable observations remain missing.",
+      "rows": 5387,
+      "columns": [
+        "date",
+        "rainfall_mm",
+        "mean_temperature_c",
+        "max_temperature_c",
+        "min_temperature_c"
+      ],
+      "missing_values": {
+        "date": 0,
+        "rainfall_mm": 0,
+        "mean_temperature_c": 0,
+        "max_temperature_c": 0,
+        "min_temperature_c": 0
+      },
+      "coverage_start": "2012-01-01",
+      "coverage_through": "2026-09-30",
+      "sha256": "0ec9eafe875ba664e68b2ed15bb95ea53d7e5435b71f1fd2e508d37b9443fa56",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/weather_daily.csv"
+    },
+    {
+      "id": "school_holidays",
+      "title": "School calendar",
+      "family": "Calendar",
+      "units": "Dated periods",
+      "note": "Curated reference snapshot through 2026; some extra holidays apply specifically to primary schools. New years require review.",
+      "rows": 88,
+      "columns": [
+        "year",
+        "type",
+        "name",
+        "start_date",
+        "end_date",
+        "source",
+        "days"
+      ],
+      "missing_values": {
+        "year": 0,
+        "type": 0,
+        "name": 0,
+        "start_date": 0,
+        "end_date": 0,
+        "source": 0,
+        "days": 0
+      },
+      "coverage_start": "2012-03-10",
+      "coverage_through": "2026-12-31",
+      "sha256": "c887b64f347b9ace5357809c623882f31bf1222ba3a0ee73579577d1e73494b6",
+      "curated": true,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/school_holidays.csv"
+    },
+    {
+      "id": "public_holidays",
+      "title": "Public holidays",
+      "family": "Calendar",
+      "units": "Dates",
+      "note": "MOM current data plus curated legacy dates and two documented observed-day reconciliations.",
+      "rows": 209,
+      "columns": [
+        "date",
+        "holiday",
+        "source"
+      ],
+      "missing_values": {
+        "date": 0,
+        "holiday": 0,
+        "source": 0
+      },
+      "coverage_start": "2012-01-01",
+      "coverage_through": "2027-12-25",
+      "sha256": "fbde46edb3376358580baa2817b72e4062207a3f2ec656a726206d9c8d3dd3cb",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/public_holidays.csv"
+    },
+    {
+      "id": "weekly_covariates",
+      "title": "Weekly environment and calendar context",
+      "family": "Context",
+      "units": "Mixed units; see columns",
+      "note": "PSI mean uses regional means, unlike the main dashboard's mean of daily peak PSI. Calendar coverage is explicit; no future school dates are invented.",
+      "rows": 773,
+      "columns": [
+        "week_start",
+        "psi_mean",
+        "psi_max",
+        "psi_days_unhealthy",
+        "psi_days_reported",
+        "rainfall_mm",
+        "rain_days_reported",
+        "mean_temperature_c",
+        "public_holiday_weekdays",
+        "school_closed_weekdays",
+        "school_closure",
+        "week_end",
+        "epi_week",
+        "school_holiday_week",
+        "school_calendar_available",
+        "relative_humidity_pct"
+      ],
+      "missing_values": {
+        "week_start": 0,
+        "psi_mean": 117,
+        "psi_max": 117,
+        "psi_days_unhealthy": 0,
+        "psi_days_reported": 0,
+        "rainfall_mm": 3,
+        "rain_days_reported": 0,
+        "mean_temperature_c": 3,
+        "public_holiday_weekdays": 0,
+        "school_closed_weekdays": 0,
+        "school_closure": 0,
+        "week_end": 0,
+        "epi_week": 0,
+        "school_holiday_week": 0,
+        "school_calendar_available": 0,
+        "relative_humidity_pct": 3
+      },
+      "coverage_start": "2012-01-01",
+      "coverage_through": "2026-10-18",
+      "sha256": "0a00c45aaffe4a7bb4e1135ad400912cbc5dff4c09520752805191714562a459",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/weekly_covariates.csv"
+    },
+    {
+      "id": "population_by_age",
+      "title": "Population by age",
+      "family": "Population",
+      "units": "People; resident share 0\u20131",
+      "note": "Resident age groups and total population have different denominators. Repeated total-population columns must not be summed over ages.",
+      "rows": 285,
+      "columns": [
+        "year",
+        "residents",
+        "age_group",
+        "resident_share",
+        "total_0_14",
+        "total_15_64",
+        "total_65_plus",
+        "total_population"
+      ],
+      "missing_values": {
+        "year": 0,
+        "residents": 0,
+        "age_group": 0,
+        "resident_share": 0,
+        "total_0_14": 0,
+        "total_15_64": 0,
+        "total_65_plus": 0,
+        "total_population": 0
+      },
+      "coverage_start": "2012",
+      "coverage_through": "2026",
+      "sha256": "db753d6cd6de0eecac5068adcb61b3a0c211d7c89c2a16ad753751649970203a",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/population_by_age.csv"
+    },
+    {
+      "id": "contact_matrix_singapore",
+      "title": "Singapore contact matrices",
+      "family": "Contacts",
+      "units": "Contacts per person per day",
+      "note": "Prem et al. synthetic matrices, 16 age groups and five settings. Rows and columns are age groups; these are modelled estimates.",
+      "rows": 1280,
+      "columns": [
+        "setting",
+        "age_group",
+        "contact_age_group",
+        "contacts_per_day"
+      ],
+      "missing_values": {
+        "setting": 0,
+        "age_group": 0,
+        "contact_age_group": 0,
+        "contacts_per_day": 0
+      },
+      "coverage_start": null,
+      "coverage_through": null,
+      "sha256": "5ea4edf95553c9cb74428e33ff8750da07f99ed82edefa94c55f31e9197f633c",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/contact_matrix_singapore.csv"
+    },
+    {
+      "id": "vaccination_coverage",
+      "title": "Influenza vaccination survey coverage",
+      "family": "Vaccination",
+      "units": "Self-reported coverage %",
+      "note": "Curated NPHS values for specific age groups and survey years. No interpolation or extrapolation; new releases require review.",
+      "rows": 6,
+      "columns": [
+        "year",
+        "age_group",
+        "coverage_pct",
+        "source",
+        "source_url"
+      ],
+      "missing_values": {
+        "year": 0,
+        "age_group": 0,
+        "coverage_pct": 0,
+        "source": 0,
+        "source_url": 0
+      },
+      "coverage_start": "2019",
+      "coverage_through": "2024",
+      "sha256": "6d5bbccec00d7b24ee147b97e99ee6365931553e738c62abf7f09413346777e9",
+      "curated": true,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/vaccination_coverage.csv"
+    },
+    {
+      "id": "visitor_arrivals_monthly",
+      "title": "Monthly visitor arrivals",
+      "family": "Travel",
+      "units": "Arrivals per month",
+      "note": "Totals, regions and countries overlap; do not sum across hierarchy levels.",
+      "rows": 13888,
+      "columns": [
+        "month",
+        "level",
+        "region",
+        "place",
+        "arrivals"
+      ],
+      "missing_values": {
+        "month": 0,
+        "level": 0,
+        "region": 224,
+        "place": 0,
+        "arrivals": 0
+      },
+      "coverage_start": "2008-01-01",
+      "coverage_through": "2026-08-01",
+      "sha256": "47293bdc43fdb351d8604ad1640e91b7df60c2c401739ba634d5a7448bcfaa38",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/visitor_arrivals_monthly.csv"
+    },
+    {
+      "id": "deaths_respiratory",
+      "title": "Respiratory deaths",
+      "family": "Mortality",
+      "units": "Deaths by year and age",
+      "note": "Annual all-age totals and age-specific strata overlap. Influenza and pneumonia are separate ICD categories.",
+      "rows": 27,
+      "columns": [
+        "year",
+        "cause",
+        "deaths",
+        "age_group"
+      ],
+      "missing_values": {
+        "year": 0,
+        "cause": 0,
+        "deaths": 0,
+        "age_group": 0
+      },
+      "coverage_start": "2022",
+      "coverage_through": "2024",
+      "sha256": "3a8b8f08e2c94654a9367f8c3478a9ed21a534549ab5166c481242397c81e665",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/deaths_respiratory.csv"
+    },
+    {
+      "id": "deaths_monthly",
+      "title": "Monthly total deaths",
+      "family": "Mortality",
+      "units": "Deaths per month",
+      "note": "All causes; not a direct influenza-attributable mortality estimate.",
+      "rows": 798,
+      "columns": [
+        "month",
+        "deaths"
+      ],
+      "missing_values": {
+        "month": 0,
+        "deaths": 0
+      },
+      "coverage_start": "1960-01-01",
+      "coverage_through": "2026-06-01",
+      "sha256": "3b65324881e19dd5e21d729295af4643fd205e4f47fd16aaa4ba7b2778170c05",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/deaths_monthly.csv"
+    },
+    {
+      "id": "flunet_weekly_by_source",
+      "title": "FluNet by country and reporting source",
+      "family": "Influenza",
+      "units": "Tested and positive specimens",
+      "note": "Keeps sentinel/non-sentinel/undefined reporting sources separate. Positives are specimens, not all population infections.",
+      "rows": 10189,
+      "columns": [
+        "country",
+        "country_code",
+        "week_start",
+        "origin_source",
+        "tested",
+        "inf_a",
+        "a_h1n1pdm09",
+        "a_h3",
+        "inf_b",
+        "pct_positive_a",
+        "epi_week"
+      ],
+      "missing_values": {
+        "country": 0,
+        "country_code": 0,
+        "week_start": 0,
+        "origin_source": 0,
+        "tested": 173,
+        "inf_a": 903,
+        "a_h1n1pdm09": 1648,
+        "a_h3": 286,
+        "inf_b": 275,
+        "pct_positive_a": 1180,
+        "epi_week": 0
+      },
+      "coverage_start": "1996-12-22",
+      "coverage_through": "2026-10-11",
+      "sha256": "89cc0cd9c9691f6533f81dff80b5fe77d1beda553a06f0f84e08f45e172aa099",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/flunet_weekly_by_source.csv"
+    },
+    {
+      "id": "flunet_singapore_sentinel",
+      "title": "Singapore sentinel influenza",
+      "family": "Influenza",
+      "units": "Tested and positive specimens; positivity %",
+      "note": "Consistent SENTINEL source only; positivity is unavailable when the tested denominator is zero or missing.",
+      "rows": 917,
+      "columns": [
+        "country",
+        "country_code",
+        "week_start",
+        "origin_source",
+        "tested",
+        "inf_a",
+        "a_h1n1pdm09",
+        "a_h3",
+        "inf_b",
+        "pct_positive_a",
+        "epi_week"
+      ],
+      "missing_values": {
+        "country": 0,
+        "country_code": 0,
+        "week_start": 0,
+        "origin_source": 0,
+        "tested": 16,
+        "inf_a": 3,
+        "a_h1n1pdm09": 23,
+        "a_h3": 3,
+        "inf_b": 0,
+        "pct_positive_a": 19,
+        "epi_week": 0
+      },
+      "coverage_start": "2008-11-09",
+      "coverage_through": "2026-10-11",
+      "sha256": "99fc17e88ddf0aae4570b24df939057888b9e5ea02cdf96b784faf8a5f9c810e",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/flunet_singapore_sentinel.csv"
+    },
+    {
+      "id": "flunet_southeast_asia_weekly",
+      "title": "Neighbouring-country influenza",
+      "family": "Influenza",
+      "units": "Specimens aggregated across reported sources",
+      "note": "Source totals are combined as in the extracted recipe; source composition can change and country ascertainment differs.",
+      "rows": 7967,
+      "columns": [
+        "country",
+        "country_code",
+        "week_start",
+        "tested",
+        "inf_a",
+        "a_h1n1pdm09",
+        "a_h3",
+        "inf_b",
+        "sources",
+        "pct_positive_a",
+        "epi_week"
+      ],
+      "missing_values": {
+        "country": 0,
+        "country_code": 0,
+        "week_start": 0,
+        "tested": 139,
+        "inf_a": 266,
+        "a_h1n1pdm09": 1415,
+        "a_h3": 190,
+        "inf_b": 148,
+        "sources": 0,
+        "pct_positive_a": 399,
+        "epi_week": 0
+      },
+      "coverage_start": "1996-12-22",
+      "coverage_through": "2026-10-04",
+      "sha256": "5fb8d51d3ff72ce5cf047b97ce07ab474d3fcb13c2350100941185cc2909ab6a",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/flunet_southeast_asia_weekly.csv"
+    },
+    {
+      "id": "relative_humidity_monthly",
+      "title": "Monthly relative humidity",
+      "family": "Environment",
+      "units": "Relative humidity %",
+      "note": "Monthly Changi mean; not daily humidity.",
+      "rows": 537,
+      "columns": [
+        "month",
+        "relative_humidity_pct"
+      ],
+      "missing_values": {
+        "month": 0,
+        "relative_humidity_pct": 0
+      },
+      "coverage_start": "1982-01-01",
+      "coverage_through": "2026-09-01",
+      "sha256": "5d15391beff80fb5c3a79f9465c3bbe796cacfcfaf74662ba5d4c6840fda55f3",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/relative_humidity_monthly.csv"
+    },
+    {
+      "id": "deaths_rates_annual",
+      "title": "Annual deaths and death-rate series",
+      "family": "Mortality",
+      "units": "Series-specific counts/rates",
+      "note": "Preserves the original series labels; rates and counts have different units.",
+      "rows": 845,
+      "columns": [
+        "series",
+        "year",
+        "value"
+      ],
+      "missing_values": {
+        "series": 0,
+        "year": 0,
+        "value": 68
+      },
+      "coverage_start": "1960",
+      "coverage_through": "2024",
+      "sha256": "ae6160feb331a381baa2641c4312590a61c1cd42cfd57f2cbf8336b911e00703",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/deaths_rates_annual.csv"
+    }
+  ],
+  "raw_sources": [
+    {
+      "id": "notifications",
+      "source": "https://data.gov.sg/datasets/d_ca168b2cb763640d72c4600a68f9909e/view",
+      "path": "raw/notifications.csv"
+    },
+    {
+      "id": "polyclinic",
+      "source": "https://data.gov.sg/datasets/d_5d5508f1c954f5630d7b3aa7875d01f9/view",
+      "path": "raw/polyclinic.csv"
+    },
+    {
+      "id": "psi_historical",
+      "source": "https://data.gov.sg/datasets/d_b4cf557f8750260d229c49fd768e11ed/view",
+      "path": "raw/psi_historical.csv"
+    },
+    {
+      "id": "humidity",
+      "source": "https://data.gov.sg/datasets/d_e3b1111a26b2aefef4f386c068d4ca5d/view",
+      "path": "raw/humidity.csv"
+    },
+    {
+      "id": "residents",
+      "source": "https://data.gov.sg/datasets/d_3cf667d761b4bdc6d4d3d3aeec37dea5/view",
+      "path": "raw/residents.csv"
+    },
+    {
+      "id": "total_population",
+      "source": "https://data.gov.sg/datasets/d_6c26f6181f2e5dd62bf3210fa1029074/view",
+      "path": "raw/total_population.csv"
+    },
+    {
+      "id": "public_holidays",
+      "source": "https://data.gov.sg/datasets/d_8ef23381f9417e4d4254ee8b4dcdb176/view",
+      "path": "raw/public_holidays.csv"
+    },
+    {
+      "id": "visitors",
+      "source": "https://data.gov.sg/datasets/d_d1c33009b674dcf70b8e8c790b793f28/view",
+      "path": "raw/visitors.csv"
+    },
+    {
+      "id": "deaths_cause",
+      "source": "https://data.gov.sg/datasets/d_f9e1ec367036b43d97eec96cbcee7827/view",
+      "path": "raw/deaths_cause.csv"
+    },
+    {
+      "id": "deaths_age",
+      "source": "https://data.gov.sg/datasets/d_716c31ea00d7c05d43d4109d8b0db3bb/view",
+      "path": "raw/deaths_age.csv"
+    },
+    {
+      "id": "deaths_rates",
+      "source": "https://data.gov.sg/datasets/d_e2c79c60c046f9a2061328cc3f665688/view",
+      "path": "raw/deaths_rates.csv"
+    },
+    {
+      "id": "deaths_monthly",
+      "source": "https://data.gov.sg/datasets/d_ccff6769339af25d11a9223031e87da3/view",
+      "path": "raw/deaths_monthly.csv"
+    }
+  ],
+  "refresh": {
+    "run_at": "2026-10-22T12:44:29+00:00",
+    "sources": [
+      {
+        "name": "flunet_singapore",
+        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+        "path": "raw\\flunet_singapore.csv",
+        "status": "refreshed",
+        "notes": [],
+        "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
+      },
+      {
+        "name": "flunet_neighbours",
+        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+        "path": "raw\\flunet_neighbours.csv",
+        "status": "refreshed",
+        "notes": [],
+        "sha256": "d345690bcf466e87b7df4e64c4251123349d4117b627f649aec2d72ef83e2c0a"
+      },
+      {
+        "name": "weather",
+        "source": "https://www.weather.gov.sg/climate-historical-daily/",
+        "path": "raw\\weather_daily_raw.csv",
+        "status": "partial",
+        "notes": [
+          "2026-10: HTTP 404"
+        ],
+        "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597"
+      },
+      {
+        "name": "notifications",
+        "source": "https://data.gov.sg/datasets/d_ca168b2cb763640d72c4600a68f9909e/view",
+        "path": "raw/notifications.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "b782b6570e3e3ba4377b487b0c1c40905d0d7dd40db0e716c8a659bb53310a54"
+      },
+      {
+        "name": "polyclinic",
+        "source": "https://data.gov.sg/datasets/d_5d5508f1c954f5630d7b3aa7875d01f9/view",
+        "path": "raw/polyclinic.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "315d3c92963b25e7c4593d95e46bd6ba41fe131ab79e6f4982d5ffd91c0a0ccf"
+      },
+      {
+        "name": "psi_historical",
+        "source": "https://data.gov.sg/datasets/d_b4cf557f8750260d229c49fd768e11ed/view",
+        "path": "raw/psi_historical.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "7f3a842f05dcdb0296df2934b9f5b388d6dfcffdd1a68dd29dec8c69bcf1564f"
+      },
+      {
+        "name": "humidity",
+        "source": "https://data.gov.sg/datasets/d_e3b1111a26b2aefef4f386c068d4ca5d/view",
+        "path": "raw/humidity.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "47449b875513742352f6b859ad4495ba5cb43feb8ed4b7bafdd49331c8f66a26"
+      },
+      {
+        "name": "residents",
+        "source": "https://data.gov.sg/datasets/d_3cf667d761b4bdc6d4d3d3aeec37dea5/view",
+        "path": "raw/residents.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "4ae99b295b48690f2ac58f59662b091e739f30db5947fe5dbfd42c27feefc7f4"
+      },
+      {
+        "name": "total_population",
+        "source": "https://data.gov.sg/datasets/d_6c26f6181f2e5dd62bf3210fa1029074/view",
+        "path": "raw/total_population.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "3350108a1e6637a3a02ed35af560647c512f914b1598c7d18139cebd40355cad"
+      },
+      {
+        "name": "public_holidays",
+        "source": "https://data.gov.sg/datasets/d_8ef23381f9417e4d4254ee8b4dcdb176/view",
+        "path": "raw/public_holidays.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "35e469d2c46642b19e5b17d48348aa5bb00b82aeca6557135e68f2fcd4eb9d5d"
+      },
+      {
+        "name": "visitors",
+        "source": "https://data.gov.sg/datasets/d_d1c33009b674dcf70b8e8c790b793f28/view",
+        "path": "raw/visitors.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "63daa464a80da2935e9c51f1e7ba404f37e2037ff76d6bfb464a5b91998c059d"
+      },
+      {
+        "name": "deaths_cause",
+        "source": "https://data.gov.sg/datasets/d_f9e1ec367036b43d97eec96cbcee7827/view",
+        "path": "raw/deaths_cause.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "ee38b94f4c5ba66f83c1a430a50f8482d2521d82a91f3d50eba3765915b9e4cb"
+      },
+      {
+        "name": "deaths_age",
+        "source": "https://data.gov.sg/datasets/d_716c31ea00d7c05d43d4109d8b0db3bb/view",
+        "path": "raw/deaths_age.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "b517feabd7f436f09cd4c04d3e70adaf39a1b40fcf28f3ede5cccd2de24f895d"
+      },
+      {
+        "name": "deaths_rates",
+        "source": "https://data.gov.sg/datasets/d_e2c79c60c046f9a2061328cc3f665688/view",
+        "path": "raw/deaths_rates.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "74343913ec60cb2715146613b02d2e34130fc6012c4a5b0ba7ed3b3c460d013e"
+      },
+      {
+        "name": "deaths_monthly",
+        "source": "https://data.gov.sg/datasets/d_ccff6769339af25d11a9223031e87da3/view",
+        "path": "raw/deaths_monthly.csv",
+        "checked_at": "2026-10-22T12:41:20+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:41:20+00:00",
+        "sha256": "5bece3e6cc2935943d9651721bb59b23fb77dbce07bd693eda3e82c403e7f1f9"
+      },
+      {
+        "name": "psi_recent",
+        "source": "https://api-open.data.gov.sg/v2/real-time/api/psi",
+        "path": "raw/psi_recent.csv",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "18e40f7455afdb7eb15b5a77e46ed846de1460550db097212c0ab16a74db7a4a"
+      },
+      {
+        "name": "contact_all",
+        "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_all.rdata",
+        "path": "raw/contact_all.rdata",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "ca2e23f519fd747068ec99782fa2c2a6124d6f3018747607f99ffd9a68afe578"
+      },
+      {
+        "name": "contact_home",
+        "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_home.rdata",
+        "path": "raw/contact_home.rdata",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "9f7dae851a3c131c830d2304366578a9b9534028077b6072b14ecbf37882e967"
+      },
+      {
+        "name": "contact_school",
+        "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_school.rdata",
+        "path": "raw/contact_school.rdata",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "21e1665b8f15ebe507fba93646c008b5736ad7458bb8af256ca3f37334bb64b8"
+      },
+      {
+        "name": "contact_work",
+        "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_work.rdata",
+        "path": "raw/contact_work.rdata",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "6f0db1aec1446940e76298837fe832f332a4f9c32cb46fdca2cd4fff83eba504"
+      },
+      {
+        "name": "contact_others",
+        "source": "https://raw.githubusercontent.com/kieshaprem/synthetic-contact-matrices/master/output/syntheticmatrices/contact_others.rdata",
+        "path": "raw/contact_others.rdata",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "f599b53d0494f3346b961d727ad9a8d9b63495324bbac986e5ccaaa30ce032f0"
+      },
+      {
+        "name": "cda_2023",
+        "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2023/",
+        "path": "raw/cda/bulletin_2023.xls",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "5bfdfee2f85d4183e4ec18c6b82167d511ea72e1794dcc44e3828a3f08509264"
+      },
+      {
+        "name": "cda_2024",
+        "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2024/",
+        "path": "raw/cda/bulletin_2024.xlsx",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "569844f89419e1ec8d0e963be8a48dfee89c5afc2085ad1b5669629d5969c70d"
+      },
+      {
+        "name": "cda_2025",
+        "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2025/",
+        "path": "raw/cda/bulletin_2025.xlsx",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "31bb619f7fee0a68428dde44a53865cc54423e2f74d5c2073b04ab418f74a703"
+      },
+      {
+        "name": "cda_2026",
+        "source": "https://www.cda.gov.sg/resources/weekly-infectious-diseases-bulletin-2026/",
+        "path": "raw/cda/bulletin_2026.xlsx",
+        "checked_at": "2026-10-22T12:44:29+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-22T12:44:29+00:00",
+        "sha256": "d5db99e53f0b01bc38df70c7f922ba55ea89b58555ed35812bc7576b5b1c9c8f"
+      }
+    ]
+  },
+  "imported_file_count": 46,
+  "imported_files": [
+    {
+      "path": "raw/cda_weekly_bulletin_2023.xlsx",
+      "source_path": "raw data\\cda_weekly_bulletin_2023.xlsx",
+      "sha256": "5bfdfee2f85d4183e4ec18c6b82167d511ea72e1794dcc44e3828a3f08509264",
+      "bytes": 30961
+    },
+    {
+      "path": "raw/cda_weekly_bulletin_2024.xlsx",
+      "source_path": "raw data\\cda_weekly_bulletin_2024.xlsx",
+      "sha256": "569844f89419e1ec8d0e963be8a48dfee89c5afc2085ad1b5669629d5969c70d",
+      "bytes": 65686
+    },
+    {
+      "path": "raw/cda_weekly_bulletin_2025.xlsx",
+      "source_path": "raw data\\cda_weekly_bulletin_2025.xlsx",
+      "sha256": "31bb619f7fee0a68428dde44a53865cc54423e2f74d5c2073b04ab418f74a703",
+      "bytes": 129283
+    },
+    {
+      "path": "raw/cda_weekly_bulletin_2026.xlsx",
+      "source_path": "raw data\\cda_weekly_bulletin_2026.xlsx",
+      "sha256": "b7aa18874b6fe47fff9ed73dcb415d3a38895dd7691c5a87eca18c91b790b5ce",
+      "bytes": 54555
+    },
+    {
+      "path": "raw/contact_all.rdata",
+      "source_path": "raw data\\contact_all.rdata",
+      "sha256": "ca2e23f519fd747068ec99782fa2c2a6124d6f3018747607f99ffd9a68afe578",
+      "bytes": 202386
+    },
+    {
+      "path": "raw/contact_home.rdata",
+      "source_path": "raw data\\contact_home.rdata",
+      "sha256": "9f7dae851a3c131c830d2304366578a9b9534028077b6072b14ecbf37882e967",
+      "bytes": 173084
+    },
+    {
+      "path": "raw/contact_others.rdata",
+      "source_path": "raw data\\contact_others.rdata",
+      "sha256": "f599b53d0494f3346b961d727ad9a8d9b63495324bbac986e5ccaaa30ce032f0",
+      "bytes": 179278
+    },
+    {
+      "path": "raw/contact_school.rdata",
+      "source_path": "raw data\\contact_school.rdata",
+      "sha256": "21e1665b8f15ebe507fba93646c008b5736ad7458bb8af256ca3f37334bb64b8",
+      "bytes": 112167
+    },
+    {
+      "path": "raw/contact_work.rdata",
+      "source_path": "raw data\\contact_work.rdata",
+      "sha256": "6f0db1aec1446940e76298837fe832f332a4f9c32cb46fdca2cd4fff83eba504",
+      "bytes": 139464
+    },
+    {
+      "path": "raw/datagovsg_cause_of_death_by_age_2024.csv",
+      "source_path": "raw data\\datagovsg_cause_of_death_by_age_2024.csv",
+      "sha256": "b517feabd7f436f09cd4c04d3e70adaf39a1b40fcf28f3ede5cccd2de24f895d",
+      "bytes": 122194
+    },
+    {
+      "path": "raw/datagovsg_deaths_and_death_rates_by_cause_annual.csv",
+      "source_path": "raw data\\datagovsg_deaths_and_death_rates_by_cause_annual.csv",
+      "sha256": "74343913ec60cb2715146613b02d2e34130fc6012c4a5b0ba7ed3b3c460d013e",
+      "bytes": 4251
+    },
+    {
+      "path": "raw/datagovsg_deaths_by_cause_certification_2022_2024.csv",
+      "source_path": "raw data\\datagovsg_deaths_by_cause_certification_2022_2024.csv",
+      "sha256": "ee38b94f4c5ba66f83c1a430a50f8482d2521d82a91f3d50eba3765915b9e4cb",
+      "bytes": 25073
+    },
+    {
+      "path": "raw/datagovsg_deaths_by_ethnic_sex_monthly.csv",
+      "source_path": "raw data\\datagovsg_deaths_by_ethnic_sex_monthly.csv",
+      "sha256": "5bece3e6cc2935943d9651721bb59b23fb77dbce07bd693eda3e82c403e7f1f9",
+      "bytes": 49556
+    },
+    {
+      "path": "raw/datagovsg_historical_24hr_psi_2014_2026.csv",
+      "source_path": "raw data\\datagovsg_historical_24hr_psi_2014_2026.csv",
+      "sha256": "0f4a387c4d6f0ecb62cac523c5223719addda8e829b9037dbf0c092efd0c4bb0",
+      "bytes": 3328434
+    },
+    {
+      "path": "raw/datagovsg_polyclinic_attendances_2012_2022.csv",
+      "source_path": "raw data\\datagovsg_polyclinic_attendances_2012_2022.csv",
+      "sha256": "a33384317a6ceb375ff64f27c4d26876ad5a66757a454903b9f970be78d69137",
+      "bytes": 84595
+    },
+    {
+      "path": "raw/datagovsg_psi_hourly_2026-09-01_to_2026-10-16.csv",
+      "source_path": "raw data\\datagovsg_psi_hourly_2026-09-01_to_2026-10-16.csv",
+      "sha256": "298bba680b29b2c2a28e67b2db63d2989f7d64734bb7ca6a12f4e7b29792b468",
+      "bytes": 306664
+    },
+    {
+      "path": "raw/datagovsg_public_holidays_2020_2027.csv",
+      "source_path": "raw data\\datagovsg_public_holidays_2020_2027.csv",
+      "sha256": "35e469d2c46642b19e5b17d48348aa5bb00b82aeca6557135e68f2fcd4eb9d5d",
+      "bytes": 3549
+    },
+    {
+      "path": "raw/datagovsg_relative_humidity_monthly_mean.csv",
+      "source_path": "raw data\\datagovsg_relative_humidity_monthly_mean.csv",
+      "sha256": "47449b875513742352f6b859ad4495ba5cb43feb8ed4b7bafdd49331c8f66a26",
+      "bytes": 6895
+    },
+    {
+      "path": "raw/datagovsg_residents_by_age_ethnic_sex_annual.csv",
+      "source_path": "raw data\\datagovsg_residents_by_age_ethnic_sex_annual.csv",
+      "sha256": "4ae99b295b48690f2ac58f59662b091e739f30db5947fe5dbfd42c27feefc7f4",
+      "bytes": 146400
+    },
+    {
+      "path": "raw/datagovsg_total_population_broad_age_sex_annual.csv",
+      "source_path": "raw data\\datagovsg_total_population_broad_age_sex_annual.csv",
+      "sha256": "3350108a1e6637a3a02ed35af560647c512f914b1598c7d18139cebd40355cad",
+      "bytes": 6291
+    },
+    {
+      "path": "raw/datagovsg_visitor_arrivals_by_residence_monthly.csv",
+      "source_path": "raw data\\datagovsg_visitor_arrivals_by_residence_monthly.csv",
+      "sha256": "63daa464a80da2935e9c51f1e7ba404f37e2037ff76d6bfb464a5b91998c059d",
+      "bytes": 75751
+    },
+    {
+      "path": "raw/datagovsg_weekly_notifications_2012_2022.csv",
+      "source_path": "raw data\\datagovsg_weekly_notifications_2012_2022.csv",
+      "sha256": "b782b6570e3e3ba4377b487b0c1c40905d0d7dd40db0e716c8a659bb53310a54",
+      "bytes": 534409
+    },
+    {
+      "path": "raw/moe_school_terms_and_holidays_2012_2026.csv",
+      "source_path": "raw data\\moe_school_terms_and_holidays_2012_2026.csv",
+      "sha256": "2b8f28b54822a74c14901466a67acfb934225a812e9e40db48a5cbe10fa0be4a",
+      "bytes": 11366
+    },
+    {
+      "path": "raw/moh_nphs_influenza_vaccination_coverage.csv",
+      "source_path": "raw data\\moh_nphs_influenza_vaccination_coverage.csv",
+      "sha256": "ffbf7ab48fca40f6cbda6fd23f547edb08fa12182251d40dfcf9525c719a3b48",
+      "bytes": 1301
+    },
+    {
+      "path": "raw/mss_daily_weather_changi_2012_2026.csv",
+      "source_path": "raw data\\mss_daily_weather_changi_2012_2026.csv",
+      "sha256": "a28f5a9b199f29125454985bbfb055efdc3677ba09d5208ec99b2042cb9b1a71",
+      "bytes": 433410
+    },
+    {
+      "path": "raw/public_holidays_2012_2019_python_holidays.csv",
+      "source_path": "raw data\\public_holidays_2012_2019_python_holidays.csv",
+      "sha256": "065f7e30f0299acce000d3c7bdbbace4421dcdaa0119e7f053a65194bd3783c3",
+      "bytes": 2705
+    },
+    {
+      "path": "raw/who_flunet_singapore_all.csv",
+      "source_path": "raw data\\who_flunet_singapore_all.csv",
+      "sha256": "b4e87213d1da9ef9e5861824759bbd9e072b809f1a89168d733745d505d4f623",
+      "bytes": 179911
+    },
+    {
+      "path": "raw/who_flunet_southeast_asia.csv",
+      "source_path": "raw data\\who_flunet_southeast_asia.csv",
+      "sha256": "57537060548c37b4e0bce9eb4894a1c17d0f1c924fcfce826b121cd46bec7e75",
+      "bytes": 1543552
+    },
+    {
+      "path": "processed/contact_matrix_singapore.csv",
+      "source_path": "processed data\\contact_matrix_singapore.csv",
+      "sha256": "ead3d742702ebf68fa2ff5b8d94475885d11d2c05c1fc475ae4aea44bd26e098",
+      "bytes": 31669
+    },
+    {
+      "path": "processed/deaths_monthly.csv",
+      "source_path": "processed data\\deaths_monthly.csv",
+      "sha256": "bdfa333bfc59509447ad11e796ecf77ef6fb698373eee6f7fd2981530af8214b",
+      "bytes": 12574
+    },
+    {
+      "path": "processed/deaths_respiratory_2022_2024.csv",
+      "source_path": "processed data\\deaths_respiratory_2022_2024.csv",
+      "sha256": "4e0703ed55711767a097d844f0c8144f5f2dd08a80c8a63723b0100900302a58",
+      "bytes": 703
+    },
+    {
+      "path": "processed/flunet_southeast_asia_weekly.csv",
+      "source_path": "processed data\\flunet_southeast_asia_weekly.csv",
+      "sha256": "9f8e085cbf6b70ed6b5304a49d52a6c8ab1e062be9b5d56c26fe3a848431532b",
+      "bytes": 505991
+    },
+    {
+      "path": "processed/polyclinic_attendances_2012_2026.csv",
+      "source_path": "processed data\\polyclinic_attendances_2012_2026.csv",
+      "sha256": "b7e7bb5a81421ad7ffe6089e8fbe61e6c474f0aa60a2a207a0496cbcf670abde",
+      "bytes": 508634
+    },
+    {
+      "path": "processed/population_by_age_2012_2026.csv",
+      "source_path": "processed data\\population_by_age_2012_2026.csv",
+      "sha256": "ff8389f25342ec1411f545ac1dba389f5e8f05768bdd19b0afdedff6c364cacf",
+      "bytes": 19379
+    },
+    {
+      "path": "processed/psi_daily_2014_2026.csv",
+      "source_path": "processed data\\psi_daily_2014_2026.csv",
+      "sha256": "292258e40036801e0b328bcef03fa619956beb012dbabd05e4daf81c390f5263",
+      "bytes": 109326
+    },
+    {
+      "path": "processed/public_holidays_2012_2027.csv",
+      "source_path": "processed data\\public_holidays_2012_2027.csv",
+      "sha256": "9be762ecb95918c4775ecf5e2c7b31c4ba0301cff3b2a0509468fa4709bad0c7",
+      "bytes": 11479
+    },
+    {
+      "path": "processed/school_holidays_2012_2026.csv",
+      "source_path": "processed data\\school_holidays_2012_2026.csv",
+      "sha256": "a56ed519e6f214c3cce3a4b59636a1c821c08d3cf1e93d9a051db46931d778f1",
+      "bytes": 11578
+    },
+    {
+      "path": "processed/vaccination_coverage.csv",
+      "source_path": "processed data\\vaccination_coverage.csv",
+      "sha256": "ffbf7ab48fca40f6cbda6fd23f547edb08fa12182251d40dfcf9525c719a3b48",
+      "bytes": 1301
+    },
+    {
+      "path": "processed/visitor_arrivals_monthly.csv",
+      "source_path": "processed data\\visitor_arrivals_monthly.csv",
+      "sha256": "7de06fe67a5a9c508c1ab87461a12c6a684c49ba792f6e799643def2d85ed71c",
+      "bytes": 576029
+    },
+    {
+      "path": "processed/weather_daily_changi_2012_2026.csv",
+      "source_path": "processed data\\weather_daily_changi_2012_2026.csv",
+      "sha256": "80dadc2363a3b1a23f121380f234136dcf6945cf95e3b7da7c7ec96bb39ab9e7",
+      "bytes": 152805
+    },
+    {
+      "path": "processed/weekly_covariates_2012_2026.csv",
+      "source_path": "processed data\\weekly_covariates_2012_2026.csv",
+      "sha256": "4bca219e42ad24547a70314dcf60ac8c677baedaeefbc60116dea82dbd134059",
+      "bytes": 59225
+    },
+    {
+      "path": "processed/weekly_notifications_2012_2026.csv",
+      "source_path": "processed data\\weekly_notifications_2012_2026.csv",
+      "sha256": "c009de81a7ec563bf2d3211639df70eb1d95c21ae5725e4e0732cf5e08ac356a",
+      "bytes": 3536609
+    },
+    {
+      "path": "recipes/download_extra_data.R",
+      "source_path": "scripts\\download_extra_data.R",
+      "sha256": "c5337767265eb70670ba81c94f30230a30181c86cbbabd52f6976f95a874f366",
+      "bytes": 28135
+    },
+    {
+      "path": "recipes/process_extra_data.R",
+      "source_path": "scripts\\process_extra_data.R",
+      "sha256": "a0217953875a70989a3edb92a70b954d112af12aee1615953cedc6ef91b0727a",
+      "bytes": 19963
+    },
+    {
+      "path": "recipes/combine_surveillance_data.R",
+      "source_path": "scripts\\combine_surveillance_data.R",
+      "sha256": "c4b7fd189b3a83634b25aad454ee67b09b1124fde8c239387337d9675ed51a2e",
+      "bytes": 8702
+    },
+    {
+      "path": "recipes/SOURCE_README.txt",
+      "source_path": "README.txt",
+      "sha256": "d49f2f6675c977783d5b5c5dd45036d42822a0fadef6817b513f3bf533260a35",
+      "bytes": 44643
+    }
+  ],
+  "selection_note": "All tables are retained. No supplementary table is automatically added to existing analytical views.",
+  "curated_reference_note": "School calendars, legacy holidays and vaccination survey values are retained dated references, not live scraped updates."
+}

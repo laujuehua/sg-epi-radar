@@ -1,0 +1,454 @@
+---
+title: "SG Epi Radar"
+format:
+  dashboard:
+    orientation: rows
+    scrolling: true
+    theme: flatly
+    include-in-header: chart-assets/ui-styles.html
+    include-after-body: chart-assets/ui-script.html
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+#| label: setup
+import json
+import hashlib
+from pathlib import Path
+from html import escape
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from plotly.offline import get_plotlyjs
+import sys
+sys.path.insert(0, str(Path("..").resolve()))
+from sgsurv.insights import signal_episodes, seasonal_comparison
+from sgsurv.evaluation import evaluate_events
+from IPython import get_ipython
+from IPython.display import HTML, Markdown
+get_ipython().ast_node_interactivity = "last_expr"
+DATA = Path("..") / "data" / "processed"
+meta = json.loads((DATA / "metadata.json").read_text(encoding="utf-8"))
+det = pd.read_csv(DATA / "bulletin_detection.csv", parse_dates=["week_start"])
+det = signal_episodes(det)
+alerts = pd.read_csv(DATA / "recent_alerts.csv", parse_dates=["week_start"])
+psi = pd.read_csv(DATA / "psi_weekly.csv", parse_dates=["week_start"])
+psi_resp = pd.read_csv(DATA / "psi_respiratory.csv", parse_dates=["week_start"])
+revision_file = DATA / "revision_history.json"
+revision_history = json.loads(revision_file.read_text(encoding="utf-8")) if revision_file.exists() else {"started_at": None, "updates": []}
+events = json.loads((Path("..")/"data"/"reference"/"outbreak_events.json").read_text(encoding="utf-8"))
+evaluation = evaluate_events(det, events)
+BLUE, ORANGE, RED, GREY = "#2458a6", "#a95112", "#b02548", "#656d78"
+LAYOUT = dict(template="plotly_white", margin=dict(l=65,r=25,t=85,b=30),
+              legend=dict(orientation="h",y=1.13,x=0), hovermode="x unified",
+              font=dict(size=13), autosize=True)
+latest = det.week_start.max()
+end = latest + pd.Timedelta(days=6)
+current = det[det.week_start.eq(latest) & det.cases.notna()]
+latest_alerts = alerts[alerts.week_start.eq(latest)]
+today = pd.Timestamp.now(tz="Asia/Singapore").tz_localize(None).normalize()
+def datefmt(value):
+    return pd.Timestamp(value).strftime("%d %b %Y")
+def freshness(start):
+    age = (today - (pd.Timestamp(start) + pd.Timedelta(days=6))).days
+    label = "Behind expected weekly coverage" if age > 14 else "Within 14 days of week end"
+    end_date = (pd.Timestamp(start) + pd.Timedelta(days=6)).strftime("%Y-%m-%d")
+    return f'<span class="coverage-status" data-coverage-end="{end_date}">{label}</span>'
+def period_buttons():
+    return dict(buttons=[dict(count=6,label="6 months",step="month",stepmode="backward"),
+                         dict(count=1,label="1 year",step="year",stepmode="backward"),
+                         dict(count=5,label="5 years",step="year",stepmode="backward"),
+                         dict(label="All history",step="all")])
+def table(frame, precision=1):
+    return HTML('<div class="table-responsive" tabindex="0" aria-label="Scrollable data table">' +
+                frame.to_html(index=False,classes="table table-sm table-striped",border=0,na_rep="Unavailable",
+                              float_format=lambda v:f"{v:,.{precision}f}") + '</div>')
+def selector(kind, labels, active=0):
+    options = ''.join(f'<option value="{i}" {"selected" if i == active else ""}>{escape(label)}</option>'
+                      for i,label in enumerate(labels))
+    return HTML(f'<label class="chart-selector">Select {"disease" if kind == "disease" else "period"}'
+                f'<select data-chart-select="{kind}">{options}</select></label>')
+payload_columns = ["disease","year","week","week_start","cases","hl_expected","hl_threshold","c2_expected","c2_threshold","any_alert","signal_run_weeks","episode_start","signal_state"]
+payload = json.loads(det[payload_columns].to_json(orient="records",date_format="iso"))
+Path("chart-assets").mkdir(exist_ok=True)
+_ = Path("chart-assets/explorer.json").write_text(json.dumps({"records":payload,"revisions":revision_history},allow_nan=False),encoding="utf-8")
+evaluation.to_csv("chart-assets/event_evaluation.csv",index=False)
+_plotly_loaded = False
+Path("chart-assets").mkdir(exist_ok=True)
+_ = Path("chart-assets/plotly.min.js").write_text(get_plotlyjs(), encoding="utf-8")
+for source_name, include_file, kind in [("styles.css","ui-styles.html","style"),("app.js","ui-script.html","script")]:
+    content = Path(source_name).read_bytes()
+    digest = hashlib.sha256(content).hexdigest()[:12]
+    asset_name = f"{Path(source_name).stem}-{digest}{Path(source_name).suffix}"
+    _ = (Path("chart-assets")/asset_name).write_bytes(content)
+    tag = f'<link rel="stylesheet" href="chart-assets/{asset_name}">' if kind == "style" else f'<script src="chart-assets/{asset_name}"></script>'
+    _ = (Path("chart-assets")/include_file).write_text(tag,encoding="utf-8")
+
+def show_chart(figure):
+    global _plotly_loaded
+    html = figure.to_html(full_html=False, include_plotlyjs="chart-assets/plotly.min.js" if not _plotly_loaded else False,
+                          include_mathjax=False, config={"responsive":True,"displaylogo":False})
+    _plotly_loaded = True
+    return HTML(html)
+```
+
+# Overview {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Reporting status"
+display(Markdown(f"**Reporting week: EW {int(current.week.iloc[0])}, {datefmt(latest)}–{datefmt(end)}.** "
+                 "Recent counts are provisional. Statistical signals prompt review; they do not confirm outbreaks.\n\n"
+                 f"**Bulletin:** through {datefmt(end)} · {freshness(latest)}. "
+                 f"**PSI:** through {datefmt(psi.week_start.max() + pd.Timedelta(days=6))} · {freshness(psi.week_start.max())}.\n\n"
+                 f"**Last processed:** {pd.Timestamp(meta['run_at']).tz_convert('Asia/Singapore').strftime('%d %b %Y, %H:%M SGT')}. "
+                 "Coverage status uses a 14-day allowance after each reporting week ends."))
+```
+
+## Row
+
+```{python}
+#| content: valuebox
+#| title: "Diseases reported in latest week"
+dict(color="primary",value=len(current))
+```
+
+```{python}
+#| content: valuebox
+#| title: "Signals in latest week"
+dict(color="warning" if len(latest_alerts) else "success",value=len(latest_alerts))
+```
+
+```{python}
+#| content: valuebox
+#| title: "Disease-week signals in last 8 weeks"
+dict(color="warning" if len(alerts) else "success",value=len(alerts))
+```
+
+## Row
+
+```{python}
+#| title: "Weekly situation"
+previous = det[det.week_start.eq(latest-pd.Timedelta(weeks=1))][["disease","cases"]].rename(columns={"cases":"previous"})
+changes = current.merge(previous,on="disease").dropna(subset=["previous"])
+changes["change"] = changes.cases - changes.previous
+rises = changes[changes.change.gt(0)].nlargest(3,"change")
+text = (f"The latest reporting week contains {len(latest_alerts)} statistical signals across {len(current)} reported diseases. "
+        f"Across the eight weeks ending {datefmt(end)}, {len(alerts)} disease-week signals were recorded "
+        f"in {alerts.disease.nunique()} diseases.")
+if not rises.empty:
+    text += "\n\nLargest absolute increases from the previous week: " + "; ".join(
+        f"{r.disease}: {r.cases:,.0f} cases (+{r.change:,.0f})" for r in rises.itertuples()) + ". These changes are descriptive and may not exceed a signal threshold."
+text += f"\n\nThe dataset contains {det.disease.nunique()} historical disease series; {det.disease.nunique()-len(current)} have no reported count in the latest week."
+display(Markdown(text))
+ai_path, ai_meta = DATA/"ai_summary.md", DATA/"ai_summary.json"
+if ai_path.exists() and ai_meta.exists() and json.loads(ai_meta.read_text()).get("snapshot_id") == meta.get("snapshot_id"):
+    display(Markdown("**Optional AI commentary**\n\n" + ai_path.read_text(encoding="utf-8")))
+```
+
+```{python}
+#| title: "Signals for review · last 8 weeks"
+if alerts.empty:
+    display(Markdown("No statistical signals in the latest eight weeks. This does not establish the absence of outbreaks."))
+else:
+    rows = []
+    for r in alerts.itertuples():
+        seasonal = r.hl_alert
+        rows.append({"Week starting":datefmt(r.week_start),"Disease":r.disease,"Cases":r.cases,
+                     "Expected":r.hl_expected if seasonal else det.loc[det.disease.eq(r.disease) & det.week_start.eq(r.week_start),"c2_expected"].iloc[0],
+                     "Threshold":r.hl_threshold if seasonal else r.c2_threshold,
+                     "Method":"Seasonal" if seasonal else "EARS C2",
+                     "Episode":det.loc[det.disease.eq(r.disease) & det.week_start.eq(r.week_start),"signal_state"].iloc[0],
+                     "Consecutive weeks":int(det.loc[det.disease.eq(r.disease) & det.week_start.eq(r.week_start),"signal_run_weeks"].iloc[0])})
+    display(table(pd.DataFrame(rows)))
+    links = ' · '.join(f'<a href="#disease-trend" data-disease="{escape(d,quote=True)}">Explore {escape(d)}</a>' for d in alerts.disease.unique())
+    display(HTML(links))
+```
+
+## Row
+
+### Disease trend {#disease-trend}
+
+```{python}
+#| title: "Weekly disease trend · use the disease selector and date controls"
+last_seen = det[det.cases.notna()].groupby("disease").week_start.max()
+diseases = sorted(last_seen.index, key=lambda d:(last_seen[d] != latest,d))
+default = alerts.disease.iloc[0] if len(alerts) else ("Dengue" if "Dengue" in diseases else diseases[0])
+labels = [d if last_seen[d] == latest else f"{d} (last reported {datefmt(last_seen[d])})" for d in diseases]
+display(selector("disease", labels, diseases.index(default)))
+display(HTML('<div class="chart-periods" aria-label="Disease chart period">' +
+             ''.join(f'<button type="button" data-months="{n}">{label}</button>' for n,label in
+                     [(6,"6 months"),(12,"1 year"),(60,"5 years"),(0,"All history")]) + '</div>' +
+             '<p class="chart-key"><span>■ Reported cases</span><span>┄ Seasonal expected</span>'
+             '<span>━ Seasonal threshold</span><span>··· EARS C2 threshold</span><span>▲ Signal for review</span><span>× Unavailable</span></p>'))
+display(HTML("""<section id="disease-detail" aria-live="polite"><p>Loading disease details…</p></section>
+<div class="explorer-actions"><label>From <input type="date" id="export-start"></label><label>To <input type="date" id="export-end"></label>
+<button type="button" id="apply-dates">Apply dates</button><button type="button" id="download-disease">Download filtered CSV</button>
+<button type="button" id="share-view">Copy view link</button></div>
+<div class="saved-view-controls"><label>View name <input id="saved-view-name" maxlength="80" placeholder="e.g. Dengue last year"></label><button type="button" id="save-view">Save view</button>
+<label>Saved views <select id="saved-views"><option value="">Choose a saved view</option></select></label><button type="button" id="load-view">Load view</button><button type="button" id="delete-view">Remove saved view</button></div>
+<p class="muted">Saved views stay in this browser. Localhost links work only on the computer hosting the app.</p><p id="explorer-status" role="status"></p>"""))
+fig = go.Figure()
+for d in diseases:
+    s = det[det.disease.eq(d)]
+    visible = d == default
+    fig.add_bar(x=s.week_start,y=s.cases,name="Reported cases",marker_color=BLUE,visible=visible)
+    fig.add_scatter(x=s.week_start,y=s.hl_expected,name="Seasonal expected",line=dict(color=BLUE,dash="dash"),visible=visible)
+    fig.add_scatter(x=s.week_start,y=s.hl_threshold,name="Seasonal threshold",line=dict(color=ORANGE,width=2),visible=visible)
+    fig.add_scatter(x=s.week_start,y=s.c2_threshold,name="EARS C2 threshold",line=dict(color=GREY,dash="dot"),visible=visible)
+    a = s[s.any_alert]
+    fig.add_scatter(x=a.week_start,y=a.cases,name="Signal for review",mode="markers",marker=dict(color=RED,size=10,symbol="triangle-up"),visible=visible)
+    missing = s[s.cases.isna()]
+    fig.add_scatter(x=missing.week_start,y=[0]*len(missing),name="Unavailable observation",mode="markers",marker=dict(color=GREY,symbol="x",size=9),visible=visible,hovertemplate="%{x|%d %b %Y}: unavailable (not zero)<extra></extra>")
+buttons=[]
+for i,d in enumerate(diseases):
+    active = [False]*(len(diseases)*6)
+    active[i*6:(i+1)*6] = [True]*6
+    label = d if last_seen[d] == latest else f"{d} (last reported {datefmt(last_seen[d])})"
+    buttons.append(dict(label=label,method="update",args=[{"visible":active},{"xaxis.range":[str(last_seen[d]-pd.DateOffset(years=1)),str(last_seen[d]+pd.Timedelta(days=6))]}]))
+fig.update_layout(**LAYOUT,height=500,showlegend=False,yaxis_title="Notified cases per week",bargap=.08,
+                  meta=dict(kind="disease"),updatemenus=[dict(buttons=buttons,active=diseases.index(default),visible=False)])
+fig.update_xaxes(range=[last_seen[default]-pd.DateOffset(years=1),last_seen[default]+pd.Timedelta(days=6)],
+                 nticks=4,tickformat="%b\n%Y",rangeslider_visible=True)
+show_chart(fig)
+```
+
+## Row
+
+```{python}
+#| title: "Seasonal comparison · selected disease"
+display(HTML('<label class="chart-selector">Years to compare <select id="season-years"><option value="6">Most recent 6 years</option><option value="3">Most recent 3 years</option><option value="0">All reporting years</option></select></label><p id="season-caption">Each line uses epidemiological week numbers. Missing observations remain gaps; the latest year is emphasised.</p>'))
+season = seasonal_comparison(det, default)
+fig = go.Figure()
+for year, group in season.groupby("year"):
+    fig.add_scatter(x=group.week,y=group.cases,mode="lines",name=str(year),connectgaps=False,
+                    line=dict(width=3 if year==season.year.max() else 1.5))
+fig.update_layout(**LAYOUT,height=460,meta=dict(kind="seasonal"),xaxis_title="Epidemiological week",yaxis_title="Cases per week")
+fig.update_xaxes(range=[1,53],tickmode="array",tickvals=[1,13,26,39,52])
+display(show_chart(fig))
+display(HTML('<details><summary>Accessible seasonal comparison data</summary><div id="season-table" class="table-responsive" tabindex="0"></div></details>'))
+```
+
+## Row
+
+```{python}
+#| title: "Accessible chart data · latest week"
+display(table(current[["disease","cases","hl_expected","hl_threshold","any_alert"]].rename(columns={
+    "disease":"Disease","cases":"Cases","hl_expected":"Seasonal expected","hl_threshold":"Seasonal threshold","any_alert":"Signal"})))
+display(Markdown("Chart controls support pointer interaction. This table provides the latest figures without relying on chart colours or hover. Unavailable observations appear as crosses at zero on the chart; they are not zero counts."))
+```
+
+# Haze & respiratory {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Coverage and interpretation"
+overlap = psi_resp[psi_resp.attendances.notna()]
+display(Markdown(f"**Overlapping observations:** {datefmt(overlap.week_start.min())}–{datefmt(overlap.week_start.max()+pd.Timedelta(days=6))}. "
+                 f"**PSI coverage:** through {datefmt(psi.week_start.max()+pd.Timedelta(days=6))}. "
+                 "PSI and respiratory attendances are descriptive comparisons; this dashboard does not estimate a causal effect. "
+                 "Weeks with fewer than seven PSI days are excluded from correlations."))
+```
+
+## Row
+
+```{python}
+#| title: "PSI and respiratory attendances · select a period"
+fig = make_subplots(rows=2,cols=1,shared_xaxes=True,vertical_spacing=.15,
+                    subplot_titles=("Weekly peak<br>24-hour PSI","Average daily polyclinic<br>URTI attendances"))
+fig.add_scatter(x=psi.week_start,y=psi.psi_max,name="PSI",line=dict(color=ORANGE),row=1,col=1)
+for level in (100,200):
+    fig.add_hline(y=level,line=dict(color=RED,dash="dash",width=1),row=1,col=1)
+fig.add_scatter(x=psi_resp.week_start,y=psi_resp.attendances,name="URTI",line=dict(color=BLUE),row=2,col=1)
+for w in psi[psi.haze_week].itertuples():
+    fig.add_vrect(x0=w.week_start,x1=w.week_start+pd.Timedelta(days=7),fillcolor=ORANGE,opacity=.12,line_width=0)
+incomplete=psi[psi.days_with_data.lt(7)]
+fig.add_scatter(x=incomplete.week_start,y=incomplete.psi_max,name="Incomplete PSI week",mode="markers",marker=dict(color=GREY,symbol="x",size=8),row=1,col=1)
+periods=[("Latest year",psi.week_start.max()-pd.DateOffset(years=1),psi.week_start.max()+pd.Timedelta(days=6)),
+         ("2015 episode",pd.Timestamp("2015-01-01"),pd.Timestamp("2015-12-31")),
+         ("2019 episode",pd.Timestamp("2019-01-01"),pd.Timestamp("2019-12-31")),
+         ("All history",psi.week_start.min(),psi.week_start.max()+pd.Timedelta(days=6))]
+display(selector("haze", [p[0] for p in periods]))
+fig.update_layout(**LAYOUT,height=640,meta=dict(kind="haze"),updatemenus=[dict(visible=False,
+    buttons=[dict(label=label,method="relayout",args=[{"xaxis.range":[str(start),str(stop)],"xaxis2.range":[str(start),str(stop)]}]) for label,start,stop in periods])])
+for row in (1,2):
+    fig.update_xaxes(range=[periods[0][1],periods[0][2]],row=row,col=1)
+show_chart(fig)
+```
+
+## Row
+
+```{python}
+#| title: "Explore overlapping observations by period"
+period_specs=[("All overlapping weeks",None,None),("2015",pd.Timestamp("2015-01-01"),pd.Timestamp("2015-12-31")),
+              ("2019",pd.Timestamp("2019-01-01"),pd.Timestamp("2019-12-31")),
+              ("Latest overlapping year",overlap.week_start.max()-pd.DateOffset(years=1),overlap.week_start.max())]
+display(selector("scatter", [p[0] for p in period_specs]))
+fig=go.Figure()
+corrows=[]
+for idx,(label,start,stop) in enumerate(period_specs):
+    s=psi_resp if start is None else psi_resp[psi_resp.week_start.between(start,stop)]
+    s=s.set_index("week_start").asfreq("7D").reset_index()
+    complete=s.days_with_data.eq(7)
+    s["psi_mean"]=s.psi_mean.where(complete)
+    for haze,color,name in [(False,GREY,"Other weeks"),(True,RED,"Haze weeks")]:
+        points=s[s.haze_week.eq(haze)]
+        fig.add_scatter(x=points.psi_mean,y=points.attendances,mode="markers",name=name,
+            marker=dict(color=color,size=7,symbol="triangle-up" if haze else "circle",opacity=.65),
+            text=points.week_start.dt.strftime("%d %b %Y"),visible=idx==0,
+            hovertemplate="%{text}<br>Mean daily peak PSI: %{x}<br>%{y:,.1f} attendances/day<extra></extra>")
+    for lag in range(4):
+        x=s.psi_mean.shift(lag)
+        ok=x.notna() & s.attendances.notna() & complete
+        rho=x[ok].rank().corr(s.loc[ok,"attendances"].rank()) if ok.sum()>3 else float("nan")
+        corrows.append({"Period":label,"PSI lag (weeks)":lag,"Spearman rho":rho,"Paired weeks":int(ok.sum())})
+fig.update_layout(**LAYOUT,height=460,xaxis_title="Mean daily peak 24-hour PSI",yaxis_title="URTI attendances/day",
+    meta=dict(kind="scatter"),updatemenus=[dict(visible=False,buttons=[dict(label=p[0],method="update",args=[{"visible":[j//2==i for j in range(len(period_specs)*2)]}]) for i,p in enumerate(period_specs)])])
+show_chart(fig)
+```
+
+```{python}
+#| title: "Lagged correlations by period · exploratory"
+display(table(pd.DataFrame(corrows), precision=3))
+display(Markdown("A lag of one week compares this week's attendances with PSI one calendar week earlier. Both series are seasonal; influenza activity and other factors can affect attendances. Constant or insufficient series show unavailable correlations."))
+```
+
+```{python}
+#| title: "Accessible PSI and respiratory observations · latest 12 overlapping weeks"
+display(table(overlap.tail(12)[["week_start","psi_mean","psi_max","days_with_data","attendances"]]))
+```
+
+# Data revisions {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Changes between retained snapshots"
+if not revision_history["updates"]:
+    display(Markdown("Revision tracking will begin with the next successful processing run. Earlier revisions cannot be reconstructed."))
+else:
+    updates = revision_history["updates"]
+    last_update = updates[-1]
+    tracking_start = pd.Timestamp(revision_history['started_at']).tz_convert('Asia/Singapore').strftime('%d %b %Y, %H:%M SGT')
+    display(Markdown(f"**Tracking began:** {tracking_start}. **Distinct snapshots retained:** {len(updates)}. "
+                     "Changes compare observed case counts for the same disease-week. Newly added rows and removed rows are counted separately. "
+                     "Missing → zero is a revision, not an unchanged count. Earlier publisher revisions are unavailable unless a local snapshot retained them."))
+    summary_rows=[{"Processed at (SGT)":pd.Timestamp(u["run_at"]).tz_convert('Asia/Singapore').strftime('%d %b %Y, %H:%M'),"Case revisions":len(u["changes"]),"Added disease-weeks":u["added_rows"],"Removed disease-weeks":u["removed_rows"]} for u in updates[-20:][::-1]]
+    display(table(pd.DataFrame(summary_rows)))
+    revision_rows=[dict(**change, processed_at_sgt=pd.Timestamp(u["run_at"]).tz_convert('Asia/Singapore').strftime('%d %b %Y, %H:%M')) for u in updates[::-1] for change in u["changes"]]
+    if revision_rows:
+        display(table(pd.DataFrame(revision_rows)))
+    else:
+        display(Markdown("**No case revisions recorded in the retained comparisons.** Tracking starts here; this does not imply earlier publications were unchanged."))
+    _ = Path("chart-assets/revision_history.json").write_text(json.dumps(revision_history,indent=2,allow_nan=False),encoding="utf-8")
+    display(HTML('<a class="download-link" href="chart-assets/revision_history.json" download>Download revision history (JSON)</a>'))
+```
+
+# Detection evaluation {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Retrospective event comparisons · exploratory"
+display(Markdown("Two sourced historical events are compared with fixed eight-week windows using the current rules. "
+    "Windows were selected from external reporting, without changing thresholds to fit these events. "
+    "These selected examples do not estimate general sensitivity, specificity or positive predictive value. "
+    "The dataset contains revised historical counts, so results are retrospective rather than a reconstruction of real-time alerts."))
+display(Markdown("**Timing:** weeks after the anchor measures the first signal week within the selected window, not delay from infection onset or publication availability. "
+    "A value of zero can mean a signal was already active. Incomplete baseline or observation coverage is reported explicitly. "
+    "Signals outside the windows are unclassified; they cannot be called false positives without a complete event-labelled reference set."))
+```
+
+## Row
+
+```{python}
+#| title: "Event results · combined rule and individual methods"
+view=evaluation.rename(columns={"event":"Event","method":"Method","evaluable_weeks":"Evaluable weeks","window_weeks":"Window weeks",
+    "status":"Result","first_signal_week":"First signal week","weeks_after_anchor":"Weeks after anchor",
+    "signal_weeks":"Signal weeks","unclassified_signals_outside_window":"Unclassified signal-weeks outside window",
+    "evaluable_weeks_outside_window":"Evaluable weeks outside window"})
+display(table(view[["Event","Method","Evaluable weeks","Window weeks","Result","First signal week","Weeks after anchor","Signal weeks","Unclassified signal-weeks outside window","Evaluable weeks outside window"]]))
+display(HTML('<a class="download-link" href="chart-assets/event_evaluation.csv" download>Download evaluation CSV</a>'))
+```
+
+## Row
+
+```{python}
+#| title: "Event timeline · band shows the analyst-defined window"
+display(selector("evaluation",[e["event"] for e in events]))
+fig=go.Figure()
+for i,event in enumerate(events):
+    anchor=pd.Timestamp(event["anchor_week"])
+    stop=anchor+pd.Timedelta(weeks=event["window_weeks"])
+    series=det[det.disease.eq(event["disease"]) & det.week_start.between(anchor-pd.Timedelta(weeks=8),stop)]
+    fig.add_scatter(x=series.week_start,y=series.cases,name="Cases",line=dict(color=BLUE),visible=i==0)
+    fig.add_scatter(x=series.week_start,y=series.hl_threshold,name="Seasonal threshold",line=dict(color=ORANGE),visible=i==0)
+    points=series[series.any_alert]
+    fig.add_scatter(x=points.week_start,y=points.cases,name="Combined signal",mode="markers",marker=dict(color=RED,symbol="triangle-up",size=9),visible=i==0)
+buttons=[]
+for i,event in enumerate(events):
+    anchor=pd.Timestamp(event["anchor_week"])
+    stop=anchor+pd.Timedelta(weeks=event["window_weeks"])
+    shape=dict(type="rect",xref="x",yref="paper",x0=str(anchor),x1=str(stop),y0=0,y1=1,fillcolor=BLUE,opacity=.09,line_width=0)
+    buttons.append(dict(label=event["event"],method="update",args=[{"visible":[j//3==i for j in range(len(events)*3)]},{"shapes":[shape],"xaxis.autorange":True,"yaxis.autorange":True}]))
+fig.update_layout(**LAYOUT,height=450,meta=dict(kind="evaluation"),shapes=buttons[0]["args"][1]["shapes"],updatemenus=[dict(visible=False,buttons=buttons)])
+show_chart(fig)
+```
+
+## Row
+
+```{python}
+#| title: "Event catalogue and source decisions"
+for event in events:
+    display(Markdown(f"**{event['event']}** · anchor week {event['anchor_week']} · {event['window_weeks']} weeks. "
+                     f"{event['anchor_precision']}. {event['note']} [Source: {event['source_title']}]({event['source_url']})"))
+display(Markdown("The catalogue is intentionally small. Expanding it requires independent event definitions, non-event labels, reporting-delay data and checks across additional diseases. "
+    "No threshold tuning or disease-specific optimisation was performed."))
+```
+
+# Data library {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "All supplementary datasets · preview and download"
+from sgsurv.library import render_library
+display(HTML(render_library(Path("..") / "data" / "extra", Path("chart-assets") / "data-library")))
+```
+
+# Methods {scrolling=true}
+
+## Row
+
+### Data and coverage
+
+- **Weekly bulletin:** notified cases and average daily polyclinic attendances. MOH via data.gov.sg for 2012–2022; CDA yearly Excel files for 2023 onwards. Disease names are harmonised across sources.
+- **PSI:** NEA hourly regional 24-hour PSI. Each hour uses the highest regional reading; weekly statistics use each day's peak. A haze week exceeds PSI 100 on at least one observed day.
+- **Missing observations:** unavailable or unparseable counts remain missing, distinct from reported zero. They are excluded from seasonal baselines; EARS C2 requires all seven baseline observations.
+- **Source priority:** downloaded files in `data/raw/cda` precede manual files in `data/raw`. Within each folder, the most recently modified file wins, with filename breaking ties. Conflicting disease-week values produce a warning. The processing metadata records file order.
+- **Epi weeks:** Sunday–Saturday using the MMWR convention, dated by the Sunday that starts the week.
+
+### Signal detection
+
+- **Seasonal historical limits:** mean of the same seasonal week ±1 week over the previous five years, with at least nine observed baseline values. Threshold = mean + 2 SD; 2020–2021 excluded.
+- **EARS C2:** seven-week baseline ending three weeks before the observation. Threshold = mean + 3 SD. Used for the combined signal only when the seasonal baseline is unavailable.
+- **Minimum count:** five cases per week. This rule suppresses signals below five; absence of a signal does not establish absence of disease or an outbreak.
+- **Validation:** the evaluation page compares two sourced event windows retrospectively. It does not establish general sensitivity, specificity, or real-time timeliness.
+
+### Interpretation and publication checks
+
+Recent counts are provisional. Definitions, testing, notifications and reporting coverage can change. Historical-only series are labelled by their last reported week. Missingness and incomplete PSI weeks are shown explicitly. Publication checks reject duplicates, negative case counts, invalid PSI day coverage, backwards coverage dates, and a fall exceeding 10% in the latest-week disease count relative to the prior snapshot. Coverage status flags data more than 14 days past the reporting week end; it does not independently verify the publisher's release schedule.
+
+The weekly summary is generated from computed figures on every build. Optional AI commentary is displayed only when its saved snapshot identifier matches the current data. PSI–URTI correlations use complete PSI weeks, preserve calendar gaps, and describe association without causal interpretation.
+
+```{python}
+#| title: "Data quality notes"
+for note in meta.get("quality_notes",[]):
+    display(Markdown("- " + note))
+```
+
+

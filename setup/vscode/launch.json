@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Download CDA yearly bulletins (2023 onwards)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sgsurv.fetch_cda",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Pipeline: download data + process",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sgsurv.pipeline",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Pipeline: process existing data (no download)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sgsurv.pipeline",
+      "args": [
+        "--skip-fetch"
+      ],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Pipeline: process + AI summary",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sgsurv.pipeline",
+      "args": [
+        "--skip-fetch",
+        "--ai"
+      ],
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal"
+    }
+  ]
+}

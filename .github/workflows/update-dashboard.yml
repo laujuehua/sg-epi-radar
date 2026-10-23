@@ -1,0 +1,108 @@
+name: Update dashboard
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"   # Mondays 01:00 UTC = 09:00 Singapore
+  workflow_dispatch:       # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write          # commit refreshed data/processed
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest
+
+      - name: Fetch data and run pipeline
+        env:
+          DATA_GOV_SG_API_KEY: ${{ secrets.DATA_GOV_SG_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # optional; AI step skips if empty
+        run: python -m sgsurv.pipeline --ai
+
+      - uses: actions/cache@v4
+        with:
+          path: data/extra/raw
+          key: ${{ runner.os }}-extra-v1-${{ github.run_id }}
+          restore-keys: ${{ runner.os }}-extra-v1-
+
+      - name: Refresh supplementary data library
+        env:
+          DATA_GOV_SG_API_KEY: ${{ secrets.DATA_GOV_SG_API_KEY }}
+        run: python -m sgsurv.extra_data
+
+      - name: Retain supplementary refresh diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: supplementary-refresh-status
+          path: data/extra/refresh_status.json
+          if-no-files-found: ignore
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render dashboard
+        run: |
+          python -m sgsurv.assets
+          quarto render dashboard/index.qmd
+
+      - name: Validate publication data
+        run: python -m sgsurv.validate
+
+      - name: Commit refreshed processed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed data/extra/processed data/extra/catalog.json data/extra/refresh_status.json
+          git diff --staged --quiet || git commit -m "Update processed data [skip ci]"
+          git push
+
+      - name: Collect site files
+        run: |
+          mkdir -p _site
+          cp dashboard/index.html _site/
+          cp -r dashboard/index_files _site/ 2>/dev/null || true
+          cp -r dashboard/chart-assets _site/
+          cp dashboard/app.js dashboard/styles.css _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Package site for project-name hosting
+        run: cd _site && zip -r ../sg-epi-radar-site.zip .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sg-epi-radar-site
+          path: sg-epi-radar-site.zip
+
+  deploy:
+    if: vars.ENABLE_GITHUB_PAGES == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

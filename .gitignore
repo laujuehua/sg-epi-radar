@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets
+.env
+
+# Raw downloads (re-created by `python -m sgsurv.pipeline`)
+data/raw/*.csv
+data/raw/cda/
+data/raw/*.xls*
+data/raw/*.pdf
+
+# Quarto build output (GitHub Actions builds and publishes the dashboard)
+.quarto/
+dashboard/index.html
+dashboard/index_files/
+dashboard/chart-assets/
+dashboard/*.ipynb
+dashboard/*.quarto_ipynb
+_site/
+sg-epi-radar-site.zip
+.tmp/
+.vendor/
+data/imported/
+data/extra/raw/

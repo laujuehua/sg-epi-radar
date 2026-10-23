@@ -1,0 +1,28 @@
+year,cause,deaths,age_group
+2022,Influenza,5,All ages
+2023,Influenza,1,All ages
+2024,Influenza,1,10-19
+2024,Influenza,2,75-79
+2024,Influenza,2,80-84
+2024,Influenza,1,85-89
+2024,Influenza,3,90andOver
+2024,Influenza,9,All ages
+2022,Pneumonia,5391,All ages
+2023,Pneumonia,6317,All ages
+2024,Pneumonia,4,1
+2024,Pneumonia,2,10-19
+2024,Pneumonia,13,20-29
+2024,Pneumonia,1,28DAYS<1Year
+2024,Pneumonia,1,3
+2024,Pneumonia,19,30-39
+2024,Pneumonia,40,40-49
+2024,Pneumonia,1,5-9
+2024,Pneumonia,122,50-59
+2024,Pneumonia,153,60-64
+2024,Pneumonia,302,65-69
+2024,Pneumonia,521,70-74
+2024,Pneumonia,745,75-79
+2024,Pneumonia,1050,80-84
+2024,Pneumonia,1366,85-89
+2024,Pneumonia,1737,90andOver
+2024,Pneumonia,6077,All ages

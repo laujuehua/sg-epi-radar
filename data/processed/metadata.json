@@ -1,0 +1,23 @@
+{
+  "run_at": "2026-10-22T08:35:29+00:00",
+  "bulletin_through": "2026-10-04",
+  "psi_through": "2026-08-30",
+  "n_diseases": 40,
+  "n_recent_alerts": 2,
+  "n_current_diseases": 38,
+  "quality_notes": [
+    "2 PSI weeks have fewer than 7 days; excluded from correlations.",
+    "1 disease-week observations are unavailable; not treated as zero."
+  ],
+  "source_priority": [
+    "cda\\bulletin_2026.xlsx",
+    "cda\\bulletin_2025.xlsx",
+    "cda\\bulletin_2024.xlsx",
+    "cda\\bulletin_2023.xls",
+    "weekly-infectious-disease-bulletin-year-2026.xlsx",
+    "weekly-infectious-disease-bulletin-year-2025.xlsx",
+    "weekly infectious disease bulletin_EW52-2024_upload.xlsx",
+    "weekly-infectious-disease-bulletin-year-2023_upload-2023.xls"
+  ],
+  "snapshot_id": "4731854df81457b05aed3b4355e3a2175f43c9a10a9f4a64c9e667ae9d374dfe"
+}

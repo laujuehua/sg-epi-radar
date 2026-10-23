@@ -1,0 +1,46 @@
+disease,sources,first_year,last_year,table
+Middle East Respiratory Syndrome,CDA,2023,2026,bulletin
+Acute Viral Hepatitis A,CDA + data.gov.sg,2012,2026,bulletin
+Acute Viral Hepatitis B,CDA + data.gov.sg,2012,2026,bulletin
+Acute Viral Hepatitis C,CDA + data.gov.sg,2012,2026,bulletin
+Acute Viral Hepatitis E,CDA + data.gov.sg,2012,2026,bulletin
+Avian Influenza,CDA + data.gov.sg,2012,2026,bulletin
+Botulism,CDA + data.gov.sg,2017,2026,bulletin
+Campylobacter enteritis,CDA + data.gov.sg,2012,2026,bulletin
+Chikungunya,CDA + data.gov.sg,2012,2026,bulletin
+Cholera,CDA + data.gov.sg,2012,2026,bulletin
+DHF,CDA + data.gov.sg,2012,2026,bulletin
+Dengue,CDA + data.gov.sg,2012,2026,bulletin
+Diphtheria,CDA + data.gov.sg,2012,2026,bulletin
+Ebola Virus Disease,CDA + data.gov.sg,2017,2026,bulletin
+Haemophilus influenzae type b,CDA + data.gov.sg,2012,2026,bulletin
+Japanese Encephalitis,CDA + data.gov.sg,2017,2026,bulletin
+Legionellosis,CDA + data.gov.sg,2012,2026,bulletin
+Leptospirosis,CDA + data.gov.sg,2017,2026,bulletin
+Malaria,CDA + data.gov.sg,2012,2026,bulletin
+Measles,CDA + data.gov.sg,2012,2026,bulletin
+Melioidosis,CDA + data.gov.sg,2012,2026,bulletin
+Meningococcal Infection,CDA + data.gov.sg,2012,2026,bulletin
+Mpox,CDA + data.gov.sg,2022,2026,bulletin
+Mumps,CDA + data.gov.sg,2012,2026,bulletin
+Murine Typhus,CDA + data.gov.sg,2017,2026,bulletin
+Nipah,CDA + data.gov.sg,2012,2026,bulletin
+Paratyphoid,CDA + data.gov.sg,2012,2026,bulletin
+Pertussis,CDA + data.gov.sg,2012,2026,bulletin
+Plague,CDA + data.gov.sg,2012,2026,bulletin
+Pneumococcal Disease (invasive),CDA + data.gov.sg,2012,2026,bulletin
+Poliomyelitis,CDA + data.gov.sg,2012,2026,bulletin
+Rubella,CDA + data.gov.sg,2012,2026,bulletin
+SARS,CDA + data.gov.sg,2012,2026,bulletin
+Salmonellosis (non-enteric fevers),CDA + data.gov.sg,2012,2026,bulletin
+Tetanus,CDA + data.gov.sg,2017,2026,bulletin
+Typhoid,CDA + data.gov.sg,2012,2026,bulletin
+Yellow Fever,CDA + data.gov.sg,2012,2026,bulletin
+Zika,CDA + data.gov.sg,2016,2026,bulletin
+Encephalitis,data.gov.sg,2012,2022,bulletin
+HFMD,data.gov.sg,2012,2022,bulletin
+Acute Conjunctivitis,CDA + data.gov.sg,2012,2026,polyclinic
+Acute Diarrhoea,CDA + data.gov.sg,2012,2026,polyclinic
+Acute Upper Respiratory Tract infections,CDA + data.gov.sg,2012,2026,polyclinic
+Chickenpox,CDA + data.gov.sg,2012,2026,polyclinic
+HFMD,CDA + data.gov.sg,2018,2026,polyclinic

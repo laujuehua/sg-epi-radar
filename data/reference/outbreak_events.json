@@ -1,0 +1,22 @@
+[
+  {
+    "event": "Dengue rise in early May 2020",
+    "disease": "Dengue",
+    "anchor_week": "2020-05-03",
+    "window_weeks": 8,
+    "anchor_precision": "Approximate: analyst maps early May to the week starting 3 May",
+    "source_title": "NEA, 3 June 2020: dengue rise over four weeks since early May",
+    "source_url": "https://www.nea.gov.sg/media/news/news/index/number-of-weekly-dengue-cases-expected-to-exceed-the-historical-high-of-891-unless-urgent-collective-community-action-is-taken",
+    "note": "NEA describes a rise since early May, not an epidemic onset on 3 May. The eight-week window is an analyst-defined comparison, not the full outbreak duration."
+  },
+  {
+    "event": "First reported local Zika transmission, August 2016",
+    "disease": "Zika",
+    "anchor_week": "2016-08-21",
+    "window_weeks": 8,
+    "anchor_precision": "Week containing the reported recognition date, 27 August 2016",
+    "source_title": "Maurer-Stroh et al., Eurosurveillance (2016), PMID 27684526",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/27684526/",
+    "note": "The source dates recognition of local transmission, not infection onset. Eight weeks from that reporting week is an analyst-defined comparison window."
+  }
+]

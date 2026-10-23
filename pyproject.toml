@@ -1,0 +1,9 @@
+[project]
+name = "sgsurv"
+version = "0.1.0"
+description = "Singapore infectious disease surveillance dashboard: MOH weekly bulletin, aberration detection and NEA PSI"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
