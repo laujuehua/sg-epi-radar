@@ -233,8 +233,8 @@ function briefing(){
  byId('news-status').textContent=`${items.length} matching links (up to 60 displayed). Feed checked ${data.briefing.checked_at||'not yet'}. Latest retained publication ${data.briefing.items[0]?.published||'unavailable'}.`;
 }
 function library(){
- const query=byId('library-search')?.value.toLowerCase()||'',family=byId('library-family')?.value||'',region=byId('library-region')?.value||'';let count=0;
- for(const el of document.querySelectorAll('.library-dataset')){el.hidden=!((!family||el.dataset.family===family)&&(!region||el.dataset.region===region)&&el.dataset.search.toLowerCase().includes(query));if(!el.hidden)count++;}
+ const query=byId('library-search')?.value.toLowerCase()||'',family=byId('library-family')?.value||'',region=byId('library-region')?.value||'',frequency=byId('library-frequency')?.value||'',publisher=byId('library-publisher')?.value||'';let count=0;
+ for(const el of document.querySelectorAll('.library-dataset')){el.hidden=!((!family||el.dataset.family===family)&&(!region||el.dataset.region===region)&&(!frequency||el.dataset.frequency===frequency)&&(!publisher||el.dataset.publisher===publisher)&&el.dataset.search.toLowerCase().includes(query));if(!el.hidden)count++;}
  if(byId('library-count'))byId('library-count').textContent=`${count} datasets match. Expand a dataset for its preview and download.`;
  const table=byId('data-library')?.querySelector('table');
  if(table){const states=new Map([...document.querySelectorAll('.library-dataset')].map(el=>[el.querySelector('summary').textContent.split(' · ')[0],el.hidden]));for(const row of table.tBodies[0]?.rows||[])row.hidden=states.get(row.cells[0]?.textContent.trim())||false;}

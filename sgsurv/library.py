@@ -5,6 +5,13 @@ from html import escape
 from pathlib import Path
 
 import pandas as pd
+from .extra_sources import SEA_COUNTRIES
+
+
+def labels(key):
+    frequency="Weekly" if key.startswith(("weekly_","flunet_")) or key=="polyclinic_attendances" else "Daily" if "daily" in key else "Monthly" if "monthly" in key else "Fixed estimate" if "contact" in key else "Dated periods" if "holidays" in key else "Annual"
+    publisher="WHO" if key.startswith("flunet") else "WHO / World Bank" if key=="southeast_asia_tb_annual" else "Prem et al." if "contact" in key else "CDA / MOH" if key in ["weekly_notifications","polyclinic_attendances","vaccination_coverage"] else "NEA" if key=="psi_daily" else "MSS / NEA" if key in ["weather_daily","relative_humidity_monthly"] else "MOE / curated references" if key=="school_holidays" else "MOM / curated references" if key=="public_holidays" else "STB" if key=="visitor_arrivals_monthly" else "Multiple Singapore agencies" if key=="weekly_covariates" else "SingStat"
+    return frequency,publisher
 
 
 def render_library(base: Path, destination: Path) -> str:
@@ -23,7 +30,12 @@ def render_library(base: Path, destination: Path) -> str:
     parts.append('<div class="radar-controls"><label>Search datasets <input id="library-search" type="search" placeholder="Disease, dataset or keyword"></label>'
                  '<label>Family <select id="library-family"><option value="">All families</option>'
                  + ''.join(f'<option>{escape(f)}</option>' for f in sorted({i["family"] for i in catalog["datasets"]}))
-                 + '</select></label><label>Coverage <select id="library-region"><option value="">All countries</option><option>Singapore</option><option>Regional</option></select></label></div><p id="library-count" role="status"></p>')
+                 + '</select></label><label>Coverage <select id="library-region"><option value="">All countries</option><option>Singapore</option><option>Regional</option></select></label>'
+                 '<label>Frequency <select id="library-frequency"><option value="">All frequencies</option>'
+                 + ''.join(f'<option>{escape(f)}</option>' for f in sorted({labels(i["id"])[0] for i in catalog["datasets"]}))
+                 + '</select></label><label>Publisher <select id="library-publisher"><option value="">All publishers</option>'
+                 + ''.join(f'<option>{escape(p)}</option>' for p in sorted({labels(i["id"])[1] for i in catalog["datasets"]}))
+                 + '</select></label></div><p id="library-count" role="status"></p>')
     for item in catalog["datasets"]:
         key=item["id"]
         source=base / item["path"]
@@ -36,10 +48,15 @@ def render_library(base: Path, destination: Path) -> str:
     parts.append('<div class="library-table">'+pd.DataFrame(rows).to_html(index=False,classes="table table-striped",border=0)+'</div>')
     for item in catalog["datasets"]:
         key=item["id"]
-        preview=pd.read_csv(base / item["path"]).tail(8)
+        frame=pd.read_csv(base / item["path"])
+        preview=frame.tail(8)
         region="Regional" if key.startswith(("flunet_weekly","flunet_southeast","southeast_asia")) else "Singapore"
-        search=escape(' '.join([item["title"],item["family"],item["units"],item["note"],key]),quote=True)
-        parts.append(f'<details class="library-dataset" data-family="{escape(item["family"])}" data-region="{region}" data-search="{search}"><summary>{escape(item["title"])} · {item["rows"]:,} rows</summary>'
+        frequency,publisher=labels(key)
+        terms=' '.join(str(v) for c in ["country","disease"] if c in frame for v in frame[c].dropna().unique())
+        if "country_code" in frame:
+            terms+=' '+' '.join(SEA_COUNTRIES.get(c,c) for c in frame.country_code.dropna().unique())
+        search=escape(' '.join([item["title"],item["family"],item["units"],item["note"],key,publisher,terms]),quote=True)
+        parts.append(f'<details class="library-dataset" data-family="{escape(item["family"])}" data-region="{region}" data-frequency="{frequency}" data-publisher="{escape(publisher)}" data-search="{search}"><summary>{escape(item["title"])} · {item["rows"]:,} rows</summary>'
                      f'<p><strong>Units:</strong> {escape(item["units"])}<br>{escape(item["note"])}</p>'
                      + ''.join(f'<p><strong>Quality note:</strong> {escape(note)}</p>' for note in item.get("quality_notes",[]))
                      +
