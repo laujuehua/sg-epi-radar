@@ -30,10 +30,13 @@ DESCRIPTIONS = {
     "flunet_weekly_by_source": ("FluNet by country and reporting source","Influenza","Tested and positive specimens","Keeps sentinel/non-sentinel/undefined reporting sources separate. Positives are specimens, not all population infections."),
     "flunet_singapore_sentinel": ("Singapore sentinel influenza","Influenza","Tested and positive specimens; positivity %","Consistent SENTINEL source only; positivity is unavailable when the tested denominator is zero or missing."),
     "flunet_southeast_asia_weekly": ("Neighbouring-country influenza","Influenza","Specimens aggregated across reported sources","Source totals are combined as in the extracted recipe; source composition can change and country ascertainment differs."),
+    "southeast_asia_tb_annual": ("Southeast Asia annual TB incidence","Regional health","Estimated incident cases per 100,000 population per year","WHO Global Tuberculosis Report via World Bank WDI, indicator SH.TBS.INCD (CC BY 4.0). Modelled annual estimates, not weekly case notifications. Missing estimates remain missing."),
 }
 
 
 def coverage(frame):
+    if "incidence_per_100000" in frame:
+        frame=frame[pd.to_numeric(frame.incidence_per_100000,errors="coerce").notna()]
     for key in ["week_start","date","month","start_date","year"]:
         if key not in frame:
             continue
@@ -82,7 +85,7 @@ def main():
     parser.add_argument("--import-from",type=Path,help="One-time read-only import; all subsequent runs use this project's own cache")
     parser.add_argument("--skip-fetch",action="store_true",help="Rebuild from the local cache without network requests")
     parser.add_argument("--fetch-only",action="store_true")
-    parser.add_argument("--groups",nargs="+",choices=["data_gov","flunet","psi","weather","contacts","cda"],help="Refresh selected source families")
+    parser.add_argument("--groups",nargs="+",choices=["data_gov","flunet","psi","weather","contacts","cda","regional"],help="Refresh selected source families")
     args=parser.parse_args()
     if args.import_from:
         result=import_project(args.import_from)

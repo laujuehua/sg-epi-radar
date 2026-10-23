@@ -96,6 +96,14 @@ jobs:
           name: sg-epi-radar-site
           path: sg-epi-radar-site.zip
 
+      - name: Deploy to Cloudflare Pages
+        if: vars.ENABLE_CLOUDFLARE_PAGES == 'true'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _site --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'sg-epi-radar' }} --branch=main
+
   deploy:
     if: vars.ENABLE_GITHUB_PAGES == 'true'
     needs: build

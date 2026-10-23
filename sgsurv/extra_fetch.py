@@ -15,7 +15,7 @@ import numpy as np
 import requests
 
 from . import clean, fetch_cda
-from .extra_sources import EXTRA, IMPORTED, REFERENCE, DATA_GOV, CURATED, WEATHER_COLUMNS
+from .extra_sources import EXTRA, IMPORTED, REFERENCE, DATA_GOV, CURATED, WEATHER_COLUMNS, SEA_COUNTRIES
 from .import_data import sha256
 
 
@@ -205,6 +205,32 @@ def refresh_weather(raw, today):
     return missing
 
 
+def download_tb(target, getter=get):
+    """WHO annual TB incidence estimates via World Bank WDI; retain missing years."""
+    codes=";".join(SEA_COUNTRIES)
+    url=f"https://api.worldbank.org/v2/country/{codes}/indicator/SH.TBS.INCD"
+    rows=[]
+    page=1
+    while True:
+        payload=getter(url,params={"format":"json","per_page":1000,"page":page}).json()
+        if not isinstance(payload,list) or len(payload)!=2 or not isinstance(payload[1],list):
+            raise ValueError("Unexpected World Bank response")
+        rows.extend(payload[1])
+        if page>=int(payload[0]["pages"]):
+            break
+        page+=1
+        if page>100:
+            raise ValueError("World Bank pagination exceeded limit")
+    frame=pd.DataFrame([dict(country_code=r["countryiso3code"],country=SEA_COUNTRIES.get(r["countryiso3code"]),
+                             year=int(r["date"]),incidence_per_100000=r["value"],
+                             indicator=r["indicator"]["id"],source="WHO Global Tuberculosis Report via World Bank WDI") for r in rows])
+    if frame.empty or not set(frame.country_code).issubset(SEA_COUNTRIES) or frame.duplicated(["country_code","year"]).any():
+        raise ValueError("Unexpected TB countries or duplicate country-years")
+    if frame.incidence_per_100000.dropna().lt(0).any():
+        raise ValueError("Negative TB incidence")
+    save_bytes(target,frame.sort_values(["country_code","year"]).to_csv(index=False).encode(),csv=True)
+
+
 def refresh_psi(raw, today):
     historical=pd.read_csv(raw / "psi_historical.csv",dtype=str)
     times=historical.iloc[:,0].replace({"2016-04-04 010:00:00":"2016-04-04 00:00:00"})
@@ -254,7 +280,7 @@ def refresh(base=EXTRA, groups=None, today=None):
     for record in previous.get("sources",[]):
         record.setdefault("checked_at",previous.get("run_at"))
     report={"run_at":datetime.now(timezone.utc).isoformat(timespec="seconds"),"sources":previous.get("sources",[])}
-    chosen=set(groups or ["data_gov","flunet","psi","weather","contacts","cda"])
+    chosen=set(groups or ["data_gov","flunet","psi","weather","contacts","cda","regional"])
     def step(name,url,target,action):
         record=dict(name=name,source=url,path=target.relative_to(base).as_posix(),checked_at=report["run_at"])
         try:
@@ -280,9 +306,11 @@ def refresh(base=EXTRA, groups=None, today=None):
             target=raw / f"{name}.csv"
             step(name,f"https://data.gov.sg/datasets/{dataset_id}/view",target,lambda d=dataset_id,t=target:download_data_gov(d,t))
     if "flunet" in chosen:
-        for name,countries in [("singapore",["SGP"]),("neighbours",["MYS","IDN","THA","PHL","VNM","KHM","LAO"])]:
+        for name,countries in [("singapore",["SGP"]),("neighbours",[c for c in SEA_COUNTRIES if c!="SGP"])]:
             target=raw / f"flunet_{name}.csv"
             step(f"flunet_{name}","https://xmart-api-public.who.int/FLUMART/VIW_FNT",target,lambda c=countries,t=target:download_flunet(c,t))
+    if "regional" in chosen:
+        step("sea_tb","https://data.worldbank.org/indicator/SH.TBS.INCD",raw / "sea_tb.csv",lambda:download_tb(raw / "sea_tb.csv"))
     if "psi" in chosen:
         step("psi_recent","https://api-open.data.gov.sg/v2/real-time/api/psi",raw / "psi_recent.csv",lambda:refresh_psi(raw,today))
     if "weather" in chosen:

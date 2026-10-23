@@ -1,5 +1,13 @@
 # SG Epi Radar
 
+The **Southeast Asia** tab covers all 11 geographic Southeast Asian countries. Weekly influenza charts use WHO FluNet sentinel reporting only, with A+B positivity and explicit missing weeks. A separate annual TB chart uses WHO estimates distributed through World Bank WDI (`SH.TBS.INCD`, CC BY 4.0). Country coverage dates differ; neither dataset is a comprehensive regional outbreak feed. Regional sources refresh with `python -m sgsurv.extra_data --groups flunet regional` and the scheduled workflow.
+
+### Publish at a project address
+
+Create a Cloudflare Pages **Direct Upload** project named `sg-epi-radar` and upload the generated `sg-epi-radar-site.zip`. The ZIP contains the contents of `_site` with `index.html` at its root. The project receives a `pages.dev` address, subject to name availability. GitHub Pages deployment is disabled unless repository variable `ENABLE_GITHUB_PAGES` is explicitly set to `true`.
+
+For automatic Cloudflare updates, add repository Actions secrets `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` (Account → Cloudflare Pages → Edit, scoped to your account), plus repository variables `CLOUDFLARE_PROJECT_NAME=sg-epi-radar` and `ENABLE_CLOUDFLARE_PAGES=true`. The existing **Update dashboard** workflow builds, refreshes data and deploys `_site` using Wrangler. Keep credentials in GitHub secrets, not source files. Each successful build also provides a downloadable site ZIP as an Actions artifact.
+
 An automated surveillance pipeline and dashboard built on Singapore open data:
 
 - **Outbreak signal detection** on MOH's weekly notifiable disease counts, using seasonal *historical limits* and the CDC's *EARS C2* method, written out in plain pandas so each step is visible.

@@ -1,22 +1,6 @@
 {
-  "run_at": "2026-10-22T12:44:29+00:00",
+  "run_at": "2026-10-23T05:32:15+00:00",
   "sources": [
-    {
-      "name": "flunet_singapore",
-      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-      "path": "raw\\flunet_singapore.csv",
-      "status": "refreshed",
-      "notes": [],
-      "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
-    },
-    {
-      "name": "flunet_neighbours",
-      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-      "path": "raw\\flunet_neighbours.csv",
-      "status": "refreshed",
-      "notes": [],
-      "sha256": "d345690bcf466e87b7df4e64c4251123349d4117b627f649aec2d72ef83e2c0a"
-    },
     {
       "name": "weather",
       "source": "https://www.weather.gov.sg/climate-historical-daily/",
@@ -25,7 +9,8 @@
       "notes": [
         "2026-10: HTTP 404"
       ],
-      "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597"
+      "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597",
+      "checked_at": "2026-10-22T12:44:29+00:00"
     },
     {
       "name": "notifications",
@@ -246,6 +231,36 @@
       "notes": [],
       "last_success_at": "2026-10-22T12:44:29+00:00",
       "sha256": "d5db99e53f0b01bc38df70c7f922ba55ea89b58555ed35812bc7576b5b1c9c8f"
+    },
+    {
+      "name": "flunet_singapore",
+      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+      "path": "raw/flunet_singapore.csv",
+      "checked_at": "2026-10-23T05:32:15+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:32:15+00:00",
+      "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
+    },
+    {
+      "name": "flunet_neighbours",
+      "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+      "path": "raw/flunet_neighbours.csv",
+      "checked_at": "2026-10-23T05:32:15+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:32:15+00:00",
+      "sha256": "7a9e528c1d38cbfdc05498cf4967afab63f6485c8fb4bb457a2a501df6e98132"
+    },
+    {
+      "name": "sea_tb",
+      "source": "https://data.worldbank.org/indicator/SH.TBS.INCD",
+      "path": "raw/sea_tb.csv",
+      "checked_at": "2026-10-23T05:32:15+00:00",
+      "status": "refreshed",
+      "notes": [],
+      "last_success_at": "2026-10-23T05:32:15+00:00",
+      "sha256": "e9b329b2e95a31ebdeb43278506a3167181f50ff29df4d2bba4a53f2185cebcb"
     }
   ]
 }

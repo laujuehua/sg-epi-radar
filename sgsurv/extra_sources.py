@@ -29,4 +29,7 @@ WEATHER_COLUMNS = ["station", "year", "month", "day", "daily_rainfall_total_mm",
     "highest_30min_rainfall_mm", "highest_60min_rainfall_mm", "highest_120min_rainfall_mm",
     "mean_temperature_c", "maximum_temperature_c", "minimum_temperature_c",
     "mean_wind_speed_kmh", "max_wind_speed_kmh"]
-FLUNET_COUNTRIES = ["SGP", "MYS", "IDN", "THA", "PHL", "VNM", "KHM", "LAO"]
+SEA_COUNTRIES = {"BRN":"Brunei", "KHM":"Cambodia", "IDN":"Indonesia", "LAO":"Laos",
+                 "MYS":"Malaysia", "MMR":"Myanmar", "PHL":"Philippines", "SGP":"Singapore",
+                 "THA":"Thailand", "TLS":"Timor-Leste", "VNM":"Vietnam"}
+FLUNET_COUNTRIES = list(SEA_COUNTRIES)

@@ -410,6 +410,65 @@ display(Markdown("The catalogue is intentionally small. Expanding it requires in
     "No threshold tuning or disease-specific optimisation was performed."))
 ```
 
+# Southeast Asia {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Regional surveillance · 11 countries"
+from sgsurv import regional
+regional_root=Path("..") / "data" / "extra" / "processed"
+regional_flu=regional.influenza(pd.read_csv(regional_root / "flunet_weekly_by_source.csv"))
+regional_tb_path=regional_root / "southeast_asia_tb_annual.csv"
+regional_tb=pd.read_csv(regional_tb_path) if regional_tb_path.exists() else pd.DataFrame(columns=["country_code","year","incidence_per_100000"])
+display(Markdown("Brunei, Cambodia, Indonesia, Laos, Malaysia, Myanmar, Philippines, Singapore, Thailand, Timor-Leste and Vietnam. "
+    "This page starts with **weekly influenza laboratory surveillance** and **annual tuberculosis incidence estimates**. "
+    "It is not a complete regional outbreak feed. Southeast Asia here is geographic, rather than the WHO administrative region."))
+display(Markdown("Influenza charts use **SENTINEL reporting only**, without substituting other reporting sources. "
+    "Positivity uses influenza A + B positive specimens divided by tested specimens. Unavailable or invalid denominators remain missing; "
+    "country coverage, testing and reporting differ. These figures do not measure all infections in the population. "
+    "TB values are annual estimates, not weekly notification counts or live alerts."))
+```
+
+## Row
+
+```{python}
+#| title: "Influenza positivity · sentinel surveillance · latest three years"
+display(Markdown("Use the legend to hide or compare countries. Gaps represent unavailable weeks; absent lines indicate no eligible sentinel observations in the common window."))
+show_chart(regional.flu_chart(regional_flu))
+```
+
+## Row
+
+```{python}
+#| title: "Tuberculosis · annual estimated incidence"
+if regional_tb.empty:
+    display(Markdown("Annual TB estimates have not been downloaded. Coverage is unavailable."))
+else:
+    show_chart(regional.tb_chart(regional_tb))
+```
+
+## Row
+
+```{python}
+#| title: "Country coverage · observation dates can differ"
+display(table(regional.coverage(regional_flu,regional_tb)))
+display(Markdown("Each row uses that country's latest available sentinel observation and TB estimate. Different dates must not be treated as a same-week comparison. Blank cells mean unavailable, not zero."))
+```
+
+## Row
+
+```{python}
+#| title: "Sources and regional downloads"
+display(Markdown("[WHO FluNet](https://www.who.int/tools/flunet) supplies publicly available country-level virological surveillance. "
+    "The full download keeps sentinel, non-sentinel and undefined sources separate. "
+    "[WHO Global Tuberculosis Report via World Bank WDI](https://data.worldbank.org/indicator/SH.TBS.INCD) supplies annual TB incidence per 100,000 people (CC BY 4.0). "
+    "Both sources are included in the scheduled data refresh; the Data library lists download outcomes and coverage."))
+display(HTML('<a class="download-link" href="chart-assets/data-library/flunet_weekly_by_source.csv" download>Download regional influenza by reporting source</a>'))
+if not regional_tb.empty:
+    display(HTML('<a class="download-link" href="chart-assets/data-library/southeast_asia_tb_annual.csv" download>Download annual regional TB estimates</a>'))
+```
+
 # Data library {scrolling=true}
 
 ## Row

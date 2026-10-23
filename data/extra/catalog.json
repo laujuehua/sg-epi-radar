@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T12:44:56+00:00",
+  "generated_at": "2026-10-23T05:34:39+00:00",
   "datasets": [
     {
       "id": "weekly_notifications",
@@ -414,7 +414,7 @@
       "family": "Influenza",
       "units": "Tested and positive specimens",
       "note": "Keeps sentinel/non-sentinel/undefined reporting sources separate. Positives are specimens, not all population infections.",
-      "rows": 10189,
+      "rows": 12237,
       "columns": [
         "country",
         "country_code",
@@ -433,17 +433,17 @@
         "country_code": 0,
         "week_start": 0,
         "origin_source": 0,
-        "tested": 173,
-        "inf_a": 903,
-        "a_h1n1pdm09": 1648,
-        "a_h3": 286,
-        "inf_b": 275,
-        "pct_positive_a": 1180,
+        "tested": 174,
+        "inf_a": 1737,
+        "a_h1n1pdm09": 1650,
+        "a_h3": 287,
+        "inf_b": 322,
+        "pct_positive_a": 2390,
         "epi_week": 0
       },
       "coverage_start": "1996-12-22",
       "coverage_through": "2026-10-11",
-      "sha256": "89cc0cd9c9691f6533f81dff80b5fe77d1beda553a06f0f84e08f45e172aa099",
+      "sha256": "da7a291485f00b96f6108e445be712220ada79590c3c8367727241913452735c",
       "curated": false,
       "quality_notes": [],
       "included_in_dashboard_views": false,
@@ -496,7 +496,7 @@
       "family": "Influenza",
       "units": "Specimens aggregated across reported sources",
       "note": "Source totals are combined as in the extracted recipe; source composition can change and country ascertainment differs.",
-      "rows": 7967,
+      "rows": 9284,
       "columns": [
         "country",
         "country_code",
@@ -515,21 +515,52 @@
         "country_code": 0,
         "week_start": 0,
         "tested": 139,
-        "inf_a": 266,
-        "a_h1n1pdm09": 1415,
+        "inf_a": 610,
+        "a_h1n1pdm09": 1416,
         "a_h3": 190,
-        "inf_b": 148,
+        "inf_b": 187,
         "sources": 0,
-        "pct_positive_a": 399,
+        "pct_positive_a": 940,
         "epi_week": 0
       },
       "coverage_start": "1996-12-22",
-      "coverage_through": "2026-10-04",
-      "sha256": "5fb8d51d3ff72ce5cf047b97ce07ab474d3fcb13c2350100941185cc2909ab6a",
+      "coverage_through": "2026-10-11",
+      "sha256": "184bfd00fcb0ece93c73cf00ce06bf7f2c5c3d3244d46cce9ea1d035302177df",
       "curated": false,
       "quality_notes": [],
       "included_in_dashboard_views": false,
       "path": "processed/flunet_southeast_asia_weekly.csv"
+    },
+    {
+      "id": "southeast_asia_tb_annual",
+      "title": "Southeast Asia annual TB incidence",
+      "family": "Regional health",
+      "units": "Estimated incident cases per 100,000 population per year",
+      "note": "WHO Global Tuberculosis Report via World Bank WDI, indicator SH.TBS.INCD (CC BY 4.0). Modelled annual estimates, not weekly case notifications. Missing estimates remain missing.",
+      "rows": 726,
+      "columns": [
+        "country_code",
+        "country",
+        "year",
+        "incidence_per_100000",
+        "indicator",
+        "source"
+      ],
+      "missing_values": {
+        "country_code": 0,
+        "country": 0,
+        "year": 0,
+        "incidence_per_100000": 453,
+        "indicator": 0,
+        "source": 0
+      },
+      "coverage_start": "2000",
+      "coverage_through": "2024",
+      "sha256": "e9b329b2e95a31ebdeb43278506a3167181f50ff29df4d2bba4a53f2185cebcb",
+      "curated": false,
+      "quality_notes": [],
+      "included_in_dashboard_views": false,
+      "path": "processed/southeast_asia_tb_annual.csv"
     },
     {
       "id": "relative_humidity_monthly",
@@ -643,24 +674,8 @@
     }
   ],
   "refresh": {
-    "run_at": "2026-10-22T12:44:29+00:00",
+    "run_at": "2026-10-23T05:32:15+00:00",
     "sources": [
-      {
-        "name": "flunet_singapore",
-        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-        "path": "raw\\flunet_singapore.csv",
-        "status": "refreshed",
-        "notes": [],
-        "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
-      },
-      {
-        "name": "flunet_neighbours",
-        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
-        "path": "raw\\flunet_neighbours.csv",
-        "status": "refreshed",
-        "notes": [],
-        "sha256": "d345690bcf466e87b7df4e64c4251123349d4117b627f649aec2d72ef83e2c0a"
-      },
       {
         "name": "weather",
         "source": "https://www.weather.gov.sg/climate-historical-daily/",
@@ -669,7 +684,8 @@
         "notes": [
           "2026-10: HTTP 404"
         ],
-        "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597"
+        "sha256": "7e06a5accd35bbcd684ee80153e864401b1df00e8180c55d3c7f1fcebf403597",
+        "checked_at": "2026-10-22T12:44:29+00:00"
       },
       {
         "name": "notifications",
@@ -890,6 +906,36 @@
         "notes": [],
         "last_success_at": "2026-10-22T12:44:29+00:00",
         "sha256": "d5db99e53f0b01bc38df70c7f922ba55ea89b58555ed35812bc7576b5b1c9c8f"
+      },
+      {
+        "name": "flunet_singapore",
+        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+        "path": "raw/flunet_singapore.csv",
+        "checked_at": "2026-10-23T05:32:15+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-23T05:32:15+00:00",
+        "sha256": "e0a1e209994801ad516a6a243db8e4c6b93e4db0510064c44d2924a1ef801f27"
+      },
+      {
+        "name": "flunet_neighbours",
+        "source": "https://xmart-api-public.who.int/FLUMART/VIW_FNT",
+        "path": "raw/flunet_neighbours.csv",
+        "checked_at": "2026-10-23T05:32:15+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-23T05:32:15+00:00",
+        "sha256": "7a9e528c1d38cbfdc05498cf4967afab63f6485c8fb4bb457a2a501df6e98132"
+      },
+      {
+        "name": "sea_tb",
+        "source": "https://data.worldbank.org/indicator/SH.TBS.INCD",
+        "path": "raw/sea_tb.csv",
+        "checked_at": "2026-10-23T05:32:15+00:00",
+        "status": "refreshed",
+        "notes": [],
+        "last_success_at": "2026-10-23T05:32:15+00:00",
+        "sha256": "e9b329b2e95a31ebdeb43278506a3167181f50ff29df4d2bba4a53f2185cebcb"
       }
     ]
   },

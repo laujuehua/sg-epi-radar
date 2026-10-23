@@ -282,6 +282,8 @@ def process(base=EXTRA, reference=REFERENCE):
     tables["flunet_weekly_by_source"]=flu_weekly(pd.concat([flunet_sg,flunet_neighbours],ignore_index=True))
     tables["flunet_singapore_sentinel"]=flu_weekly(flunet_sg[flunet_sg.ORIGIN_SOURCE.eq("SENTINEL")])
     tables["flunet_southeast_asia_weekly"]=flu_weekly(flunet_neighbours,aggregate_sources=True)
+    if (raw / "sea_tb.csv").exists():
+        tables["southeast_asia_tb_annual"]=read("sea_tb")
     tables["relative_humidity_monthly"]=read("humidity").rename(columns={"mean_rh":"relative_humidity_pct"})
     tables["deaths_rates_annual"]=annual_long(read("deaths_rates")).drop(columns="row")
     # Compute and validate every table before replacing any published derived table.
