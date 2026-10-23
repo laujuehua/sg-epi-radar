@@ -8,20 +8,34 @@
 
 The **Southeast Asia** tab covers all 11 geographic Southeast Asian countries. Weekly influenza charts use WHO FluNet sentinel reporting only, with A+B positivity and explicit missing weeks. A separate annual TB chart uses WHO estimates distributed through World Bank WDI (`SH.TBS.INCD`, CC BY 4.0). Country coverage dates differ; neither dataset is a comprehensive regional outbreak feed. Regional sources refresh with `python -m sgsurv.extra_data --groups flunet regional` and the scheduled workflow.
 
-### Publish at a project address
+### Publish with Cloudflare Workers and GitHub
 
-Create a Cloudflare Pages **Direct Upload** project named `sg-epi-radar` and upload the generated `sg-epi-radar-site.zip`. The ZIP contains the contents of `_site` with `index.html` at its root. The project receives a `pages.dev` address, subject to name availability. GitHub Pages deployment is disabled unless repository variable `ENABLE_GITHUB_PAGES` is explicitly set to `true`.
+The current Cloudflare **Create an app** screen offers **Continue with GitHub** and **Upload your static files**. Pages appears separately as a legacy workflow. This project uses a GitHub-linked **Worker with static assets**, named `sg-epi-radar`. The agreed public address is `https://sg-epi-radar.laujuehua.workers.dev`; the account subdomain is intentionally retained.
 
-For automatic Cloudflare updates, add repository Actions secrets `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` (Account → Cloudflare Pages → Edit, scoped to your account), plus repository variables `CLOUDFLARE_PROJECT_NAME=sg-epi-radar` and `ENABLE_CLOUDFLARE_PAGES=true`. The existing **Update dashboard** workflow builds, refreshes data and deploys `_site` using Wrangler. Keep credentials in GitHub secrets, not source files. Each successful build also provides a downloadable site ZIP as an Actions artifact.
+For the existing linked Worker, open **Settings → Build** and configure:
+
+| Setting | Value |
+|---|---|
+| Repository | `laujuehua/sg-epi-radar` |
+| Production branch | `main` |
+| Root directory | Repository root (`/`) |
+| Build command | `bash setup/build-cloudflare.sh` |
+| Deploy command | `npx wrangler deploy` |
+
+Save the settings and retry the latest deployment. No ZIP upload is needed for this GitHub integration. `wrangler.jsonc` names the Worker and publishes only `_site`. The build script installs Python dependencies and a pinned, checksum-verified Quarto release, renders the committed data snapshot and assembles the static site. It does not fetch new observations during a Cloudflare build or access the original OneDrive project. Cloudflare's GitHub integration supplies deployment authentication; the earlier Pages API-token/variable instructions do not apply.
+
+GitHub Actions handles scheduled public-data refreshes, tests and validation. It commits refreshed tables to `main`; Cloudflare builds the repository snapshot for hosting. Each successful Actions build also retains `sg-epi-radar-site.zip` as a portable artifact. GitHub Pages stays optional and disabled unless `ENABLE_GITHUB_PAGES=true` is explicitly set.
+
+Workers addresses use `<worker-name>.<account-subdomain>.workers.dev`. The account subdomain can be changed from **Workers & Pages → Your subdomain → Change**, but this affects all Workers in the account. The standard Worker URL cannot be shortened to `sg-epi-radar.workers.dev`. See [Workers Builds configuration](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/), [static assets](https://developers.cloudflare.com/workers/static-assets/binding/) and [workers.dev addresses](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/).
 
 An automated surveillance pipeline and dashboard built on Singapore open data:
 
 - **Outbreak signal detection** on MOH's weekly notifiable disease counts, using seasonal *historical limits* and the CDC's *EARS C2* method, written out in plain pandas so each step is visible.
 - **Haze and respiratory illness**: NEA's 24-hour PSI next to MOH polyclinic attendances for acute upper respiratory tract infections (URTI), covering the 2015 and 2019 haze episodes.
 - **Optional AI situation summary**: a short weekly write-up drafted by Claude from the computed figures only, labelled as AI-drafted.
-- **Automation**: GitHub Actions refreshes the data every Monday, runs the tests, rebuilds the Quarto dashboard and publishes it to GitHub Pages.
+- **Automation**: GitHub Actions refreshes and validates data every Monday; the GitHub-linked Cloudflare Worker builds and hosts the dashboard.
 
-> Public app address: to be configured with a project address that does not contain a personal username.
+> Public app address: `https://sg-epi-radar.laujuehua.workers.dev` (deployment must complete before the dashboard is available).
 
 ## Data
 
@@ -52,7 +66,7 @@ sg-epi-radar/
 ├── data/processed/         # outputs the dashboard reads (committed)
 ├── setup/                  # copied into place by setup/install_config.py:
 │   ├── vscode/             #   -> .vscode/ (run/debug configs, tasks, extensions)
-│   └── github-workflows/   #   -> .github/workflows/ (weekly refresh + Pages deploy)
+│   └── github-workflows/   #   -> .github/workflows/ (weekly refresh + static build)
 ```
 
 ## Run it in VS Code (Windows)
@@ -120,10 +134,10 @@ git push -u origin main
 
 Then on GitHub:
 
-1. *Settings → Pages → Source*: **GitHub Actions**.
+1. Connect `laujuehua/sg-epi-radar` to the Cloudflare Worker and apply the build settings above.
 2. Optional: *Settings → Secrets and variables → Actions* → add `DATA_GOV_SG_API_KEY` and/or `ANTHROPIC_API_KEY`.
 3. *Actions → Update dashboard → Run workflow* for the first build. After that it runs every Monday at 09:00 SGT and on every push to `main`.
-4. Replace `YOUR-USERNAME` in this README and in `dashboard/index.qmd`.
+4. Retry the latest Cloudflare build after saving its build command and deploy command.
 
 ## Methods
 
@@ -195,4 +209,4 @@ The school calendar, historical public holidays and vaccination survey observati
 
 When PSI bulk history overlaps the real-time cache, the bulk observations take priority. Disagreements are counted in the catalogue and shown beside the PSI preview; both raw versions remain available locally. The imported Chickenpox 2014-W52 duplicate (14, 19) is reconciled to weeks 52 and 53 in derived data only, and the known malformed historical PSI midnight timestamp is repaired during parsing.
 
-Original copies and working raw downloads are ignored by Git. The verified local snapshot lives at `data/imported/ide5011`, including its manifest and the source recipes. Refreshes archive changed raw files by hash. The GitHub Monday workflow now refreshes and caches supplementary sources, rebuilds the library and publishes its downloads with the dashboard. This schedule becomes active only when the project is pushed to a configured GitHub repository; no remote repository or deployment has been created here.
+Original copies and working raw downloads are ignored by Git. The verified local snapshot lives at `data/imported/ide5011`, including its manifest and the source recipes. Refreshes archive changed raw files by hash. The GitHub repository is configured for a Monday refresh of supplementary sources, rebuilding the library and its downloads. Cloudflare hosting uses the GitHub-linked Worker and the build settings above.

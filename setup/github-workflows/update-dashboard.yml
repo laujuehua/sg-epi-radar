@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: dashboard-refresh
   cancel-in-progress: false
 
 jobs:
@@ -32,6 +32,9 @@ jobs:
 
       - name: Run tests
         run: python -m pytest
+
+      - name: Check Cloudflare build script
+        run: bash -n setup/build-cloudflare.sh
 
       - name: Fetch data and run pipeline
         env:
@@ -73,36 +76,24 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/processed data/extra/processed data/extra/catalog.json data/extra/refresh_status.json
-          git diff --staged --quiet || git commit -m "Update processed data [skip ci]"
+          # GITHUB_TOKEN pushes do not retrigger Actions. Avoid skip annotations
+          # so the independent Cloudflare Git integration can build fresh data.
+          git diff --staged --quiet || git commit -m "Update processed data"
+          git pull --rebase origin main
           git push
 
       - name: Collect site files
-        run: |
-          mkdir -p _site
-          cp dashboard/index.html _site/
-          cp -r dashboard/index_files _site/ 2>/dev/null || true
-          cp -r dashboard/chart-assets _site/
-          cp dashboard/app.js dashboard/styles.css _site/
+        run: python -m sgsurv.site
 
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
-      - name: Package site for project-name hosting
-        run: cd _site && zip -r ../sg-epi-radar-site.zip .
 
       - uses: actions/upload-artifact@v4
         with:
           name: sg-epi-radar-site
           path: sg-epi-radar-site.zip
 
-      - name: Deploy to Cloudflare Pages
-        if: vars.ENABLE_CLOUDFLARE_PAGES == 'true'
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME || 'sg-epi-radar' }} --branch=main
 
   deploy:
     if: vars.ENABLE_GITHUB_PAGES == 'true'

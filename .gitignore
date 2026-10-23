@@ -24,5 +24,7 @@ _site/
 sg-epi-radar-site.zip
 .tmp/
 .vendor/
+.cloudflare-build/
+.wrangler/
 data/imported/
 data/extra/raw/
