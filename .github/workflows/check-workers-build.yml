@@ -1,0 +1,35 @@
+name: Check Workers build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/check-workers-build.yml'
+      - 'setup/build-cloudflare.sh'
+      - 'wrangler.jsonc'
+      - 'requirements.txt'
+      - 'sgsurv/site.py'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-workers-build
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build using the Cloudflare command
+        run: bash setup/build-cloudflare.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-workers-site
+          path: sg-epi-radar-site.zip
