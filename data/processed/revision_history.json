@@ -42,6 +42,15 @@
       "changes": [],
       "added_rows": 0,
       "removed_rows": 0
+    },
+    {
+      "run_at": "2026-10-23T11:28:58+00:00",
+      "snapshot_id": "1d2593e9cfba3d933537886a9682b45e922342a0cd13d1a86f6f48061e7cf828",
+      "previous_snapshot_id": "4388380da011b3e723c3be3b9de3254b5b1aba6f5d1cae1705767f986da7cb0d",
+      "comparison_available": true,
+      "changes": [],
+      "added_rows": 0,
+      "removed_rows": 0
     }
   ]
 }
