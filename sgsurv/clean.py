@@ -318,6 +318,19 @@ def clean_psi_hourly(raw: pd.DataFrame) -> pd.DataFrame:
     return df[["timestamp", *REGIONS, "national"]].sort_values("timestamp", ignore_index=True)
 
 
+def psi_from_daily_peaks(daily: pd.DataFrame) -> pd.DataFrame:
+    """Keep the dashboard's mean-of-daily-peaks definition for refreshed context."""
+    daily=daily.copy()
+    daily["date"]=pd.to_datetime(daily.date)
+    daily["week_start"]=to_week_start(daily.date)
+    out=daily.groupby("week_start").agg(psi_mean=("psi_daily_max","mean"),psi_max=("psi_daily_max","max"),
+        days_unhealthy=("psi_daily_max",lambda s:int(s.gt(HAZE_THRESHOLD).sum())),days_with_data=("psi_daily_max","count")).reset_index()
+    out.psi_mean=out.psi_mean.round(1)
+    out["band"]=out.psi_max.map(psi_band)
+    out["haze_week"]=out.psi_max.gt(HAZE_THRESHOLD)
+    return out
+
+
 def psi_weekly(hourly: pd.DataFrame) -> pd.DataFrame:
     """Aggregate hourly PSI to Sunday-start weeks."""
     daily = (

@@ -114,7 +114,7 @@ async function restoreUrl(){
  const start=params.get('start'),end=params.get('end');
  if(params.has('years')&&['0','3','6'].includes(params.get('years')))document.getElementById('season-years').value=params.get('years');
  await applyDisease(i>=0?i:Number(select('disease').value),validRange(start||'',end||'')?[start,end]:null);
- for(const kind of ['haze','scatter','evaluation'])if(params.has(kind)){const value=Number(params.get(kind));if(Number.isInteger(value)&&value>=0&&value<select(kind).options.length)applyOther(kind,value);}
+ for(const kind of ['haze','scatter','evaluation'])if(params.has(kind)){const value=Number(params.get(kind));if(Number.isInteger(value)&&value>=0&&value<select(kind).options.length){select(kind).value=String(value);applyOther(kind,value);}}
  restoring=false;
 }
 document.addEventListener('change',async e=>{
@@ -149,5 +149,129 @@ window.addEventListener('load',async()=>{
 window.addEventListener('popstate',()=>{if(ready)restoreUrl();});
 window.addEventListener('resize',redrawVisiblePlots);
 document.addEventListener('shown.bs.tab',()=>setTimeout(redrawVisiblePlots,100));
+document.addEventListener('radar-chart-ready',e=>{const kind=e.detail;if(['haze','scatter','evaluation'].includes(kind))applyOther(kind,Number(select(kind).value));});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCoverage();});
+})();
+
+/* Independent illness, reference, briefing and regional controls. No API keys in browser. */
+(() => {
+'use strict';
+let data, illnessRows=[], initial=true;
+const byId=id=>document.getElementById(id);
+const date=value=>String(value).slice(0,10);
+const node=(tag,text,cls)=>{const el=document.createElement(tag);if(text!=null)el.textContent=text;if(cls)el.className=cls;return el;};
+const plotLayout={template:'plotly_white',height:480,margin:{l:75,r:25,t:25,b:65},hovermode:'x unified',font:{size:13},yaxis:{rangemode:'tozero'},legend:{orientation:'h'}};
+function link(title,url){const a=node('a',title);if(/^https:\/\//.test(url)){a.href=url;a.target='_blank';a.rel='noopener noreferrer';}return a;}
+async function lazyCharts(){
+ for(const el of document.querySelectorAll('[data-plot-spec]')){
+  if(el.offsetParent===null||el.dataset.loading)continue;
+  el.dataset.loading='true';
+  try{const response=await fetch(el.dataset.plotSpec);if(!response.ok)throw Error();const spec=await response.json();el.replaceChildren();await Plotly.newPlot(el,spec.data,spec.layout,{responsive:true,displaylogo:false});document.dispatchEvent(new CustomEvent('radar-chart-ready',{detail:el.dataset.kind}));}
+  catch{el.dataset.loading='';el.replaceChildren(node('p','Chart could not load. Reopen this tab to retry.'));}
+ }
+}
+function illnessOptions(){
+ const group=byId('illness-group').value,source=byId('illness-source').value,select=byId('illness-select'),previous=select.value;
+ select.replaceChildren();data.series.filter(s=>(group==='all'||s.respiratory)&&(!source||s.source===source)).forEach(s=>select.add(new Option(`${s.name} · ${s.source}`,s.id)));
+ if([...select.options].some(o=>o.value===previous))select.value=previous;
+ else if([...select.options].some(o=>o.value.includes('Polyclinic:Acute Upper')))select.value=[...select.options].find(o=>o.value.includes('Polyclinic:Acute Upper')).value;
+ drawIllness(true);
+}
+function card(name,target){
+ target.replaceChildren();
+ const reference=data.pathogens.find(p=>p.name===name||p.aliases.includes(name));
+ if(!reference){target.append(node('p',`A sourced quick-reference card for ${name} is not yet available.`),link('Browse WHO health topics','https://www.who.int/health-topics'));return;}
+ target.append(node('h3',reference.name),node('p',reference.agent));
+ const dl=node('dl');dl.className='wiki-facts';
+ for(const [key,label] of [['symptoms','Symptoms'],['incubation','Incubation period'],['infectious','Infectious period'],['transmission','Transmission']])dl.append(node('dt',label),node('dd',reference[key]));
+ target.append(dl,node('p',`Reference checked ${reference.checked}. Ranges vary with the person, pathogen and setting.`));
+ target.append(link('Primary reference',reference.source));
+ for(const url of reference.sources||[])target.append(node('span',' · '),link('Additional reference',url));
+ const notices=data.briefing.items.filter(i=>i.kind==='Official outbreak notice'&&i.topics.includes(reference.name)).slice(0,3);
+ target.append(node('h4','Recent WHO notices in the retained feed'));
+ if(!notices.length)target.append(node('p','No matching notice in the retained feed; this does not establish that there is no advisory.'));
+ for(const item of notices)target.append(node('p',item.published+' · '),link(item.title,item.url));
+ target.append(node('p'),link('Check WHO Disease Outbreak News for current recommendations','https://www.who.int/emergencies/disease-outbreak-news'));
+}
+function drawIllness(reset=false){
+ if(!data||byId('illness-explorer')?.offsetParent===null)return;
+ const series=data.series.find(s=>s.id===byId('illness-select').value),target=byId('illness-plot');
+ if(!series){target.replaceChildren(node('p','No series matches these filters.'));return;}
+ if(reset||!byId('illness-start').value){const end=series.dates.at(-1),start=new Date(end+'T00:00:00Z');start.setUTCFullYear(start.getUTCFullYear()-2);byId('illness-end').value=end;byId('illness-start').value=date(start.toISOString());}
+ const start=byId('illness-start').value,end=byId('illness-end').value;
+ if(!start||!end||start>end){illnessRows=[];byId('illness-note').textContent='Choose a start date on or before the end date.';return;}
+ illnessRows=series.dates.map((d,i)=>({week_start:d,value:series.values[i]})).filter(r=>r.week_start>=start&&r.week_start<=end);
+ for(const row of illnessRows){const stop=new Date(row.week_start+'T00:00:00Z');stop.setUTCDate(stop.getUTCDate()+6);const periods=data.school.filter(s=>['vacation','closure'].includes(s.type)&&s.start_date<=date(stop.toISOString())&&s.end_date>=row.week_start);row.school_period=data.school_years.includes(Number(row.week_start.slice(0,4)))?(periods.map(s=>s.name+' ('+s.type+')').join('; ')||'No recorded vacation/closure'):'Unknown calendar coverage';}
+ const shapes=[];const relevant=data.school.filter(s=>['vacation','closure'].includes(s.type)&&s.start_date<=end&&s.end_date>=start);
+ if(byId('illness-holidays').checked)for(const holiday of relevant){const stop=new Date(holiday.end_date+'T00:00:00Z');stop.setUTCDate(stop.getUTCDate()+1);shapes.push({type:'rect',xref:'x',yref:'paper',x0:holiday.start_date,x1:date(stop.toISOString()),y0:0,y1:1,fillcolor:'#b4c6e7',opacity:.28,line:{width:0},layer:'below'});}
+ const minYear=Math.min(...data.school_years),maxYear=Math.max(...data.school_years);
+ byId('illness-note').textContent=`${series.units}. ${illnessRows.length} reporting weeks selected. ${byId('illness-holidays').checked?'Blue bands: school vacations/closures.':'School-holiday shading is off.'} School calendar: ${minYear}–${maxYear}. `+(Number(start.slice(0,4))<minYear||Number(end.slice(0,4))>maxYear?'Calendar coverage is UNKNOWN outside those years; unshaded dates there must not be read as term time.':byId('illness-holidays').checked?'Unshaded dates are outside the recorded vacation/closure periods.':'');
+ Plotly.react(target,[{x:illnessRows.map(r=>r.week_start),y:illnessRows.map(r=>r.value),customdata:illnessRows.map(r=>r.school_period),type:'scatter',mode:'lines',connectgaps:false,name:series.name,line:{color:'#2458a6',width:2},hovertemplate:'%{x}<br>%{y:,.1f}<br>%{customdata}<extra></extra>'}],{...plotLayout,shapes,xaxis:{title:'Week starting (Sunday)',range:[start,end]},yaxis:{title:series.units,rangemode:'tozero'}},{responsive:true,displaylogo:false});
+ byId('calendar-note').textContent=`Curated reference years ${minYear}–${maxYear}. Only vacation and closure periods are shaded; primary-school-only special days are excluded. Dates are descriptive context, not a causal analysis.`;
+ byId('calendar-sources').replaceChildren(...[...new Set(relevant.map(s=>s.source))].map(url=>{const li=node('li');li.append(link(url,url));return li;}));
+ card(series.name,byId('illness-reference'));
+}
+function regionalControls(){
+ if(!data)return;
+ const selected=new Set([...byId('region-countries').querySelectorAll('input:checked')].map(e=>e.value));
+ if(byId('region-singapore').checked)selected.add('Singapore');else selected.delete('Singapore');
+ for(const kind of ['region-flu','region-tb']){
+  const plot=[...document.querySelectorAll('.js-plotly-plot')].find(p=>p.layout?.meta?.kind===kind);if(!plot)continue;
+  Plotly.restyle(plot,{visible:plot.data.map(t=>selected.has(t.name))});
+  if(kind==='region-flu'){
+   const dates=data.flu.map(r=>date(r.week_start)).sort(),stop=dates.at(-1),months=Number(byId('region-period').value),start=new Date(stop+'T00:00:00Z');start.setUTCMonth(start.getUTCMonth()-months);
+   Plotly.relayout(plot,{'xaxis.range':[months?date(start.toISOString()):dates[0],stop],'xaxis.autorange':false});
+  }
+ }
+}
+function briefing(){
+ const query=byId('news-search').value.toLowerCase(),region=byId('news-region').value,kind=byId('news-kind').value;
+ const items=data.briefing.items.filter(i=>(!region||i.scope===region)&&(!kind||i.kind===kind)&&`${i.title} ${i.topics.join(' ')}`.toLowerCase().includes(query));
+ byId('news-list').replaceChildren();
+ for(const item of items.slice(0,60)){const box=node('article',null,'headline-card');box.append(node('p',`${item.published} · ${item.source} · ${item.scope}`,'muted'),link(item.title,item.url),node('p',item.kind+' · '+item.topics.join(', '),'muted'));byId('news-list').append(box);}
+ if(!items.length)byId('news-list').append(node('p','No matching headlines in the retained feed. Try another filter or check the original publisher.'));
+ byId('news-status').textContent=`${items.length} matching links (up to 60 displayed). Feed checked ${data.briefing.checked_at||'not yet'}. Latest retained publication ${data.briefing.items[0]?.published||'unavailable'}.`;
+}
+function library(){
+ const query=byId('library-search')?.value.toLowerCase()||'',family=byId('library-family')?.value||'',region=byId('library-region')?.value||'';let count=0;
+ for(const el of document.querySelectorAll('.library-dataset')){el.hidden=!((!family||el.dataset.family===family)&&(!region||el.dataset.region===region)&&el.dataset.search.toLowerCase().includes(query));if(!el.hidden)count++;}
+ if(byId('library-count'))byId('library-count').textContent=`${count} datasets match. Expand a dataset for its preview and download.`;
+ const table=byId('data-library')?.querySelector('table');
+ if(table){const states=new Map([...document.querySelectorAll('.library-dataset')].map(el=>[el.querySelector('summary').textContent.split(' · ')[0],el.hidden]));for(const row of table.tBodies[0]?.rows||[])row.hidden=states.get(row.cells[0]?.textContent.trim())||false;}
+}
+async function activated(){await lazyCharts();if(!data)return;drawIllness(initial);if(byId('illness-explorer')?.offsetParent!==null)initial=false;regionalControls();}
+window.addEventListener('load',async()=>{
+ await lazyCharts();
+ try{
+  const response=await fetch('chart-assets/enhancements.json');if(!response.ok)throw Error();data=await response.json();
+  for(const p of data.pathogens)byId('wiki-select').add(new Option(p.name,p.name));
+  card(data.pathogens[0].name,byId('wiki-card'));
+  for(const name of Object.values(data.countries)){if(name==='Singapore')continue;const label=node('label'),input=node('input');input.type='checkbox';input.value=name;input.checked=true;label.append(input,document.createTextNode(name));byId('region-countries').append(label);}
+  byId('news-sources').replaceChildren(...data.briefing.sources.map(s=>node('li',`${s.source}: ${s.status} · checked ${s.checked_at}`)));
+  illnessOptions();briefing();library();await activated();
+ }catch(err){for(const id of ['news-status','illness-note'])if(byId(id))byId(id).textContent='Explorer data could not load. Reload to retry.';console.error('Explorer data unavailable',err);}
+ const signals=[...document.querySelectorAll('.card')].find(c=>c.querySelector('.card-header')?.textContent.includes('Signals for review'));
+ if(signals){const body=signals.querySelector('.card-body');if(body){const details=node('details'),summary=node('summary','Show recent signal table');details.append(summary,...body.childNodes);body.append(details);}}
+});
+document.addEventListener('shown.bs.tab',activated);
+document.addEventListener('radar-chart-ready',regionalControls);
+document.addEventListener('input',e=>{if(!data)return;if(e.target.id.startsWith('news-'))briefing();if(e.target.id.startsWith('library-'))library();});
+document.addEventListener('change',e=>{
+ if(!data)return;const id=e.target.id;
+ if(['illness-group','illness-source'].includes(id))illnessOptions();
+ else if(id==='illness-select')drawIllness(true);
+ else if(id.startsWith('illness-'))drawIllness();
+ if(id==='wiki-select')card(e.target.value,byId('wiki-card'));
+ if(e.target.closest('#region-countries')||id.startsWith('region-'))regionalControls();
+ if(e.target.matches('[data-chart-select="disease"]')){const name=e.target.selectedOptions[0].textContent.replace(/ \(last reported .*\)$/,'');const p=data.pathogens.find(p=>p.aliases.includes(name));byId('wiki-select').value=p?.name||'';card(name,byId('wiki-card'));}
+ if(id.startsWith('news-'))briefing();if(id.startsWith('library-'))library();
+});
+document.addEventListener('click',e=>{
+ if(!data)return;
+ if(['region-all','region-none'].includes(e.target.id)){byId('region-countries').querySelectorAll('input').forEach(i=>i.checked=e.target.id==='region-all');regionalControls();}
+ if(e.target.id==='illness-download'){
+  const s=data.series.find(s=>s.id===byId('illness-select').value);if(!s||!illnessRows.length)return;
+  const quote=value=>'"'+String(value).replaceAll('"','""')+'"';const csv=['week_start,value,school_period,units',...illnessRows.map(r=>`${r.week_start},${r.value??''},${quote(r.school_period)},${quote(s.units)}`)].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=node('a');a.href=url;a.download=`${s.name.replace(/[^a-z0-9]+/gi,'-')}-${s.source}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ }
+});
 })();

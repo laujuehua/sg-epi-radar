@@ -1,19 +1,25 @@
 {
-  "run_at": "2026-10-23T06:59:15+00:00",
+  "run_at": "2026-10-23T11:16:03+00:00",
   "bulletin_through": "2026-10-11",
-  "psi_through": "2026-09-27",
+  "psi_through": "2026-10-18",
+  "psi_observed_through": "2026-10-23",
   "n_diseases": 40,
   "n_recent_alerts": 2,
   "n_current_diseases": 38,
   "quality_notes": [
     "2 PSI weeks have fewer than 7 days; excluded from correlations.",
-    "1 disease-week observations are unavailable; not treated as zero."
+    "1 disease-week observations are unavailable; not treated as zero.",
+    "PSI weekly charts include supplementary historical and real-time observations; mean remains the mean of daily peaks. Partial hourly days remain provisional."
   ],
   "source_priority": [
-    "cda/bulletin_2026.xlsx",
-    "cda/bulletin_2025.xlsx",
-    "cda/bulletin_2024.xlsx",
-    "cda/bulletin_2023.xls"
+    "cda\\bulletin_2026.xlsx",
+    "cda\\bulletin_2025.xlsx",
+    "cda\\bulletin_2024.xlsx",
+    "cda\\bulletin_2023.xls",
+    "weekly-infectious-disease-bulletin-year-2026.xlsx",
+    "weekly-infectious-disease-bulletin-year-2025.xlsx",
+    "weekly infectious disease bulletin_EW52-2024_upload.xlsx",
+    "weekly-infectious-disease-bulletin-year-2023_upload-2023.xls"
   ],
-  "snapshot_id": "a5b136274415253b166a65198abde2ca89701b9c8e1a6ce8962210e294962ef6"
+  "snapshot_id": "4388380da011b3e723c3be3b9de3254b5b1aba6f5d1cae1705767f986da7cb0d"
 }

@@ -35,7 +35,7 @@ def coverage(frame, tb):
 def flu_chart(frame):
     data=frame[frame.origin_source.eq("SENTINEL")].copy()
     end=data.week_start.max()
-    start=end-pd.Timedelta(weeks=156)
+    start=data.week_start.min()
     figure=go.Figure()
     # A common calendar window, explicit missing calendar weeks, and no fallback
     # from sentinel to another source allow interpretable country comparisons.
@@ -44,7 +44,7 @@ def flu_chart(frame):
         part=data[data.country_code.eq(code)].set_index("week_start").reindex(calendar)
         figure.add_scatter(x=calendar,y=part.positivity_pct,name=name,connectgaps=False,
                            customdata=part.tested,hovertemplate="%{x|%d %b %Y}<br>%{y:.1f}% positive<br>%{customdata} tested<extra>%{fullData.name}</extra>")
-    figure.update_layout(template="plotly_white",height=480,margin=dict(l=60,r=25,t=30,b=60),
+    figure.update_layout(meta=dict(kind="region-flu"),template="plotly_white",height=480,margin=dict(l=60,r=25,t=30,b=60),
                          yaxis_title="Influenza A + B positivity (%)",xaxis_title="Week starting (MMWR)",
                          legend=dict(orientation="h",y=-.2),hovermode="closest",yaxis=dict(rangemode="tozero"))
     return figure
@@ -53,9 +53,9 @@ def flu_chart(frame):
 def tb_chart(tb):
     figure=go.Figure()
     for code,name in SEA_COUNTRIES.items():
-        part=tb[tb.country_code.eq(code)].sort_values("year")
+        part=tb[tb.country_code.eq(code)].dropna(subset="incidence_per_100000").sort_values("year")
         figure.add_scatter(x=part.year,y=part.incidence_per_100000,name=name,connectgaps=False)
-    figure.update_layout(template="plotly_white",height=480,margin=dict(l=65,r=25,t=30,b=60),
+    figure.update_layout(meta=dict(kind="region-tb"),template="plotly_white",height=480,margin=dict(l=65,r=25,t=30,b=60),
                          xaxis_title="Year",yaxis_title="Estimated incident TB cases per 100,000 population",
                          legend=dict(orientation="h",y=-.2),hovermode="x unified",yaxis=dict(rangemode="tozero"))
     return figure

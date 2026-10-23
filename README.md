@@ -1,6 +1,14 @@
 # SG Epi Radar
 
+The **Illness explorer** provides a standalone weekly chart with illness, respiratory/all-illness, data-source and date filters. School vacation and closure shading can be toggled; hover and CSV exports include calendar context. Polyclinic average daily attendances and notified weekly cases remain separate, with explicit units. Singapore school-calendar coverage is curated for 2012–2026; future unshaded dates are unknown, not assumed school days. Primary-school-only special days are excluded from the default shading, and overlaps are descriptive rather than causal evidence.
+
+The regional tab supports country selection, Singapore comparison and common influenza periods; TB charts omit empty historical years. Secondary charts load when their tab opens. The library supports search and family/coverage filters, with recent stored-row previews. The homepage distinguishes observation coverage, source-check times, processing time and site-build time, and collapses detailed signal tables.
+
+**Briefing** combines WHO Disease Outbreak News with health-keyword-filtered CNA RSS headline links and clearly identified curated links. Only linked titles, attribution and publication dates are retained, not article text. Feeds refresh with the data workflow; failures retain cached items and remain visible. Geographic/topic labels are approximate, and feed coverage is incomplete. The **Pathogen reference** starts with eight sourced cards (influenza, measles, pertussis, HFMD, chickenpox, mumps, dengue and salmonellosis), checked 23 October 2026. Syndrome labels are explicitly distinguished from aetiological diagnoses; other illnesses show a link to WHO topics instead of invented clinical fields. Related WHO notices are the latest matching records in the retained feed, not a claim to list every current advisory.
+
 ## To do and future development
+
+Initial briefing and reference features are implemented; remaining work includes broader publisher coverage, additional clinician-reviewed pathogen cards and better regional outbreak classification.
 
 - **Singapore and regional news:** include relevant news articles about infectious diseases in Singapore and Southeast Asia, with publication dates, source links and country/pathogen tags.
 - **Important global outbreaks:** highlight significant outbreaks worldwide, with clear geographic scope, event dates and links to official reporting such as WHO Disease Outbreak News. Distinguish official advisories from media coverage.

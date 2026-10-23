@@ -70,8 +70,18 @@ def run(skip_fetch: bool = False, ai: bool = False) -> None:
     psi_raw = read("psi")
     if psi_raw is None:
         raise FileNotFoundError("data/raw/psi.csv is needed; run without --skip-fetch first")
-    psi_wk = clean.psi_weekly(clean.clean_psi_hourly(psi_raw))
-    quality_notes = validate(results, psi_wk, previous)
+    hourly=clean.clean_psi_hourly(psi_raw)
+    psi_observed_through=hourly.timestamp.max().date().isoformat()
+    psi_wk = clean.psi_weekly(hourly)
+    context_daily=PROCESSED_DIR.parent / "extra" / "processed" / "psi_daily.csv"
+    context_notes=[]
+    if context_daily.exists():
+        daily=pd.read_csv(context_daily,parse_dates=["date"])
+        if daily.date.max() >= psi_wk.week_start.max()+pd.Timedelta(days=6):
+            psi_observed_through=daily.date.max().date().isoformat()
+            psi_wk=clean.psi_from_daily_peaks(daily)
+            context_notes=["PSI weekly charts include supplementary historical and real-time observations; mean remains the mean of daily peaks. Partial hourly days remain provisional."]
+    quality_notes = validate(results, psi_wk, previous)+context_notes
     names.to_csv(PROCESSED_DIR / "disease_names.csv", index=False)
     poly.to_csv(PROCESSED_DIR / "polyclinic_weekly.csv", index=False)
     results.to_csv(PROCESSED_DIR / "bulletin_detection.csv", index=False)
@@ -86,6 +96,7 @@ def run(skip_fetch: bool = False, ai: bool = False) -> None:
         "run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "bulletin_through": str(data_through.date()),
         "psi_through": str(psi_wk["week_start"].max().date()),
+        "psi_observed_through": psi_observed_through,
         "n_diseases": int(results["disease"].nunique()),
         "n_recent_alerts": int(len(alerts)),
         "n_current_diseases": int(results.loc[results.week_start.eq(data_through) & results.cases.notna(), "disease"].nunique()),

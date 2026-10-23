@@ -16,6 +16,7 @@ execute:
 #| label: setup
 import json
 import hashlib
+import uuid
 from pathlib import Path
 from html import escape
 import pandas as pd
@@ -29,6 +30,8 @@ from sgsurv.evaluation import evaluate_events
 from IPython import get_ipython
 from IPython.display import HTML, Markdown
 get_ipython().ast_node_interactivity = "last_expr"
+from sgsurv.explore import prepare as prepare_explorers
+enhanced_payload=prepare_explorers(Path("chart-assets"))
 DATA = Path("..") / "data" / "processed"
 meta = json.loads((DATA / "metadata.json").read_text(encoding="utf-8"))
 det = pd.read_csv(DATA / "bulletin_detection.csv", parse_dates=["week_start"])
@@ -88,6 +91,11 @@ for source_name, include_file, kind in [("styles.css","ui-styles.html","style"),
 
 def show_chart(figure):
     global _plotly_loaded
+    kind=(figure.layout.meta or {}).get("kind")
+    if kind not in ["disease","seasonal"]:
+        name="plot-"+uuid.uuid4().hex+".json"
+        (Path("chart-assets")/name).write_text(figure.to_json(),encoding="utf-8")
+        return HTML(f'<div class="lazy-plot" data-plot-spec="chart-assets/{name}" data-kind="{escape(kind or "other")}" style="min-height:{figure.layout.height or 450}px"><p role="status">Chart loads when this tab opens.</p></div>')
     html = figure.to_html(full_html=False, include_plotlyjs="chart-assets/plotly.min.js" if not _plotly_loaded else False,
                           include_mathjax=False, config={"responsive":True,"displaylogo":False})
     _plotly_loaded = True
@@ -99,13 +107,19 @@ def show_chart(figure):
 ## Row
 
 ```{python}
-#| title: "Reporting status"
+#| title: "Reporting status · observations and build times"
 display(Markdown(f"**Reporting week: EW {int(current.week.iloc[0])}, {datefmt(latest)}–{datefmt(end)}.** "
                  "Recent counts are provisional. Statistical signals prompt review; they do not confirm outbreaks.\n\n"
                  f"**Bulletin:** through {datefmt(end)} · {freshness(latest)}. "
-                 f"**PSI:** through {datefmt(psi.week_start.max() + pd.Timedelta(days=6))} · {freshness(psi.week_start.max())}.\n\n"
+                 f"**PSI:** observations through {datefmt(meta.get('psi_observed_through',psi.week_start.max() + pd.Timedelta(days=6)))} · {freshness(psi.week_start.max())}.\n\n"
                  f"**Last processed:** {pd.Timestamp(meta['run_at']).tz_convert('Asia/Singapore').strftime('%d %b %Y, %H:%M SGT')}. "
                  "Coverage status uses a 14-day allowance after each reporting week ends."))
+extra_catalog=json.loads((Path("..")/"data"/"extra"/"catalog.json").read_text())
+latest_download=max((s.get("checked_at","") for s in (extra_catalog.get("refresh") or {}).get("sources",[]) if s.get("status")=="refreshed"),default="Unavailable")
+daily_psi=pd.read_csv(Path("..")/"data"/"extra"/"processed"/"psi_daily.csv")
+display(Markdown(f"**Daily PSI observations available:** through {daily_psi.date.max()}. **Latest successful source check:** {latest_download}. "
+                 f"**Website built:** {pd.Timestamp.now(tz='Asia/Singapore').strftime('%d %b %Y, %H:%M SGT')}. "
+                 "These timestamps describe different stages; a successful download does not establish complete observations. Scheduled refresh: Mondays 09:00 SGT; extra builds may occur after changes."))
 ```
 
 ## Row
@@ -131,7 +145,7 @@ dict(color="warning" if len(alerts) else "success",value=len(alerts))
 ## Row
 
 ```{python}
-#| title: "Weekly situation"
+#| title: "What changed this week"
 previous = det[det.week_start.eq(latest-pd.Timedelta(weeks=1))][["disease","cases"]].rename(columns={"cases":"previous"})
 changes = current.merge(previous,on="disease").dropna(subset=["previous"])
 changes["change"] = changes.cases - changes.previous
@@ -150,7 +164,7 @@ if ai_path.exists() and ai_meta.exists() and json.loads(ai_meta.read_text()).get
 ```
 
 ```{python}
-#| title: "Signals for review · last 8 weeks"
+#| title: "Signals for review · expand for the last 8 weeks"
 if alerts.empty:
     display(Markdown("No statistical signals in the latest eight weeks. This does not establish the absence of outbreaks."))
 else:
@@ -241,6 +255,31 @@ display(table(current[["disease","cases","hl_expected","hl_threshold","any_alert
 display(Markdown("Chart controls support pointer interaction. This table provides the latest figures without relying on chart colours or hover. Unavailable observations appear as crosses at zero on the chart; they are not zero counts."))
 ```
 
+# Illness explorer {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Illness trends · standalone chart with Singapore school holidays"
+display(HTML('''<div class="radar-controls" id="illness-controls">
+<label>Illness group <select id="illness-group"><option value="respiratory">Respiratory illnesses</option><option value="all">All illnesses</option></select></label>
+<label>Data source <select id="illness-source"><option value="">All sources</option><option>Polyclinic</option><option>Notifications</option></select></label>
+<label>Illness <select id="illness-select"></select></label>
+<label>From <input type="date" id="illness-start"></label><label>To <input type="date" id="illness-end"></label>
+<label><input type="checkbox" id="illness-holidays" checked> Show school vacations and closures</label>
+<button id="illness-download" type="button">Download filtered CSV</button></div>
+<p id="illness-note" role="status"></p><div id="illness-plot" class="radar-plot"></div>
+<p>Polyclinic series measure average daily attendances during the reporting week. Notifications measure reported cases per week; they are never added together. Shading shows Singapore school vacation/closure dates, not a demonstrated effect on illness. Missing observations remain gaps.</p>
+<details><summary>School calendar sources and coverage</summary><p id="calendar-note"></p><ul id="calendar-sources"></ul></details>'''))
+```
+
+## Row
+
+```{python}
+#| title: "Quick reference for the selected illness"
+display(HTML('<div id="illness-reference"></div>'))
+```
+
 # Haze & respiratory {scrolling=true}
 
 ## Row
@@ -249,7 +288,7 @@ display(Markdown("Chart controls support pointer interaction. This table provide
 #| title: "Coverage and interpretation"
 overlap = psi_resp[psi_resp.attendances.notna()]
 display(Markdown(f"**Overlapping observations:** {datefmt(overlap.week_start.min())}–{datefmt(overlap.week_start.max()+pd.Timedelta(days=6))}. "
-                 f"**PSI coverage:** through {datefmt(psi.week_start.max()+pd.Timedelta(days=6))}. "
+                 f"**PSI observations:** through {datefmt(meta.get('psi_observed_through',psi.week_start.max()+pd.Timedelta(days=6)))}. "
                  "PSI and respiratory attendances are descriptive comparisons; this dashboard does not estimate a causal effect. "
                  "Weeks with fewer than seven PSI days are excluded from correlations."))
 ```
@@ -428,12 +467,13 @@ display(Markdown("Influenza charts use **SENTINEL reporting only**, without subs
     "Positivity uses influenza A + B positive specimens divided by tested specimens. Unavailable or invalid denominators remain missing; "
     "country coverage, testing and reporting differ. These figures do not measure all infections in the population. "
     "TB values are annual estimates, not weekly notification counts or live alerts."))
+display(HTML('<div class="radar-controls"><label>Regional chart period <select id="region-period"><option value="36">Last 3 years</option><option value="12">Last year</option><option value="0">All available history</option></select></label><label><input id="region-singapore" type="checkbox" checked> Include Singapore</label><button type="button" id="region-all">Select comparison countries</button><button type="button" id="region-none">Clear comparison countries</button></div><fieldset id="region-countries"><legend>Countries to compare</legend></fieldset><p>Influenza filters use a common date window. Annual TB estimates retain their own observed year range.</p>'))
 ```
 
 ## Row
 
 ```{python}
-#| title: "Influenza positivity · sentinel surveillance · latest three years"
+#| title: "Influenza positivity · sentinel surveillance · selected period"
 display(Markdown("Use the legend to hide or compare countries. Gaps represent unavailable weeks; absent lines indicate no eligible sentinel observations in the common window."))
 show_chart(regional.flu_chart(regional_flu))
 ```
@@ -467,6 +507,28 @@ display(Markdown("[WHO FluNet](https://www.who.int/tools/flunet) supplies public
 display(HTML('<a class="download-link" href="chart-assets/data-library/flunet_weekly_by_source.csv" download>Download regional influenza by reporting source</a>'))
 if not regional_tb.empty:
     display(HTML('<a class="download-link" href="chart-assets/data-library/southeast_asia_tb_annual.csv" download>Download annual regional TB estimates</a>'))
+```
+
+# Briefing {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Singapore, regional and global outbreak briefing"
+display(HTML('''<div class="radar-controls"><label>Search headlines <input id="news-search" type="search" placeholder="Disease or country"></label>
+<label>Geography <select id="news-region"><option value="">All locations</option><option>Singapore</option><option>Southeast Asia / Asia</option><option>Global</option></select></label>
+<label>Source type <select id="news-kind"><option value="">All sources</option><option>Official outbreak notice</option><option>Media headline</option></select></label></div>
+<p id="news-status" role="status"></p><div id="news-list"></div>
+<p>Headlines link to publishers; article text is not reproduced. Feed-category and title-based filters can miss or misclassify stories. An official outbreak notice is not necessarily a travel advisory. See original sources for recommendations.</p><details><summary>Feed status</summary><ul id="news-sources"></ul></details>'''))
+```
+
+# Pathogen reference {scrolling=true}
+
+## Row
+
+```{python}
+#| title: "Pathogen quick reference · sourced overview"
+display(HTML('<label class="chart-selector">Reference topic <select id="wiki-select"></select></label><div id="wiki-card"></div><p>These concise reference cards cover selected common conditions and are not diagnostic advice. Syndrome labels can have many causes. Other dashboard diseases link to WHO information until a sourced card is available.</p>'))
 ```
 
 # Data library {scrolling=true}

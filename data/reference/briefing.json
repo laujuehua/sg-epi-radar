@@ -1,0 +1,1172 @@
+{
+  "checked_at": "2026-10-23T11:20:36+00:00",
+  "sources": [
+    {
+      "source": "WHO Disease Outbreak News",
+      "status": "refreshed",
+      "checked_at": "2026-10-23T11:20:36+00:00"
+    },
+    {
+      "source": "CNA Singapore",
+      "status": "refreshed",
+      "checked_at": "2026-10-23T11:20:36+00:00"
+    },
+    {
+      "source": "CNA Asia",
+      "status": "refreshed",
+      "checked_at": "2026-10-23T11:20:36+00:00"
+    },
+    {
+      "source": "CNA World",
+      "status": "refreshed",
+      "checked_at": "2026-10-23T11:20:36+00:00"
+    }
+  ],
+  "items": [
+    {
+      "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
+      "published": "2026-10-15",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Singapore flu activity rises as clinicians discuss haze-related respiratory effects",
+      "url": "https://www.channelnewsasia.com/singapore/weekly-flu-activity-highest-2024-doctors-say-haze-can-worsen-respiratory-conditions-6452511",
+      "published": "2026-10-12",
+      "source": "CNA Singapore \u00b7 curated link",
+      "scope": "Singapore",
+      "kind": "Media headline",
+      "topics": [
+        "Influenza",
+        "Other"
+      ],
+      "selection": "Paraphrased headline; link checked 2026-10-23"
+    },
+    {
+      "title": "Pneumonia of undetermined etiology - the Russian Federation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON620",
+      "published": "2026-10-10",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON619",
+      "published": "2026-10-08",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON621",
+      "published": "2026-09-25",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON617",
+      "published": "2026-09-10",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "CDA monitors increased influenza activity in Singapore",
+      "url": "https://www.channelnewsasia.com/singapore/rise-influenza-cases-cda-monitoring-6354281",
+      "published": "2026-09-01",
+      "source": "CNA Singapore \u00b7 curated link",
+      "scope": "Singapore",
+      "kind": "Media headline",
+      "topics": [
+        "Influenza"
+      ],
+      "selection": "Paraphrased headline; link checked 2026-10-23"
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON616",
+      "published": "2026-08-28",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON615",
+      "published": "2026-08-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON614",
+      "published": "2026-08-01",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON613",
+      "published": "2026-07-17",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON612",
+      "published": "2026-07-03",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Hantavirus outbreak linked to cruise ship travel, Multi-locations",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON611",
+      "published": "2026-07-02",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Nipah virus disease - India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON609",
+      "published": "2026-06-25",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Yellow fever - Global",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON610",
+      "published": "2026-06-24",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON608",
+      "published": "2026-06-19",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Regional framework aims to strengthen dengue prevention",
+      "url": "https://www.channelnewsasia.com/watch/fight-against-dengue-new-regional-framework-speed-up-adoption-prevention-strategies-6184966",
+      "published": "2026-06-15",
+      "source": "CNA \u00b7 curated regional link",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Media headline",
+      "topics": [
+        "Dengue"
+      ],
+      "selection": "Paraphrased video headline; link checked 2026-10-23"
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON607",
+      "published": "2026-06-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON606",
+      "published": "2026-06-08",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON605",
+      "published": "2026-05-29",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Hantavirus outbreak linked to cruise ship travel, Multi-locations",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON604",
+      "published": "2026-05-28",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus \u2013 Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON603",
+      "published": "2026-05-22",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo & Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON602",
+      "published": "2026-05-17",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON601",
+      "published": "2026-05-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON600",
+      "published": "2026-05-08",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Hantavirus cluster linked to cruise ship travel, Multi-country",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON599",
+      "published": "2026-05-04",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Measles - Bangladesh",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON598",
+      "published": "2026-04-23",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Measles"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H9N2) - Italy",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON597",
+      "published": "2026-04-10",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "International food safety event: Infant formula and products containing arachidonic acid oil contaminated with cereulide toxin - Multi-country",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON596",
+      "published": "2026-03-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Mpox: recombinant virus with genomic elements of clades Ib and IIb \u2013 Global situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON595",
+      "published": "2026-02-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Nipah virus infection - Bangladesh",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON594",
+      "published": "2026-02-06",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Nipah virus disease - India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON593",
+      "published": "2026-01-30",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease- Ethiopia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON592",
+      "published": "2026-01-26",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Middle East respiratory syndrome coronavirus - Global update",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON591",
+      "published": "2025-12-24",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Seasonal influenza - Global situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON586",
+      "published": "2025-12-10",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Broader transmission of mpox due to clade Ib MPXV \u2013 Global situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON587",
+      "published": "2025-12-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H5N5)- United States of America",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON590",
+      "published": "2025-12-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Ebola virus disease \u2013 Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON589",
+      "published": "2025-12-01",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Diphtheria - African Region (AFRO)",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/DON588",
+      "published": "2025-11-21",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease- Ethiopia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON585",
+      "published": "2025-11-21",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Rift Valley fever- Mauritania and Senegal",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON584",
+      "published": "2025-11-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Chikungunya virus disease- Global situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON581",
+      "published": "2025-10-03",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Nipah virus infection - Bangladesh",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON582",
+      "published": "2025-09-18",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola virus disease \u2013 Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON580",
+      "published": "2025-09-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Cholera \u2013 Multi-country with a focus on countries experiencing current surges",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON579",
+      "published": "2025-08-29",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Circulating vaccine-derived poliovirus type 1- Israel",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON578",
+      "published": "2025-08-20",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Nipah Virus Infection - India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON577",
+      "published": "2025-08-06",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Rabies - Timor-Leste",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON576",
+      "published": "2025-07-24",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H5N1) - Cambodia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON575",
+      "published": "2025-07-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Anthrax \u2013 Thailand",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON573",
+      "published": "2025-05-29",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "COVID-19 - Global Situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON572",
+      "published": "2025-05-28",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "COVID-19"
+      ]
+    },
+    {
+      "title": "Circulating vaccine-derived poliovirus type 2 (cVDPV2) - Papua New Guinea",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON571",
+      "published": "2025-05-20",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Yellow fever - Region of the Americas",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON570",
+      "published": "2025-05-16",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Measles - Morocco",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON568",
+      "published": "2025-05-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Measles"
+      ]
+    },
+    {
+      "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON569",
+      "published": "2025-05-12",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Chikungunya - La R\u00e9union and Mayotte",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON567",
+      "published": "2025-05-12",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Measles \u2013 Region of the Americas",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON565",
+      "published": "2025-04-28",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Measles"
+      ]
+    },
+    {
+      "title": "Sudan virus disease \u2013 Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON566",
+      "published": "2025-04-26",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H5N1) - Mexico",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON564",
+      "published": "2025-04-17",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Invasive meningococcal disease - Kingdom of Saudi Arabia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON563",
+      "published": "2025-04-11",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Cholera - Angola",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON562",
+      "published": "2025-03-28",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Measles - United States of America",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON561",
+      "published": "2025-03-27",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Measles"
+      ]
+    },
+    {
+      "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON560",
+      "published": "2025-03-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease\u2013 United Republic of Tanzania",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON559",
+      "published": "2025-03-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Sudan virus disease \u2013 Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON558",
+      "published": "2025-03-08",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Cluster of community deaths in Basankusu, Equateur- Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON557",
+      "published": "2025-03-03",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Sudan virus disease - Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON556",
+      "published": "2025-02-21",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg Virus Disease\u2013United Republic of Tanzania",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON554",
+      "published": "2025-02-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Sudan virus disease \u2013 Uganda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON555",
+      "published": "2025-02-01",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Zika virus disease \u2013 India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON549",
+      "published": "2025-01-29",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Chapare haemorrhagic fever- the Plurinational State of Bolivia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON553",
+      "published": "2025-01-20",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Outbreak of suspected Marburg Virus Disease\u2013 United Republic of Tanzania",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON552",
+      "published": "2025-01-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Trends of acute respiratory infection, including human metapneumovirus, in the Northern Hemisphere",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2025-DON550",
+      "published": "2025-01-07",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Acute respiratory infections complicated by malaria (previously undiagnosed disease) - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON547",
+      "published": "2024-12-27",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease - Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON548",
+      "published": "2024-12-20",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H9N2)- Viet Nam",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON514",
+      "published": "2024-12-10",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Undiagnosed disease \u2013 Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON546",
+      "published": "2024-12-08",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Oropouche virus disease - Region of the Americas",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON545",
+      "published": "2024-12-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease - Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON544",
+      "published": "2024-11-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease \u2013 Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON543",
+      "published": "2024-11-01",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Malaria - Ethiopia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON542",
+      "published": "2024-10-31",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease \u2013 Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON541",
+      "published": "2024-10-25",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease \u2013 Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON540",
+      "published": "2024-10-18",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease \u2013 Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON539",
+      "published": "2024-10-11",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "West Nile virus- Barbados",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON538",
+      "published": "2024-10-03",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON536",
+      "published": "2024-10-02",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Marburg virus disease\u2013 The Republic of Rwanda",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON537",
+      "published": "2024-09-30",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H9N2)",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON534",
+      "published": "2024-09-20",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Influenza A(H1N1) variant virus \u2013 Viet Nam",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON532",
+      "published": "2024-09-04",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Avian Influenza A(H5N1)- Cambodia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON533",
+      "published": "2024-09-02",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Mpox - Sweden",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON531",
+      "published": "2024-08-30",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Oropouche virus disease - Region of the Americas",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON530",
+      "published": "2024-08-23",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Acute encephalitis syndrome due to Chandipura virus \u2013 India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON529",
+      "published": "2024-08-23",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Mpox \u2013 African Region",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON528",
+      "published": "2024-08-22",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Antimicrobial Resistance, Hypervirulent Klebsiella pneumoniae - Global situation",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON527",
+      "published": "2024-07-31",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Dengue \u2013 Iran (Islamic Republic of)",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON526",
+      "published": "2024-07-22",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Dengue"
+      ]
+    },
+    {
+      "title": "Mpox \u2013 South Africa",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON525",
+      "published": "2024-07-09",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Mpox - Democratic Republic of the Congo",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON522",
+      "published": "2024-06-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Mpox"
+      ]
+    },
+    {
+      "title": "Human infection caused by avian Influenza A(H5N2)-Mexico",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON524",
+      "published": "2024-06-14",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza",
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A (H9N2)- India",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON523",
+      "published": "2024-06-11",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Oropouche virus disease - Cuba",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON521",
+      "published": "2024-06-11",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Avian Influenza A (H5N1) - Australia",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON519",
+      "published": "2024-06-07",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza"
+      ]
+    },
+    {
+      "title": "Human infection caused by avian Influenza A(H5N2)- Mexico",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON520",
+      "published": "2024-06-05",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Influenza",
+        "Other"
+      ]
+    }
+  ],
+  "note": "Keyword-filtered headline links; geographic labels follow feed categories or title matching. Not a comprehensive outbreak feed."
+}

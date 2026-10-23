@@ -36,12 +36,6 @@ jobs:
       - name: Check Cloudflare build script
         run: bash -n setup/build-cloudflare.sh
 
-      - name: Fetch data and run pipeline
-        env:
-          DATA_GOV_SG_API_KEY: ${{ secrets.DATA_GOV_SG_API_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # optional; AI step skips if empty
-        run: python -m sgsurv.pipeline --ai
-
       - uses: actions/cache@v4
         with:
           path: data/extra/raw
@@ -52,6 +46,15 @@ jobs:
         env:
           DATA_GOV_SG_API_KEY: ${{ secrets.DATA_GOV_SG_API_KEY }}
         run: python -m sgsurv.extra_data
+
+      - name: Fetch data and run pipeline
+        env:
+          DATA_GOV_SG_API_KEY: ${{ secrets.DATA_GOV_SG_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # optional; AI step skips if empty
+        run: python -m sgsurv.pipeline --ai
+
+      - name: Refresh briefing headlines
+        run: python -m sgsurv.content
 
       - name: Retain supplementary refresh diagnostics
         if: always()
@@ -75,7 +78,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed data/extra/processed data/extra/catalog.json data/extra/refresh_status.json
+          git add data/processed data/extra/processed data/extra/catalog.json data/extra/refresh_status.json data/reference/briefing.json
           # GITHUB_TOKEN pushes do not retrigger Actions. Avoid skip annotations
           # so the independent Cloudflare Git integration can build fresh data.
           git diff --staged --quiet || git commit -m "Update processed data"

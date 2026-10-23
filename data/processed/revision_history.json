@@ -33,6 +33,15 @@
       ],
       "added_rows": 38,
       "removed_rows": 0
+    },
+    {
+      "run_at": "2026-10-23T11:16:03+00:00",
+      "snapshot_id": "4388380da011b3e723c3be3b9de3254b5b1aba6f5d1cae1705767f986da7cb0d",
+      "previous_snapshot_id": "a5b136274415253b166a65198abde2ca89701b9c8e1a6ce8962210e294962ef6",
+      "comparison_available": true,
+      "changes": [],
+      "added_rows": 0,
+      "removed_rows": 0
     }
   ]
 }
