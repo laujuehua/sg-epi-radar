@@ -445,7 +445,7 @@ show_chart(regional.flu_chart(regional_flu))
 if regional_tb.empty:
     display(Markdown("Annual TB estimates have not been downloaded. Coverage is unavailable."))
 else:
-    show_chart(regional.tb_chart(regional_tb))
+    display(show_chart(regional.tb_chart(regional_tb)))
 ```
 
 ## Row

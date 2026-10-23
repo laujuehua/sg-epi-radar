@@ -1,5 +1,11 @@
 # SG Epi Radar
 
+## To do and future development
+
+- **Singapore and regional news:** include relevant news articles about infectious diseases in Singapore and Southeast Asia, with publication dates, source links and country/pathogen tags.
+- **Important global outbreaks:** highlight significant outbreaks worldwide, with clear geographic scope, event dates and links to official reporting such as WHO Disease Outbreak News. Distinguish official advisories from media coverage.
+- **Pathogen wiki:** add a quick reference for the selected virus, bacterium or other pathogen, covering the disease overview, symptoms, incubation period, infectious period, transmission routes and the latest relevant WHO advisories. Cite authoritative sources, show when information was checked, and distinguish established reference facts from evolving outbreak guidance.
+
 The **Southeast Asia** tab covers all 11 geographic Southeast Asian countries. Weekly influenza charts use WHO FluNet sentinel reporting only, with A+B positivity and explicit missing weeks. A separate annual TB chart uses WHO estimates distributed through World Bank WDI (`SH.TBS.INCD`, CC BY 4.0). Country coverage dates differ; neither dataset is a comprehensive regional outbreak feed. Regional sources refresh with `python -m sgsurv.extra_data --groups flunet regional` and the scheduled workflow.
 
 ### Publish at a project address
@@ -181,7 +187,7 @@ Run from this project folder:
 & "$env:LOCALAPPDATA\Python\bin\python.exe" -m sgsurv.extra_data
 ```
 
-This downloads public sources into `data/extra/raw`, rebuilds 18 tables in `data/extra/processed`, and writes `data/extra/catalog.json` with coverage, units, missing values, hashes and refresh results. Use `--skip-fetch` to rebuild offline, or `--groups data_gov flunet` to refresh selected families. Set the optional `DATA_GOV_SG_API_KEY` environment variable for authenticated data.gov.sg access; it is sent only to that API host. Requests are paced and retried. Last good cache files are retained when a source fails, with an explicit failure/partial status. Publication fails if required data cannot be rebuilt.
+This downloads public sources into `data/extra/raw`, rebuilds 19 tables in `data/extra/processed`, and writes `data/extra/catalog.json` with coverage, units, missing values, hashes and refresh results. Use `--skip-fetch` to rebuild offline, or `--groups data_gov flunet` to refresh selected families. Set the optional `DATA_GOV_SG_API_KEY` environment variable for authenticated data.gov.sg access; it is sent only to that API host. Requests are paced and retried. Last good cache files are retained when a source fails, with an explicit failure/partial status. Publication fails if required data cannot be rebuilt.
 
 The library includes notifications, polyclinic attendances, daily PSI and weather, monthly humidity, population by age, contact matrices, school/public holidays, vaccination survey coverage, visitors, mortality, Singapore sentinel influenza and regional FluNet. The **Data library** dashboard tab provides previews and complete CSV downloads. All tables are retained for review; existing charts retain their current inputs until datasets are selected for them.
 
