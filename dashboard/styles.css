@@ -124,6 +124,13 @@ body.quarto-dashboard #overview>.bslib-grid {row-gap:16px!important;}
 .radar-controls input,.radar-controls select,.radar-controls button { font:inherit; border:1px solid #aab8c8; border-radius:6px; padding:8px; background:white; color:#203249; max-width:100%; }
 .radar-controls label:has(input[type=checkbox]) { flex-direction:row; align-items:center; }
 .radar-controls button { cursor:pointer; }
+/* Quarto's fill-container rules must not turn toolbars into tall columns. */
+body.quarto-dashboard .radar-controls {
+ display:flex!important; flex-direction:row!important; flex-wrap:wrap!important;
+ align-items:end!important; justify-content:flex-start!important; flex:0 0 auto!important;
+ min-width:0; width:100%;
+}
+body.quarto-dashboard .radar-controls>* { flex:0 1 auto!important; min-width:0; }
 .radar-plot { min-height:480px; width:100%; }
 #region-countries { display:flex; flex-wrap:wrap; gap:10px 20px; border:1px solid #dce1e8; padding:12px; }
 #region-countries legend { font-size:1rem; font-weight:600; }
@@ -136,3 +143,4 @@ body.quarto-dashboard #overview>.bslib-grid {row-gap:16px!important;}
 .navbar-nav { flex-wrap:wrap; }
 [hidden] { display:none!important; }
 @media(max-width:700px) { .radar-controls { align-items:stretch; }.radar-controls label { flex:1 1 100%; }.wiki-facts { display:block; }.wiki-facts dt { margin-top:12px; }.radar-plot { min-height:440px; } }
+@media(max-width:700px) { body.quarto-dashboard .radar-controls>label { flex:1 1 100%!important; } }
