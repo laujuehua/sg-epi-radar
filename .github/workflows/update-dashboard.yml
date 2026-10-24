@@ -21,6 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # A queued refresh must include data committed by the previous run.
+          ref: main
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
