@@ -1,28 +1,39 @@
 {
-  "checked_at": "2026-10-23T11:29:04+00:00",
+  "checked_at": "2026-10-24T13:30:59+00:00",
   "sources": [
     {
       "source": "WHO Disease Outbreak News",
       "status": "refreshed",
-      "checked_at": "2026-10-23T11:29:04+00:00"
+      "checked_at": "2026-10-24T13:30:59+00:00"
     },
     {
       "source": "CNA Singapore",
       "status": "refreshed",
-      "checked_at": "2026-10-23T11:29:04+00:00"
+      "checked_at": "2026-10-24T13:30:59+00:00"
     },
     {
       "source": "CNA Asia",
       "status": "refreshed",
-      "checked_at": "2026-10-23T11:29:04+00:00"
+      "checked_at": "2026-10-24T13:30:59+00:00"
     },
     {
       "source": "CNA World",
       "status": "refreshed",
-      "checked_at": "2026-10-23T11:29:04+00:00"
+      "checked_at": "2026-10-24T13:30:59+00:00"
     }
   ],
   "items": [
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON622",
+      "published": "2026-10-23",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
     {
       "title": "Middle East respiratory syndrome coronavirus - Kingdom of Saudi Arabia",
       "url": "https://www.who.int/emergencies/disease-outbreak-news/middle-east-respiratory-syndrome-coronavirus---kingdom-of-saudi-arabia",
@@ -1153,18 +1164,6 @@
       "kind": "Official outbreak notice",
       "topics": [
         "Influenza"
-      ]
-    },
-    {
-      "title": "Human infection caused by avian Influenza A(H5N2)- Mexico",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON520",
-      "published": "2024-06-05",
-      "source": "WHO Disease Outbreak News",
-      "scope": "Global",
-      "kind": "Official outbreak notice",
-      "topics": [
-        "Influenza",
-        "Other"
       ]
     }
   ],
