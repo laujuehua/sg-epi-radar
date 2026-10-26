@@ -1,13 +1,13 @@
 {
-  "run_at": "2026-10-24T13:36:04+00:00",
+  "run_at": "2026-10-26T05:49:34+00:00",
   "bulletin_through": "2026-10-11",
-  "psi_through": "2026-10-18",
-  "psi_observed_through": "2026-10-24",
+  "psi_through": "2026-10-25",
+  "psi_observed_through": "2026-10-26",
   "n_diseases": 40,
   "n_recent_alerts": 2,
   "n_current_diseases": 38,
   "quality_notes": [
-    "1 PSI weeks have fewer than 7 days; excluded from correlations.",
+    "2 PSI weeks have fewer than 7 days; excluded from correlations.",
     "1 disease-week observations are unavailable; not treated as zero.",
     "PSI weekly charts include supplementary historical and real-time observations; mean remains the mean of daily peaks. Partial hourly days remain provisional."
   ],
@@ -17,5 +17,5 @@
     "cda/bulletin_2024.xlsx",
     "cda/bulletin_2023.xls"
   ],
-  "snapshot_id": "60654b8a184a0e76b8087cdfefa28180b9c2b621449af74de2814d39a61102d2"
+  "snapshot_id": "322ae0c6eebe79d71b1bda5de3a099e2c4acd2b1dd067aefcbda4bd625ec1cd5"
 }

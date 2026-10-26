@@ -655,3 +655,4 @@ week_start,psi_mean,psi_max,days_unhealthy,days_with_data,band,haze_week
 2026-10-04,151.4,192,7,7,Unhealthy,True
 2026-10-11,194.3,229,7,7,Very unhealthy,True
 2026-10-18,152.1,230,7,7,Very unhealthy,True
+2026-10-25,123.0,150,1,2,Unhealthy,True

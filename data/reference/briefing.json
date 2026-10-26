@@ -1,25 +1,25 @@
 {
-  "checked_at": "2026-10-24T13:36:10+00:00",
+  "checked_at": "2026-10-26T05:49:41+00:00",
   "sources": [
     {
       "source": "WHO Disease Outbreak News",
       "status": "refreshed",
-      "checked_at": "2026-10-24T13:36:10+00:00"
+      "checked_at": "2026-10-26T05:49:41+00:00"
     },
     {
       "source": "CNA Singapore",
       "status": "refreshed",
-      "checked_at": "2026-10-24T13:36:10+00:00"
+      "checked_at": "2026-10-26T05:49:41+00:00"
     },
     {
       "source": "CNA Asia",
       "status": "refreshed",
-      "checked_at": "2026-10-24T13:36:10+00:00"
+      "checked_at": "2026-10-26T05:49:41+00:00"
     },
     {
       "source": "CNA World",
       "status": "refreshed",
-      "checked_at": "2026-10-24T13:36:10+00:00"
+      "checked_at": "2026-10-26T05:49:41+00:00"
     }
   ],
   "items": [

@@ -772,3 +772,4 @@ week_start,psi_mean,psi_max,psi_days_unhealthy,psi_days_reported,rainfall_mm,rai
 2026-10-04,120.6,192.0,7,7,,0,,0,0,False,2026-10-10,2026-W40,False,True,
 2026-10-11,155.0,229.0,7,7,,0,,0,0,False,2026-10-17,2026-W41,False,True,
 2026-10-18,110.1,230.0,7,7,,0,,0,0,False,2026-10-24,2026-W42,False,True,
+2026-10-25,92.1,150.0,1,2,,0,,0,0,False,2026-10-31,2026-W43,False,True,
