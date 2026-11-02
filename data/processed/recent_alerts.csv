@@ -1,3 +1,4 @@
 disease,year,week,week_start,cases,c2_threshold,hl_expected,hl_threshold,c2_alert,hl_alert
+Pertussis,2026,42,2026-10-18,7.0,5.29,0.75,2.75,True,True
 Salmonellosis (non-enteric fevers),2026,39,2026-09-27,34.0,48.53,22.58,30.87,False,True
 Acute Viral Hepatitis E,2026,39,2026-09-27,5.0,6.2,0.67,2.81,False,True

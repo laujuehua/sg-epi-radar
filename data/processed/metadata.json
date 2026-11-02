@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-10-26T05:49:34+00:00",
-  "bulletin_through": "2026-10-11",
-  "psi_through": "2026-10-25",
-  "psi_observed_through": "2026-10-26",
+  "run_at": "2026-11-02T07:20:47+00:00",
+  "bulletin_through": "2026-10-18",
+  "psi_through": "2026-11-01",
+  "psi_observed_through": "2026-11-02",
   "n_diseases": 40,
-  "n_recent_alerts": 2,
+  "n_recent_alerts": 3,
   "n_current_diseases": 38,
   "quality_notes": [
     "2 PSI weeks have fewer than 7 days; excluded from correlations.",
@@ -17,5 +17,5 @@
     "cda/bulletin_2024.xlsx",
     "cda/bulletin_2023.xls"
   ],
-  "snapshot_id": "322ae0c6eebe79d71b1bda5de3a099e2c4acd2b1dd067aefcbda4bd625ec1cd5"
+  "snapshot_id": "cb2f1e91fcf708910f966c1499d94c109e205bd2fa695b85269fc3e0b8bb1b7d"
 }

@@ -1,28 +1,39 @@
 {
-  "checked_at": "2026-10-26T05:49:41+00:00",
+  "checked_at": "2026-11-02T07:20:54+00:00",
   "sources": [
     {
       "source": "WHO Disease Outbreak News",
       "status": "refreshed",
-      "checked_at": "2026-10-26T05:49:41+00:00"
+      "checked_at": "2026-11-02T07:20:54+00:00"
     },
     {
       "source": "CNA Singapore",
       "status": "refreshed",
-      "checked_at": "2026-10-26T05:49:41+00:00"
+      "checked_at": "2026-11-02T07:20:54+00:00"
     },
     {
       "source": "CNA Asia",
       "status": "refreshed",
-      "checked_at": "2026-10-26T05:49:41+00:00"
+      "checked_at": "2026-11-02T07:20:54+00:00"
     },
     {
       "source": "CNA World",
       "status": "refreshed",
-      "checked_at": "2026-10-26T05:49:41+00:00"
+      "checked_at": "2026-11-02T07:20:54+00:00"
     }
   ],
   "items": [
+    {
+      "title": "Malaysia Airlines says customers may be affected by Amadeus breach",
+      "url": "https://www.channelnewsasia.com/asia/malaysia-airlines-amadeus-security-breach-6510631",
+      "published": "2026-11-01",
+      "source": "CNA Asia",
+      "scope": "Southeast Asia / Asia",
+      "kind": "Media headline",
+      "topics": [
+        "MERS"
+      ]
+    },
     {
       "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
       "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON622",

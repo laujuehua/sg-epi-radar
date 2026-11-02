@@ -770,7 +770,8 @@ Acute Conjunctivitis,2026,37,2026-09-13,82.18181818181819,False,False
 Acute Conjunctivitis,2026,38,2026-09-20,76.72727272727273,False,False
 Acute Conjunctivitis,2026,39,2026-09-27,79.0909090909091,False,False
 Acute Conjunctivitis,2026,40,2026-10-04,76.54545454545455,False,False
-Acute Conjunctivitis,2026,41,2026-10-11,134.72727272727272,False,False
+Acute Conjunctivitis,2026,41,2026-10-11,146.1818181818182,False,False
+Acute Conjunctivitis,2026,42,2026-10-18,85.0909090909091,False,False
 Acute Diarrhoea,2012,1,2012-01-01,491.0,False,False
 Acute Diarrhoea,2012,2,2012-01-08,575.0,False,False
 Acute Diarrhoea,2012,3,2012-01-15,539.0,False,False
@@ -1542,7 +1543,8 @@ Acute Diarrhoea,2026,37,2026-09-13,462.0,False,False
 Acute Diarrhoea,2026,38,2026-09-20,447.6363636363636,False,False
 Acute Diarrhoea,2026,39,2026-09-27,419.27272727272725,False,False
 Acute Diarrhoea,2026,40,2026-10-04,402.54545454545456,False,False
-Acute Diarrhoea,2026,41,2026-10-11,333.09090909090907,False,False
+Acute Diarrhoea,2026,41,2026-10-11,353.09090909090907,False,False
+Acute Diarrhoea,2026,42,2026-10-18,334.3636363636364,False,False
 Acute Upper Respiratory Tract infections,2012,1,2012-01-01,2932.0,False,False
 Acute Upper Respiratory Tract infections,2012,2,2012-01-08,3189.0,False,False
 Acute Upper Respiratory Tract infections,2012,3,2012-01-15,3185.0,False,False
@@ -2314,7 +2316,8 @@ Acute Upper Respiratory Tract infections,2026,37,2026-09-13,2575.2727272727275,F
 Acute Upper Respiratory Tract infections,2026,38,2026-09-20,2579.2727272727275,False,False
 Acute Upper Respiratory Tract infections,2026,39,2026-09-27,2747.2727272727275,False,False
 Acute Upper Respiratory Tract infections,2026,40,2026-10-04,2908.0,False,False
-Acute Upper Respiratory Tract infections,2026,41,2026-10-11,3060.5454545454545,False,False
+Acute Upper Respiratory Tract infections,2026,41,2026-10-11,3260.3636363636365,False,False
+Acute Upper Respiratory Tract infections,2026,42,2026-10-18,2604.181818181818,False,False
 Chickenpox,2012,1,2012-01-01,18.0,False,False
 Chickenpox,2012,2,2012-01-08,19.0,False,False
 Chickenpox,2012,3,2012-01-15,16.0,False,False
@@ -3086,7 +3089,8 @@ Chickenpox,2026,37,2026-09-13,5.636363636363637,False,False
 Chickenpox,2026,38,2026-09-20,4.181818181818182,False,False
 Chickenpox,2026,39,2026-09-27,6.181818181818182,False,False
 Chickenpox,2026,40,2026-10-04,5.090909090909091,False,False
-Chickenpox,2026,41,2026-10-11,4.909090909090909,False,False
+Chickenpox,2026,41,2026-10-11,5.454545454545454,False,False
+Chickenpox,2026,42,2026-10-18,4.0,False,False
 HFMD,2018,1,2017-12-31,12.0,False,False
 HFMD,2018,2,2018-01-07,15.0,False,False
 HFMD,2018,3,2018-01-14,16.0,False,False
@@ -3545,4 +3549,5 @@ HFMD,2026,37,2026-09-13,18.0,False,False
 HFMD,2026,38,2026-09-20,16.0,False,False
 HFMD,2026,39,2026-09-27,15.818181818181818,False,False
 HFMD,2026,40,2026-10-04,18.0,False,False
-HFMD,2026,41,2026-10-11,15.818181818181818,False,False
+HFMD,2026,41,2026-10-11,16.545454545454547,False,False
+HFMD,2026,42,2026-10-18,18.181818181818183,False,False
