@@ -1,37 +1,82 @@
 {
-  "checked_at": "2026-11-02T07:20:54+00:00",
+  "checked_at": "2026-11-16T07:48:20+00:00",
   "sources": [
     {
       "source": "WHO Disease Outbreak News",
       "status": "refreshed",
-      "checked_at": "2026-11-02T07:20:54+00:00"
+      "checked_at": "2026-11-16T07:48:20+00:00"
     },
     {
       "source": "CNA Singapore",
       "status": "refreshed",
-      "checked_at": "2026-11-02T07:20:54+00:00"
+      "checked_at": "2026-11-16T07:48:20+00:00"
     },
     {
       "source": "CNA Asia",
       "status": "refreshed",
-      "checked_at": "2026-11-02T07:20:54+00:00"
+      "checked_at": "2026-11-16T07:48:20+00:00"
     },
     {
       "source": "CNA World",
       "status": "refreshed",
-      "checked_at": "2026-11-02T07:20:54+00:00"
+      "checked_at": "2026-11-16T07:48:20+00:00"
     }
   ],
   "items": [
     {
-      "title": "Malaysia Airlines says customers may be affected by Amadeus breach",
-      "url": "https://www.channelnewsasia.com/asia/malaysia-airlines-amadeus-security-breach-6510631",
-      "published": "2026-11-01",
-      "source": "CNA Asia",
-      "scope": "Southeast Asia / Asia",
+      "title": "Singapore\u2019s Communicable Diseases Agency named WHO collaborating centre for infection prevention and control",
+      "url": "https://www.channelnewsasia.com/singapore/cda-who-collaborating-centre-infection-prevention-ong-ye-kung-6554061",
+      "published": "2026-11-16",
+      "source": "CNA Singapore",
+      "scope": "Singapore",
       "kind": "Media headline",
       "topics": [
-        "MERS"
+        "Other"
+      ]
+    },
+    {
+      "title": "Middle East respiratory syndrome (MERS) \u2013 Qatar",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON626",
+      "published": "2026-11-13",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "MERS",
+        "Other"
+      ]
+    },
+    {
+      "title": "Ebola disease caused by Bundibugyo virus, Democratic Republic of the Congo, Kenya and Nigeria",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON625",
+      "published": "2026-11-06",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Yellow fever - WHO African Region",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON624",
+      "published": "2026-11-06",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
+      ]
+    },
+    {
+      "title": "Shamonda virus in human - France",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/2026-DON623",
+      "published": "2026-11-02",
+      "source": "WHO Disease Outbreak News",
+      "scope": "Global",
+      "kind": "Official outbreak notice",
+      "topics": [
+        "Other"
       ]
     },
     {
@@ -1130,51 +1175,6 @@
       "kind": "Official outbreak notice",
       "topics": [
         "Mpox"
-      ]
-    },
-    {
-      "title": "Human infection caused by avian Influenza A(H5N2)-Mexico",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON524",
-      "published": "2024-06-14",
-      "source": "WHO Disease Outbreak News",
-      "scope": "Global",
-      "kind": "Official outbreak notice",
-      "topics": [
-        "Influenza",
-        "Other"
-      ]
-    },
-    {
-      "title": "Avian Influenza A (H9N2)- India",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON523",
-      "published": "2024-06-11",
-      "source": "WHO Disease Outbreak News",
-      "scope": "Global",
-      "kind": "Official outbreak notice",
-      "topics": [
-        "Influenza"
-      ]
-    },
-    {
-      "title": "Oropouche virus disease - Cuba",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON521",
-      "published": "2024-06-11",
-      "source": "WHO Disease Outbreak News",
-      "scope": "Global",
-      "kind": "Official outbreak notice",
-      "topics": [
-        "Other"
-      ]
-    },
-    {
-      "title": "Avian Influenza A (H5N1) - Australia",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/2024-DON519",
-      "published": "2024-06-07",
-      "source": "WHO Disease Outbreak News",
-      "scope": "Global",
-      "kind": "Official outbreak notice",
-      "topics": [
-        "Influenza"
       ]
     }
   ],

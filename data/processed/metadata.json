@@ -1,8 +1,8 @@
 {
-  "run_at": "2026-11-02T07:20:47+00:00",
-  "bulletin_through": "2026-10-18",
-  "psi_through": "2026-11-01",
-  "psi_observed_through": "2026-11-02",
+  "run_at": "2026-11-16T07:48:13+00:00",
+  "bulletin_through": "2026-11-01",
+  "psi_through": "2026-11-15",
+  "psi_observed_through": "2026-11-16",
   "n_diseases": 40,
   "n_recent_alerts": 3,
   "n_current_diseases": 38,
@@ -17,5 +17,5 @@
     "cda/bulletin_2024.xlsx",
     "cda/bulletin_2023.xls"
   ],
-  "snapshot_id": "cb2f1e91fcf708910f966c1499d94c109e205bd2fa695b85269fc3e0b8bb1b7d"
+  "snapshot_id": "10dae4de997e6ac58fd6e45390832fd65253af76d9d427dc883b57625a79e248"
 }

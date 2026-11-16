@@ -13639,8 +13639,8 @@ month,level,region,place,arrivals
 2026-04-01,2,Africa,Mauritius,730
 2026-04-01,2,Africa,South Africa (Rep Of),3503
 2026-04-01,2,Africa,Other Markets In Africa,3153
-2026-05-01,0,,Total International Visitor Arrivals By Place Of Residence,1241170
-2026-05-01,1,Southeast Asia,Southeast Asia,434530
+2026-05-01,0,,Total International Visitor Arrivals By Place Of Residence,1241171
+2026-05-01,1,Southeast Asia,Southeast Asia,434531
 2026-05-01,1,Greater China,Greater China,259071
 2026-05-01,1,North Asia,North Asia,76918
 2026-05-01,1,South Asia,South Asia,163605
@@ -13653,7 +13653,7 @@ month,level,region,place,arrivals
 2026-05-01,2,Southeast Asia,Brunei Darussalam,4259
 2026-05-01,2,Southeast Asia,Indonesia,170126
 2026-05-01,2,Southeast Asia,Malaysia,111905
-2026-05-01,2,Southeast Asia,Myanmar,16996
+2026-05-01,2,Southeast Asia,Myanmar,16997
 2026-05-01,2,Southeast Asia,Philippines,68985
 2026-05-01,2,Southeast Asia,Thailand,30067
 2026-05-01,2,Southeast Asia,Vietnam,24778
@@ -13701,9 +13701,9 @@ month,level,region,place,arrivals
 2026-05-01,2,Africa,Mauritius,305
 2026-05-01,2,Africa,South Africa (Rep Of),2176
 2026-05-01,2,Africa,Other Markets In Africa,3657
-2026-06-01,0,,Total International Visitor Arrivals By Place Of Residence,1184532
+2026-06-01,0,,Total International Visitor Arrivals By Place Of Residence,1184533
 2026-06-01,1,Southeast Asia,Southeast Asia,425678
-2026-06-01,1,Greater China,Greater China,260124
+2026-06-01,1,Greater China,Greater China,260125
 2026-06-01,1,North Asia,North Asia,66792
 2026-06-01,1,South Asia,South Asia,125264
 2026-06-01,1,West Asia,West Asia,11630
@@ -13720,7 +13720,7 @@ month,level,region,place,arrivals
 2026-06-01,2,Southeast Asia,Thailand,23190
 2026-06-01,2,Southeast Asia,Vietnam,40051
 2026-06-01,2,Southeast Asia,Other Markets In Southeast Asia,7374
-2026-06-01,2,Greater China,China,197106
+2026-06-01,2,Greater China,China,197107
 2026-06-01,2,Greater China,Hong Kong SAR,25553
 2026-06-01,2,Greater China,Taiwan,35769
 2026-06-01,2,Greater China,Other Markets In Greater China,1696
@@ -13763,26 +13763,26 @@ month,level,region,place,arrivals
 2026-06-01,2,Africa,Mauritius,231
 2026-06-01,2,Africa,South Africa (Rep Of),2847
 2026-06-01,2,Africa,Other Markets In Africa,3256
-2026-07-01,0,,Total International Visitor Arrivals By Place Of Residence,1631241
-2026-07-01,1,Southeast Asia,Southeast Asia,444976
-2026-07-01,1,Greater China,Greater China,530316
+2026-07-01,0,,Total International Visitor Arrivals By Place Of Residence,1631284
+2026-07-01,1,Southeast Asia,Southeast Asia,444979
+2026-07-01,1,Greater China,Greater China,530355
 2026-07-01,1,North Asia,North Asia,103342
 2026-07-01,1,South Asia,South Asia,113754
 2026-07-01,1,West Asia,West Asia,22499
-2026-07-01,1,Americas,Americas,83391
+2026-07-01,1,Americas,Americas,83392
 2026-07-01,1,Europe,Europe,181045
 2026-07-01,1,Oceania,Oceania,142521
 2026-07-01,1,Africa,Africa,9338
 2026-07-01,1,Others,Others,59
 2026-07-01,2,Southeast Asia,Brunei Darussalam,4071
-2026-07-01,2,Southeast Asia,Indonesia,194868
+2026-07-01,2,Southeast Asia,Indonesia,194871
 2026-07-01,2,Southeast Asia,Malaysia,86888
 2026-07-01,2,Southeast Asia,Myanmar,17566
 2026-07-01,2,Southeast Asia,Philippines,55104
 2026-07-01,2,Southeast Asia,Thailand,34514
 2026-07-01,2,Southeast Asia,Vietnam,41307
 2026-07-01,2,Southeast Asia,Other Markets In Southeast Asia,10658
-2026-07-01,2,Greater China,China,429780
+2026-07-01,2,Greater China,China,429819
 2026-07-01,2,Greater China,Hong Kong SAR,38213
 2026-07-01,2,Greater China,Taiwan,58465
 2026-07-01,2,Greater China,Other Markets In Greater China,3858
@@ -13801,7 +13801,7 @@ month,level,region,place,arrivals
 2026-07-01,2,West Asia,United Arab Emirates,10791
 2026-07-01,2,West Asia,Other Markets In West Asia,4626
 2026-07-01,2,Americas,Canada,11104
-2026-07-01,2,Americas,USA,65306
+2026-07-01,2,Americas,USA,65307
 2026-07-01,2,Americas,Other Markets In Americas,6981
 2026-07-01,2,Europe,Belgium & Luxembourg,5988
 2026-07-01,2,Europe,Denmark,3859
@@ -13887,3 +13887,65 @@ month,level,region,place,arrivals
 2026-08-01,2,Africa,Mauritius,589
 2026-08-01,2,Africa,South Africa (Rep Of),2200
 2026-08-01,2,Africa,Other Markets In Africa,6854
+2026-09-01,0,,Total International Visitor Arrivals By Place Of Residence,1227035
+2026-09-01,1,Southeast Asia,Southeast Asia,384686
+2026-09-01,1,Greater China,Greater China,278249
+2026-09-01,1,North Asia,North Asia,108688
+2026-09-01,1,South Asia,South Asia,110298
+2026-09-01,1,West Asia,West Asia,13431
+2026-09-01,1,Americas,Americas,59283
+2026-09-01,1,Europe,Europe,133291
+2026-09-01,1,Oceania,Oceania,131791
+2026-09-01,1,Africa,Africa,7290
+2026-09-01,1,Others,Others,28
+2026-09-01,2,Southeast Asia,Brunei Darussalam,3526
+2026-09-01,2,Southeast Asia,Indonesia,154566
+2026-09-01,2,Southeast Asia,Malaysia,108068
+2026-09-01,2,Southeast Asia,Myanmar,14918
+2026-09-01,2,Southeast Asia,Philippines,47156
+2026-09-01,2,Southeast Asia,Thailand,24827
+2026-09-01,2,Southeast Asia,Vietnam,23938
+2026-09-01,2,Southeast Asia,Other Markets In Southeast Asia,7687
+2026-09-01,2,Greater China,China,218674
+2026-09-01,2,Greater China,Hong Kong SAR,22554
+2026-09-01,2,Greater China,Taiwan,35564
+2026-09-01,2,Greater China,Other Markets In Greater China,1457
+2026-09-01,2,North Asia,Japan,75408
+2026-09-01,2,North Asia,South Korea,33237
+2026-09-01,2,North Asia,Other Markets In North Asia,43
+2026-09-01,2,South Asia,Bangladesh,12358
+2026-09-01,2,South Asia,India,87730
+2026-09-01,2,South Asia,Pakistan,1629
+2026-09-01,2,South Asia,Sri Lanka,6133
+2026-09-01,2,South Asia,Other Markets In South Asia,2448
+2026-09-01,2,West Asia,Iran,376
+2026-09-01,2,West Asia,Israel,2324
+2026-09-01,2,West Asia,Kuwait,306
+2026-09-01,2,West Asia,Saudi Arabia,2032
+2026-09-01,2,West Asia,United Arab Emirates,6044
+2026-09-01,2,West Asia,Other Markets In West Asia,2349
+2026-09-01,2,Americas,Canada,7879
+2026-09-01,2,Americas,USA,44929
+2026-09-01,2,Americas,Other Markets In Americas,6475
+2026-09-01,2,Europe,Belgium & Luxembourg,3021
+2026-09-01,2,Europe,Denmark,1761
+2026-09-01,2,Europe,Finland,1233
+2026-09-01,2,Europe,France,12519
+2026-09-01,2,Europe,Germany,23065
+2026-09-01,2,Europe,Italy,7042
+2026-09-01,2,Europe,Netherlands,6679
+2026-09-01,2,Europe,Norway,1416
+2026-09-01,2,Europe,Rep Of Ireland,1702
+2026-09-01,2,Europe,Russian Federation,3470
+2026-09-01,2,Europe,Spain,6317
+2026-09-01,2,Europe,Sweden,1545
+2026-09-01,2,Europe,Switzerland,6544
+2026-09-01,2,Europe,United Kingdom,35999
+2026-09-01,2,Europe,Other Markets In Europe,20978
+2026-09-01,2,Oceania,Australia,112538
+2026-09-01,2,Oceania,New Zealand,16580
+2026-09-01,2,Oceania,Other Markets In Oceania,2673
+2026-09-01,2,Africa,Egypt,309
+2026-09-01,2,Africa,Mauritius,272
+2026-09-01,2,Africa,South Africa (Rep Of),2891
+2026-09-01,2,Africa,Other Markets In Africa,3818

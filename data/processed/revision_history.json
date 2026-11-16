@@ -86,6 +86,44 @@
       ],
       "added_rows": 38,
       "removed_rows": 0
+    },
+    {
+      "run_at": "2026-11-16T07:48:13+00:00",
+      "snapshot_id": "10dae4de997e6ac58fd6e45390832fd65253af76d9d427dc883b57625a79e248",
+      "previous_snapshot_id": "cb2f1e91fcf708910f966c1499d94c109e205bd2fa695b85269fc3e0b8bb1b7d",
+      "comparison_available": true,
+      "changes": [
+        {
+          "disease": "Acute Viral Hepatitis C",
+          "week_start": "2026-10-18",
+          "previous_cases": 0.0,
+          "current_cases": 1.0,
+          "change": 1.0
+        },
+        {
+          "disease": "Acute Viral Hepatitis E",
+          "week_start": "2026-10-18",
+          "previous_cases": 2.0,
+          "current_cases": 0.0,
+          "change": -2.0
+        },
+        {
+          "disease": "Malaria",
+          "week_start": "2026-08-23",
+          "previous_cases": 1.0,
+          "current_cases": 2.0,
+          "change": 1.0
+        },
+        {
+          "disease": "Salmonellosis (non-enteric fevers)",
+          "week_start": "2026-10-11",
+          "previous_cases": 25.0,
+          "current_cases": 26.0,
+          "change": 1.0
+        }
+      ],
+      "added_rows": 76,
+      "removed_rows": 0
     }
   ]
 }

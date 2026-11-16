@@ -654,4 +654,6 @@ week_start,psi_mean,psi_max,days_unhealthy,days_with_data,band,haze_week,attenda
 2026-09-27,120.9,167,5,7,Unhealthy,True,2747.2727272727275
 2026-10-04,151.4,192,7,7,Unhealthy,True,2908.0
 2026-10-11,194.3,229,7,7,Very unhealthy,True,3260.3636363636365
-2026-10-18,152.1,230,7,7,Very unhealthy,True,2604.181818181818
+2026-10-18,152.1,230,7,7,Very unhealthy,True,3091.6363636363635
+2026-10-25,90.1,150,1,7,Unhealthy,True,2798.0
+2026-11-01,74.9,89,0,7,Moderate,False,2724.0
